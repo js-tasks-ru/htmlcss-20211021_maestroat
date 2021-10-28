@@ -1,6 +1,5 @@
 /* Стилизация кнопки */
 
-
 .main {
 	width: 55%;
 	margin: auto;
@@ -27,7 +26,6 @@
 
 .button span {
 	color: white;
-	/*margin-left: 1em;*/
 }
 
 .button__primary {
