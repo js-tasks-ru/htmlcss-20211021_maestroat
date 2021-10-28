@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<!-- Страница с кнопкой -->
-<html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./button.css">
-    </head>
-    <body>
-
-    </body>
+<html>
+<head>
+	<title>Button</title>
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <meta charset="utf-8">
+</head>
+<body>
+<main class="main">
+<div class="button-group">
+<button class="button button__primary">
+	 <span>Primary</span>
+</button>
+<button class="button button__primary_disabled" disabled>
+	 <span>Primary Disabled</span>
+</button>
+<button class="button button__primary button__primary_active">
+	 <span>Primary Active</span>
+</button>
+</div>
+<div class="button-group">
+<button class="button button__secondary">
+	<span>Secondary</span>
+</button>
+<button class="button button__secondary_disabled" disabled>
+	<span>Secondary Disabled</span>
+</button>
+<button class="button button__secondary button__secondary_active">
+	<span>Secondary Active</span>
+</button>
+</div>
+<div class="button-group">
+<button class="button button__alternate">
+	<span>Alternate</span>
+</button>
+<button class="button button__alternate button__alternate_disabled" disabled>
+	<span>Alternate Disabled</span>
+</button>
+<button class="button button__alternate button__alternate_active">
+	<span>Alternate Active</span>
+</button>
+</div>
+</main>
+</body>
 </html>
