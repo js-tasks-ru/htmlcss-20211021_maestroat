@@ -1,1 +1,57 @@
 /* Стилизация аккордеона */
+
+
+/* Убираем стандартный маркер Firefox */
+.accordion > .accordion__item {
+  	list-style: none;
+}
+/* Убираем стандартный маркер Google, Safari */
+.accordion .accordion__item::-webkit-details-marker {
+  	display: none
+}
+
+.accordion {
+	margin-bottom: 8px;
+	background: var(--white);
+	border: 1px solid var(--grey-3);
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+.accordion .accordion__item {
+ 	outline-style: none;
+    border-bottom: none;
+/* Убираем стандартный маркер Firefox */
+	display: block; 
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.accordion[open] {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 1em;
+    color: var(--alternate-text);
+}
+
+.accordion[open] .accordion__item {
+    /*border-bottom: 1px solid #aaa;*/
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 0;
+    color: var(--alternate-border);
+}
+.accordion[open] .open__text {
+	margin-top: 0;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.accordion:last-child {margin-bottom: 0}

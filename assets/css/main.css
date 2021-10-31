@@ -29,7 +29,7 @@
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
 .main {
@@ -54,3 +54,9 @@
     width: 200px;
 }
 .button-group:last-child {margin-right: 0}
+
+.accordion-center {
+    width: 45%;
+    margin: auto;
+    margin-top: 40px;
+}
