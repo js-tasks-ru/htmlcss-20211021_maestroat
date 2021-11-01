@@ -1,11 +1,15 @@
 @import '../fonts/fonts.css';
+@import '../css/normalize.css';
 
 :root {
     --white: #ffffff;
     --black: #212429;
     --pink: #F784AD;
     --purple: #7048E8;
+    --purple-2: #5028C6;
     --blue: #374FC7;
+    --blue-1: #4263EB;
+    --blue-2: #2342C0;
     --red: #F03D3E;
     --grey-1: #F8F9FA;
     --grey-2: #DDE2E5;
@@ -17,8 +21,42 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+    --alternate-text: #495057;
+    --alternate-border: #212429;    
+
+    --button__active: green;
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.button-main  {
+    display: flex;
+    flex-basis: auto;
+    flex-flow: row wrap;
+}
+.button-group-center {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 40px;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+
+    margin-right: 20px;
+    width: 200px;
+}
+.button-group:last-child {margin-right: 0}
+
+.accordion-center {
+    width: 45%;
+    margin: auto;
+    margin-top: 40px;
 }
