@@ -60,3 +60,5 @@
     margin: auto;
     margin-top: 40px;
 }
+.accordion-center > .accordion { margin-bottom: 8px; }
+.accordion-center > .accordion:last-child {margin-bottom: 0}
