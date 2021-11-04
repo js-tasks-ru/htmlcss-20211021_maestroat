@@ -52,5 +52,7 @@
     margin-right: 20px;
     min-width: 200px;
 }
-.button-group:last-child {margin-right: 0}
+
+.button-group > .button { margin-bottom: 8px; }
+.button-group > .button:last-child { margin-bottom: 0; }
 
