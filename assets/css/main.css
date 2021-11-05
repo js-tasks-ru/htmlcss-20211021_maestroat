@@ -23,7 +23,7 @@
     --secondary: var(--purple);
 
     --alternate-text: #495057;
-    --alternate-border: #212429;    
+    --alternate-border: #212429;
 
     --button__active: green;
 }
@@ -32,7 +32,7 @@
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-.main {
+.button-main {
     display: flex;
     flex-basis: auto;
     flex-flow: row wrap;
@@ -40,8 +40,7 @@
 .button-group-center {
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto;
 }
 .button-group {
     display: flex;
@@ -49,14 +48,39 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-
     margin-right: 20px;
     width: 200px;
 }
-.button-group:last-child {margin-right: 0}
+.button-group > .button { margin-bottom: 8px; }
+.button-group > .button:last-child { margin-bottom: 0; }
 
 .accordion-center {
     width: 45%;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto;
+}
+.accordion-center > .accordion { margin-bottom: 8px; }
+.accordion-center > .accordion:last-child {margin-bottom: 0}
+
+.sceleton-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main__sceleton {
+    margin: 40px auto;
+}
+
+.histogram-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main__histogram {
+    margin: 40px auto;
+}
+
+.tooltip__center {
+    display: flex;
+    flex-wrap: wrap;
+}
+.main__tooltip {
+    margin: 100px auto;
 }
