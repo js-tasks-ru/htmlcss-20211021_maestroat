@@ -1,0 +1,44 @@
+
+
+.tooltip {
+    text-align: center;
+}
+.tooltip__icon {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip__bubble {
+    background-color: var(--black);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 10px;
+    position: absolute;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%,-180%);
+    display: none;
+}
+/*стрелка как в уроке*/
+.tooltip__bubble:after {
+    /*	content: "";
+        border: 10px solid transparent;
+        border-top: 5px solid var(--black);
+        position: absolute;
+        left: 50%;
+        top: 64%;
+        transform: translate(-50%, 100%);*/
+}
+.tooltip__icon:hover ~ .tooltip__bubble {
+    display: block;
+}
+.tooltip__icon:hover ~ .tooltip__strelka {
+    display: block;
+}
+/*Сделал стрелку через вектор*/
+.tooltip__strelka {
+    position: relative;
+    top: -78%;
+    display: none;
+}
