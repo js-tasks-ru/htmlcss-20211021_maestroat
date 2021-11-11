@@ -42,7 +42,7 @@
     color: var(--alternate-text);
 }
 .button_alternate:hover {
-    border: 1px solid var(--alternate-border);
+    border-color: var(--alternate-border);
 }
 .button_alternate:active {
     background: var(--button__active);
