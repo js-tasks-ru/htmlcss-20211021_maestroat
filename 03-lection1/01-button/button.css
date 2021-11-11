@@ -2,7 +2,7 @@
 /* Стилизация кнопки */
 
 .button {
-    border: 0 none;
+    border: none;
     box-sizing: border-box;
     border-radius: 8px;
     min-width: 200px;
