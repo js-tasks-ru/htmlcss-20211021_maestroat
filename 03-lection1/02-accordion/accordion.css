@@ -1,1 +1,60 @@
 /* Стилизация аккордеона */
+
+.accordion {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 579px;
+}
+/* Убираем стандартный маркер Firefox */
+.accordion__item > .accordion__summary {
+    list-style: none;
+}
+/* Убираем стандартный маркер Google, Safari */
+.accordion__item .accordion__summary::-webkit-details-marker {
+    display: none
+}
+
+.accordion__item {
+    background: var(--white);
+    border: 1px solid var(--grey-3);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 0;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+.accordion__item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion__item .accordion__summary {
+    outline-style: none;
+    border-bottom: none;
+    /* Убираем стандартный маркер Firefox */
+    display: block;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+.accordion__item[open] {
+    padding-bottom: 0;
+    padding-top: 0;
+    color: var(--alternate-text);
+}
+
+.accordion__item[open] .accordion__summary {
+    /*border-bottom: 1px solid #aaa;*/
+    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 1em;
+    color: var(--alternate-border);
+}
+.accordion__item[open] .open__text {
+    margin-top: 0;
+    padding-left: 1em;
+}
