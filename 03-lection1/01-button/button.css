@@ -2,7 +2,7 @@
 /* Стилизация кнопки */
 
 .button {
-    border: 1px solid var(--grey-3);
+    border: 0 none;
     box-sizing: border-box;
     border-radius: 8px;
     min-width: 200px;
@@ -37,6 +37,7 @@
     background: var(--button__active);
 }
 .button_alternate {
+    border: 1px solid var(--grey-3);
     background: var(--grey-1);
     color: var(--alternate-text);
 }
