@@ -1,11 +1,10 @@
 
-
 .tooltip {
     text-align: center;
+    position: relative;
 }
 .tooltip__icon {
     display: inline-block;
-    position: relative;
     cursor: pointer;
 }
 
@@ -17,7 +16,8 @@
     position: absolute;
     white-space: nowrap;
     left: 50%;
-    transform: translate(-50%,-190%);
+    top: -65%;
+    transform: translate(-50%);
     display: none;
 }
 /*стрелка как в уроке*/
