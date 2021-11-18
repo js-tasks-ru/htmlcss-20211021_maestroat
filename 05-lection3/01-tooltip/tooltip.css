@@ -3,12 +3,12 @@
 .tooltip {
     text-align: center;
     position: relative;
+    display: inline-block;
 }
 .tooltip__icon {
     display: inline-block;
     cursor: pointer;
 }
-
 .tooltip__bubble {
     background-color: var(--black);
     border-radius: 10px;
@@ -16,9 +16,8 @@
     padding: 10px;
     position: absolute;
     white-space: nowrap;
-    left: 50%;
-    top: -130%;
-    transform: translate(-50%);
+    bottom: 100%;
+    transform: translate(-21px, -3px);
     display: none;
 }
 /*стрелка как в уроке*/
