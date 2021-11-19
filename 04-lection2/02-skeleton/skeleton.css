@@ -1,0 +1,47 @@
+
+.skeleton {
+    border-radius: 8px;
+    background-color: var(--white);
+    border: 1px solid var(--grey-3);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.skeleton__header {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.skeleton__avatar {
+    width: 64px;
+    height: 64px;
+    background-color: var(--grey-2);
+    border-radius: 50%;
+}
+.line {
+    height: 20px;
+    background-color: var(--grey-2);
+}
+.skeleton__aside {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 12px;
+    width: calc(100% - 64px - 12px);
+}
+.aside__line-1 {
+    width: 85%;
+    margin-bottom: 10px;
+}
+.aside__line-2 {
+    width: 95%;
+}
+.main__line-1 {
+    margin-bottom: 10px;
+    width: 100%
+}
+.main__line-2 {
+    width: 95%;
+}
+
