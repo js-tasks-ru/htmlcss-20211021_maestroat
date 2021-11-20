@@ -8,6 +8,8 @@
 .tooltip__icon {
     display: inline-block;
     cursor: pointer;
+    width: 24px;
+    height: 24px;
 }
 .tooltip__bubble {
     background-color: var(--black);
