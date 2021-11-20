@@ -44,22 +44,16 @@
     color: var(--alternate-text);
 }
 .modal__close {
+    width: 24px;
+    height: 24px;
     position: absolute;
-    left: 96%;
-    top: 5%;
+    left: 91%;
+    /*top: 5%;*/
+    transform: translate(-50%, 50%);
 }
-
-/*For Mobile*/
-@media screen and (max-width: 640px) {
-    .modal__close {
-        left: 90%;
-        top: 2%;
-    }
-}
-/*For Tablet*/
-@media screen and (min-width: 640px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .modal__close {
         left: 94%;
-        top: 3%;
+        transform: translate(-50%, 50%);
     }
 }
