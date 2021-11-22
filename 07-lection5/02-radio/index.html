@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./radio.css">
-    </head>
-    <body>
+<head>
+    <title>radio</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./radio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="radio">
+    <!-- <form method="post" action="input5.php"> -->
+    <div class="radio__title">RADIO BUTTON</div>
 
-    </body>
+    <div class="radio-set">
+        <label class="radio__Checked">
+            <input class="Checked__input" type="radio" name="option" value="a1">
+            <div class="Checked__state">
+                <div class="Checked__control">
+                    <div class="Checked__icon">
+
+                    </div>
+                </div>
+                <div class="Checked__text">Default</div>
+            </div>
+        </label>
+        <label class="radio__Checked">
+            <input class="Checked__input" type="radio" name="option" value="a2">
+            <div class="Checked__state">
+                <div class="Checked__control">
+                    <div class="Checked__icon">
+
+                    </div>
+                </div>
+                <div class="Checked__text">Selected</div>
+            </div>
+        </label>
+
+        <div class="Checkbox__Disabled">
+            <div class="Disabled__control"></div>
+            <div class="Disabled__text">Disabled</div>
+        </div>
+
+    </div>
+
+    <!-- </form> -->
+</div>
+</body>
 </html>
