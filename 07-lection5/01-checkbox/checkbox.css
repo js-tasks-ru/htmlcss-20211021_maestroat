@@ -1,5 +1,8 @@
 .Checkbox {
     font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 24px;
 }
 .Checkbox__title {
     font-style: normal;
@@ -9,25 +12,19 @@
     color: var(--grey-3);
     margin-bottom: 13px;
 }
-.Checkbox-set {
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 24px;
-}
-
-.Checked__input {
+.Checkbox__input {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     opacity: 0;
     outline: none;
 }
-.Checked__state {
+.Checkbox__state {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
 }
-.Checked__control {
+.Checkbox__control-Checked {
     background: var(--white);
     width: 28px;
     height: 28px;
@@ -39,32 +36,28 @@
     align-items: center;
     justify-content: center;
 }
-.Checked__icon {
+.Checkbox__icon {
     display: inline-block;
     width: 18px;
     height: 18px;
     color: var(--white);
-    /* left: 0px;
-    top: calc(50% - 28px/2); */
-
 }
-.Checked__text{
+.Checkbox__text-Checked {
     margin-left: 12px;
     color:var(--grey-4);
 }
-
-.Checked__input:checked~.Checked__state .Checked__control {
+.Checkbox__input:checked~.Checkbox__state .Checkbox__control-Checked {
     background: var(--blue);
     border: 1px solid var(--blue);
 }
-.Checkbox__Disabled {
-    margin-top: 13px;
+.Checkbox_Disabled {
+    margin-top: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     cursor: not-allowed;
 }
-.Disabled__control {
+.Checkbox__control-Disabled {
     background: var(--grey-2);
     width: 28px;
     height: 28px;
@@ -72,7 +65,7 @@
     box-sizing: border-box;
     border-radius: 4px;
 }
-.Disabled__text {
+.Checkbox__text-Disabled {
     margin-left: 12px;
     color:var(--grey-2);
 }
