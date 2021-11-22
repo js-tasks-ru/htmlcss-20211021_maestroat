@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <!-- Страница чекбокса -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./checkbox.css">
-    </head>
-    <body>
+<head>
+    <title>checkbox</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./checkbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="Checkbox">
+    <!-- <form method="post" action="input5.php"> -->
+    <div class="Checkbox__title">CHECKBOX</div>
 
-    </body>
+    <div class="Checkbox-set">
+
+        <label class="Checkbox__Checked">
+            <input class="Checked__input" type="checkbox" name="option1" value="a1">
+            <div class="Checked__state">
+                <div class="Checked__control">
+                    <svg class="Checked__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+                </div>
+                <div class="Checked__text">Checked</div>
+            </div>
+        </label>
+
+        <div class="Checkbox__Disabled">
+            <div class="Disabled__control"></div>
+            <div class="Disabled__text">Disabled</div>
+        </div>
+
+    </div>
+
+    <!-- </form> -->
+</div>
+</body>
+
 </html>
