@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <!-- Страница с кнопкой переключения -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./toggler.css">
-    </head>
-    <body>
+<head>
+    <title>toggler</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./toggler.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .toggler-set {
+            margin-bottom: 16px;
+        }
+        .toggler-set:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="toggler">
+    <div class="toggler__title">TOGGLER</div>
 
-    </body>
+    <div class="toggler-set">
+        <label class="toggler_Checked">
+            <input class="toggler__input" type="checkbox" name="option" value="a1">
+            <span class="toggler__state">
+            	<span class="toggler__control toggler__control_off">
+            		<span class="toggler__icon toggler__icon_off">
+            		</span>
+            	</span>
+            <span class="toggler__text">Off/On</span>
+            </span>
+        </label>
+    </div>
+    <div class="toggler-set">
+            <span class="toggler__state toggler__state_Disabled">
+            	<span class="toggler__control toggler__control_Disabled">
+            		<span class="toggler__icon toggler__icon_Disabled">
+            		</span>
+            	</span>
+            <span class="toggler__text toggler__text_Disabled">Disabled</span>
+            </span>
+    </div>
+</div>
+</body>
 </html>
