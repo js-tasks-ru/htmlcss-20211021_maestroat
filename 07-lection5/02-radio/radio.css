@@ -11,7 +11,7 @@
     font-size: 1.2rem;
     line-height: 18px;
     color: var(--grey-3);
-    margin-bottom: 13px;
+    /*margin-bottom: 13px;*/
 }
 .radio__input {
     position: absolute;
@@ -48,14 +48,14 @@
     color:var(--grey-4);
     margin-left: 12px;
 }
-.radio__input:focus~.radio__state .radio__text {
+.radio__input:focus~.radio__on .radio__text {
     text-decoration: underline;
 }
-.radio__input:checked ~.radio__state .radio__control {
+.radio__input:checked ~.radio__on .radio__control {
     background: var(--white);
     border: 2px solid var(--blue);
 }
-.radio__input:checked ~.radio__state .radio__icon {
+.radio__input:checked ~.radio__on .radio__icon {
     background-color: var(--blue);
 }
 .radio__state_Disabled {
