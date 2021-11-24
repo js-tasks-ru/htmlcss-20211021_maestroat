@@ -11,7 +11,7 @@
     font-size: 1.2rem;
     line-height: 18px;
     color: var(--grey-3);
-    margin-bottom: 13px;
+    /*margin-bottom: 13px;*/
 }
 .Checkbox__input {
     position: absolute;
@@ -47,10 +47,10 @@
     margin-left: 12px;
     color:var(--grey-4);
 }
-.Checkbox__input:focus~.Checkbox__state .Checkbox__text {
+.Checkbox__input:focus~.Checkbox_on .Checkbox__text {
     text-decoration: underline;
 }
-.Checkbox__input:checked~.Checkbox__state .Checkbox__control {
+.Checkbox__input:checked~.Checkbox_on .Checkbox__control {
     background: var(--blue);
     border: 1px solid var(--blue);
 }
