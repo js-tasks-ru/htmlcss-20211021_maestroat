@@ -2,6 +2,7 @@
 <!-- Страница с кнопкой переключения -->
 <html lang="ru">
 <head>
+    <meta charset="utf-8">
     <title>toggler</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="./toggler.css">
@@ -9,39 +10,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <style type="text/css">
-        .toggler-set {
+        .toggler-wrapper {
             margin-top: 13px;
             margin-bottom: 16px;
         }
-        .toggler-set:last-child {
+        .toggler-wrapper:last-child {
             margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-<div class="toggler">
-    <div class="toggler__title">TOGGLER</div>
-    <div class="toggler-set">
-        <label class="toggler_checked">
-            <input class="toggler__input" type="checkbox" name="option" value="a1">
-            <span class="toggler__state toggler_on">
+<div class="toggler__title">TOGGLER</div>
+<div class="toggler-wrapper">
+    <label class="toggler toggler_active">
+        <input class="toggler__input" type="checkbox" name="option" value="a1">
+        <span class="toggler__state">
             	<span class="toggler__control">
             		<span class="toggler__icon">
-
             		</span>
             	</span>
             <span class="toggler__text">Off/On</span>
             </span>
-        </label>
-    </div>
-    <div class="toggler-set">
-            <span class="toggler__state toggler__state_disabled">
-            	<span class="toggler__control toggler__control_disabled">
-            		<span class="toggler__icon toggler__icon_disabled">
+    </label>
+</div>
 
+<div class="toggler-wrapper">
+    <label class="toggler toggler_active">
+        <input class="toggler__input" type="checkbox" name="option" value="a1">
+        <span class="toggler__state">
+            	<span class="toggler__control">
+            		<span class="toggler__icon">
             		</span>
             	</span>
-            <span class="toggler__text toggler__text_disabled">Disabled</span>
+             <span class="toggler__text">Off/On</span>
+             </span>
+    </label>
+</div>
+
+<div class="toggler-wrapper">
+    <div class="toggler toggler_disabled">
+            <span class="toggler__state toggler__state-disabled">
+            	<span class="toggler__control toggler__control-disabled">
+            		<span class="toggler__icon toggler__icon-disabled">
+            		</span>
+            	</span>
+            <span class="toggler__text toggler__text-disabled">Disabled</span>
             </span>
     </div>
 </div>

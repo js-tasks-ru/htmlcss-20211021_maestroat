@@ -52,31 +52,38 @@
     margin-left: 12px;
     color:var(--grey-4);
 }
-.toggler__input:checked~.toggler_on .toggler__control {
+.toggler_active .toggler__input:checked~.toggler__state .toggler__control {
     background-color: var(--blue);
     border: 1px solid var(--blue);
     align-items: flex-end;
     padding-right: 2px;
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
-.toggler__input:checked~.toggler_on .toggler__control .toggler__icon {
+.toggler_active .toggler__input:checked~.toggler__state .toggler__control .toggler__icon {
     background-color: var(--white);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
-.toggler__input:focus~.toggler_on .toggler__text {
+.toggler_active .toggler__input:focus~.toggler__state .toggler__text {
     text-decoration: underline;
 }
-
-.toggler__state_disabled {
+.toggler_disabled .toggler__state-disabled {
     cursor: not-allowed;
 }
-.toggler__control_disabled {
+.toggler_disabled .toggler__control-disabled {
     background: var(--grey-2);
     border: 1px solid var(--grey-2);
     align-items: flex-start;
     padding-left: 2px;
 }
-.toggler__icon_disabled {
+.toggler_disabled .toggler__icon-disabled {
     background-color: var(--grey-3);
 }
-.toggler__text_disabled {
+.toggler_disabled .toggler__text-disabled {
     color:var(--grey-2);
 }
