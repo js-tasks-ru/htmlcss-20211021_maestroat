@@ -47,19 +47,20 @@
     margin-left: 12px;
     color:var(--grey-4);
 }
-.Checkbox__input:focus~.Checkbox_on .Checkbox__text {
+.Checkbox_active .Checkbox__input:focus~.Checkbox__state .Checkbox__text {
     text-decoration: underline;
 }
-.Checkbox__input:checked~.Checkbox_on .Checkbox__control {
+.Checkbox_active .Checkbox__input:checked~.Checkbox__state .Checkbox__control {
     background: var(--blue);
     border: 1px solid var(--blue);
+    transition: border-color .15s linear, background .15s linear;
 }
-.Checkbox__state_Disabled {
+.Checkbox_disabled .Checkbox__state-Disabled {
     cursor: not-allowed;
 }
-.Checkbox__control_Disabled {
+.Checkbox_disabled .Checkbox__control-Disabled {
     background: var(--grey-2);
 }
-.Checkbox__text_Disabled {
+.Checkbox_disabled  .Checkbox__text-Disabled {
     color:var(--grey-2);
 }

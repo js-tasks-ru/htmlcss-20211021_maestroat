@@ -9,22 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <style type="text/css">
-        .Checkbox-set {
+        .Checkbox-wrapper {
             margin-bottom: 16px;
             margin-top: 13px;
         }
-        .Checkbox-set:last-child {
+        .Checkbox-wrapper:last-child {
             margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-<div class="Checkbox">
-    <div class="Checkbox__title">CHECKBOX</div>
-    <div class="Checkbox-set">
-    <label class="Checkbox_Checked">
+<div class="Checkbox__title">CHECKBOX</div>
+<div class="Checkbox-wrapper">
+    <label class="Checkbox Checkbox_active">
         <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
-        <span class="Checkbox__state Checkbox_on">
+        <span class="Checkbox__state">
             <span class="Checkbox__control">
                     <svg class="Checkbox__icon">
                         <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
@@ -33,12 +32,28 @@
             <span class="Checkbox__text">Checked</span>
         </span>
     </label>
-    </div>
-    <div class="Checkbox-set">
-    <div class="Checkbox__state Checkbox__state_Disabled">
-        <div class="Checkbox__control Checkbox__control_Disabled"></div>
-        <div class="Checkbox__text Checkbox__text_Disabled">Disabled</div>
-    </div>
+</div>
+
+<div class="Checkbox-wrapper">
+    <label class="Checkbox Checkbox_active">
+        <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
+        <span class="Checkbox__state">
+            <span class="Checkbox__control">
+                    <svg class="Checkbox__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+            </span>
+            <span class="Checkbox__text">Checked</span>
+        </span>
+    </label>
+</div>
+
+<div class="Checkbox-wrapper">
+    <div class="Checkbox Checkbox_disabled">
+        <div class="Checkbox__state Checkbox__state-Disabled">
+            <div class="Checkbox__control Checkbox__control-Disabled"></div>
+            <div class="Checkbox__text Checkbox__text-Disabled">Disabled</div>
+        </div>
     </div>
 </div>
 </body>
