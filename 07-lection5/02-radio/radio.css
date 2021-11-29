@@ -48,22 +48,24 @@
     color:var(--grey-4);
     margin-left: 12px;
 }
-.radio__input:focus~.radio_on .radio__text {
+.radio_active .radio__input:focus~.radio__state .radio__text {
     text-decoration: underline;
 }
-.radio__input:checked ~.radio_on .radio__control {
+.radio_active .radio__input:checked ~.radio__state .radio__control {
     background: var(--white);
     border: 2px solid var(--blue);
+    transition: border-color .15s linear, background .15s linear;
 }
-.radio__input:checked ~.radio_on .radio__icon {
+.radio_active .radio__input:checked ~.radio__state .radio__icon {
     background-color: var(--blue);
+    transition: border-color .15s linear, background .15s linear;
 }
-.radio__state_Disabled {
+.radio_disabled .radio__state-disabled {
     cursor: not-allowed;
 }
-.radio__control_Disabled {
+.radio_disabled .radio__control-disabled {
     background: var(--grey-2);
 }
-.radio__text_Disabled {
+.radio_disabled .radio__text-disabled {
     color:var(--grey-2);
 }

@@ -9,46 +9,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <style type="text/css">
-        .radio-set {
+        .radio-wrapper {
             margin-bottom: 16px;
             margin-top: 13px;
         }
-        .radio-set:last-child {
+        .radio-wrapper:last-child {
             margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-<div class="radio">
-    <div class="radio__title">RADIO BUTTON</div>
-    <div class="radio-set">
-        <label class="radio_Checked">
-            <input class="radio__input" type="radio" name="option" value="a1">
-            <span class="radio__state radio_on">
+
+<div class="radio__title">RADIO BUTTON</div>
+<div class="radio-wrapper">
+    <label class="radio radio_active">
+        <input class="radio__input" type="radio" name="option" value="a1">
+        <span class="radio__state">
                 <span class="radio__control">
                     <span class="radio__icon">
                     </span>
                 </span>
                 <span class="radio__text">Default</span>
-            </span>
-        </label>
-    </div>
-    <div class="radio-set">
-        <label class="radio_Checked">
-            <input class="radio__input" type="radio" name="option" value="a2">
-            <span class="radio__state radio_on">
+        </span>
+    </label>
+</div>
+<div class="radio-wrapper">
+    <label class="radio radio_active">
+        <input class="radio__input" type="radio" name="option" value="a2">
+        <span class="radio__state">
                 <span class="radio__control">
                     <span class="radio__icon">
                     </span>
                 </span>
                 <span class="radio__text">Selected</span>
-            </span>
-        </label>
-    </div>
-    <div class="radio-set">
-        <div class="radio__state radio__state_Disabled">
-            <div class="radio__control radio__control_Disabled"></div>
-            <div class="radio__text radio__text_Disabled">Disabled</div>
+        </span>
+    </label>
+</div>
+<div class="radio-wrapper">
+    <div class="radio radio_disabled">
+        <div class="radio__state radio__state-disabled">
+            <div class="radio__control radio__control-disabled"></div>
+            <div class="radio__text radio__text-disabled">Disabled</div>
         </div>
     </div>
 </div>
