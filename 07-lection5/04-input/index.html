@@ -11,45 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <style type="text/css">
-        .input__areas-wrapper {
+        .input__field-wrapper {
             margin-top: 5px;
             margin-bottom: 16px;
         }
-        .input__areas-wrapper:last-child {
+        .input_success .input__field-wrapper {
             margin-bottom: 0;
         }
     </style>
 </head>
 <body>
-<div class="input input_valid input_invalid input_success">
-    <div class="input__title">LABEL</div>
-    <div class="input__areas-wrapper">
-        <label for="input__area-1" class="input_checked"></label>
-        <input id="input__area-1" class="input__areas input__areas-placeholder" type="text" name="option" placeholder="Placeholder">
+<div class="input input_valid">
+    <label for="input-id-1" class="input_label">LABEL</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-1" class="input__field" type="text" name="option" placeholder="Placeholder">
     </div>
+</div>
 
-    <div class="input__title">ERROR</div>
-    <div class="input__areas-wrapper">
-        <label for="input__area-2" class="input_checked"></label>
-        <input id="input__area-2" class="input__areas input__areas-invalid" type="text" name="option" placeholder="Error">
-        <div class="input__icon input__icon_error">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="../../assets/images/sprite.svg#error" />
-            </svg>
-        </div>
+<div class="input input_invalid">
+    <label for="input-id-2" class="input_label">ERROR</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-2" class="input__field" type="text" name="option" placeholder="Error">
+        <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="../../assets/images/sprite.svg#error" />
+        </svg>
     </div>
+</div>
 
-    <div class="input__title">SUCCESS</div>
-    <div class="input__areas-wrapper">
-        <label for="input__area-3" class="input_checked"></label>
-        <input id="input__area-3" class="input__areas input__areas-success" type="text" name="option" placeholder="Success">
-        <div class="input__icon input__icon_success">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="../../assets/images/sprite.svg#success" />
-            </svg>
-        </div>
+<div class="input input_success">
+    <label for="input-id-3" class="input_label">SUCCESS</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-3" class="input__field" type="text" name="option" placeholder="Success">
+        <svg class="input__icon input__icon_success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="../../assets/images/sprite.svg#success" />
+        </svg>
     </div>
-
 </div>
 
 </body>

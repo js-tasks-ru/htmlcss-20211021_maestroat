@@ -7,13 +7,7 @@
     display: inline-block;
     width: 100%;
 }
-.input__title {
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 18px;
-    color: var(--grey-3);
-}
-.input__areas {
+.input__field {
     font-size: 2rem;
     height: 56px;
     width: 100%;
@@ -28,7 +22,7 @@
     color: var(--grey-4);
     outline:none;
 }
-.input__areas:focus {
+.input__field:focus {
     outline: none;
     /*bootstrap style*/
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -37,22 +31,26 @@
     transition-timing-function: ease-in-out, ease-in-out;
     transition-delay: 0s, 0s;
 }
-.input_checked {
+.input_label {
     display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 18px;
+    color: var(--grey-3);
 }
-.input_valid .input__areas-placeholder:focus {
+.input_valid .input__field:focus {
     border:1px solid  var(--blue);
 }
-.input_invalid .input__areas-invalid {
+.input_invalid .input__field {
     border: 1px solid var(--red);
 }
-.input_invalid .input__areas-invalid:focus {
+.input_invalid .input__field:focus {
     box-shadow:  0 0 0 5px var(--red-1);
 }
-.input_success .input__areas-success {
+.input_success .input__field {
     border: 1px solid var(--grey-2);
 }
-.input_success .input__areas-success:focus {
+.input_success .input__field:focus {
     border:1px solid  var(--blue);
     box-shadow: 0 0 0 5px var(--blue-4);
 }
@@ -71,29 +69,29 @@
     color: var(--blue);
 }
 
-::-webkit-input-placeholder { /* WebKit browsers */
+.input__field::-webkit-input-placeholder { /* WebKit browsers */
     font-family: 'Inter', 'Roboto', sans-serif;
     font-style: normal;
     font-size: 2rem;
     color: var(--grey-4);
 }
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.input__field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     font-family: 'Inter', 'Roboto', sans-serif;
     font-style: normal;
     font-size: 2rem;
     color: var(--grey-4);
 }
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+.input__field::-moz-placeholder { /* Mozilla Firefox 19+ */
     font-family: 'Inter', 'Roboto', sans-serif;
     font-style: normal;
     font-size: 2rem;
     color: var(--grey-4);
 }
-:-ms-input-placeholder { /* Internet Explorer 10+ */
+.input__field:-ms-input-placeholder { /* Internet Explorer 10+ */
     font-family: 'Inter', 'Roboto', sans-serif;
     font-style: normal;
     font-size: 2rem;
     color: var(--grey-4);
 }
-::-moz-placeholder { opacity: 1; }
-::-webkit-input-placeholder { opacity: 1; }
+.input__field::-moz-placeholder { opacity: 1; }
+.input__field::-webkit-input-placeholder { opacity: 1; }
