@@ -3,6 +3,7 @@
 <html lang="ru">
 <head>
     <title>checkbox</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="./checkbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
         }
     </style>
 </head>
-<body>
+<body class="preload">
 
 <div class="Checkbox__title">CHECKBOX</div>
 <div class="Checkbox-wrapper">
@@ -26,12 +27,11 @@
         <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
         <span class="Checkbox__state">
             <span class="Checkbox__control">
-                <span class="Checkbox__control-shadow"></span>
                     <svg class="Checkbox__icon">
                         <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
                     </svg>
             </span>
-            <span class="Checkbox__text">Checked</span>
+            <span class="Checkbox__text">Default</span>
         </span>
     </label>
 </div>
@@ -62,4 +62,5 @@
 </div>
 
 </body>
+<script src="../../assets/js/transition_no.js"></script>
 </html>

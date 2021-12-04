@@ -1,3 +1,14 @@
+
+.preload {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+}
+body {
+    /*position: absolute;
+    left: 20%;*/
+    padding-left: 100px;
+}
 .Checkbox {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
@@ -18,6 +29,7 @@
     clip: rect(0, 0, 0, 0);
     opacity: 0;
     outline: none;
+    /*transform: translate(50%, 50%);*/
 }
 .Checkbox__state {
     display: flex;
@@ -55,43 +67,30 @@
     border: 1px solid var(--blue);
     transition: border-color .2s linear, background .2s linear;
 }
-.Checkbox__control-shadow {
-    display: none;
-}
-.Checkbox_active .Checkbox__input:checked~.Checkbox__state .Checkbox__control .Checkbox__control-shadow {
-    display: inline-block;
-    position: absolute;
-    background-color: var(--grey-4);
-    border: 1px solid var(--grey-4);
-    border-radius: 10px;
+
+
+.Checkbox__input:checked~.Checkbox__state .Checkbox__control:before {
+    animation: pulse 0.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid var(--grey-2);
+    border-radius: 20%;
+    content: '';
     width: 70px;
     height: 70px;
-    transform-origin: center;
-    animation-name: go;
-    animation-duration: .5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: go;
-    -webkit-animation-duration: .5s;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-name: go;
-    -moz-animation-duration: .5s;
-    -moz-animation-timing-function: ease;
-    -moz-animation-fill-mode: forwards;
+    display: block;
+    box-sizing: border-box;
+    z-index: 0;
+    position: absolute;
+    /*    left: 0;
+        top: 0;*/
+    background-color: var(--grey-2);
 }
-@-webkit-keyframes go {
-    from {transform: scale(0.5); opacity: 0.8;}
+
+@keyframes pulse {
+    from {transform: scale(0.5); opacity: 1;}
     to {transform: scale(1); opacity: 0;}
 }
-@keyframes go {
-    from {transform: scale(0.5); opacity: 0.8;}
-    to {transform: scale(1); opacity: 0;}
-}
-@-moz-keyframes go {
-    from {transform: scale(0.5); opacity: 0.8;}
-    to {transform: scale(1); opacity: 0;}
-}
+
 
 .Checkbox_disabled .Checkbox__state-Disabled {
     cursor: not-allowed;
@@ -102,7 +101,3 @@
 .Checkbox_disabled  .Checkbox__text-Disabled {
     color:var(--grey-2);
 }
-/*body {*/
-/*    position: absolute;*/
-/*    left: 20%;*/
-/*}*/
