@@ -1,14 +1,4 @@
 
-.preload {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-}
-body {
-    /*position: absolute;
-    left: 20%;*/
-    padding-left: 100px;
-}
 .Checkbox {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
