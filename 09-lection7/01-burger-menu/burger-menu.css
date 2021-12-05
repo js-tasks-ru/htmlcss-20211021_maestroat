@@ -47,10 +47,10 @@
 .burger-menu[data-open] {
     transform: translateX(0);
 }
-.burger-menu[data-open] .burger-menu-backgraund {
+.burger-menu[data-open] .burger-menu__backgraund {
     display: block;
 }
-.burger-menu-backgraund {
+.burger-menu__backgraund {
     position: fixed;
     background-color: var(--grey-8);
     width: 100vw;
@@ -59,7 +59,7 @@
     top: 0;
     left: 0;
 }
-.burger-menu-window {
+.burger-menu__window {
     /*height: 375px;*/
     width: 375px;
     z-index: 1;
@@ -92,6 +92,11 @@
 .burger-menu__toogler-text {
     display: inline-block;
     color: var(--grey-4);
+}
+.burger-menu__toogle-button {
+    /*position: absolute;*/
+    /*transform: translateX(-100px);*/
+    margin-right: 50px;
 }
 .burger-menu__list {
     display: inline-block;
