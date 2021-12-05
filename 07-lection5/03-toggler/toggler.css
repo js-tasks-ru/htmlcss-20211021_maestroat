@@ -78,28 +78,31 @@
 }
 .toggler__state .toggler__control .toggler__icon::before, .toggler__state .toggler__control .toggler__icon::after {
     transition: left .5s ease;
+    /*transition: background-color .5s ease;*/
     content: '';
     display: block;
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    background-color: var(--grey-2);
     border: 1px solid transparent;
     box-sizing: border-box;
     position: absolute;
     left: 3px;
     top: 0;
     transform: translateY(2px);
+    background-color: transparent;
+}
+.toggler__state .toggler__control .toggler__icon::after {
+    background-color: var(--grey-2) !important;
 }
 .toggler__input:checked~.toggler__state .toggler__control::before {
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
-}
-.toggler__input:checked~.toggler__state .toggler__control .toggler__icon::after {
-    background-color: var(--white);
-    border: 1px solid transparent;
-    left: 25px;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 .toggler__input:checked~.toggler__state .toggler__control .toggler__icon::before {
     opacity: 0;
+}
+.toggler__input:checked~.toggler__state .toggler__control .toggler__icon::after {
+    background-color: var(--white) !important;
+    left: 25px;
 }
