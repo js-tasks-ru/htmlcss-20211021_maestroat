@@ -3,7 +3,7 @@
 @media screen and (min-width: 768px) {
     .burger-menu, #burger-menu-open {display: none;}
 }
-.burger-menu-button {
+.burger-menu__button {
     background: none;
     border: none;
     margin-top: 16px;
@@ -16,14 +16,14 @@
     align-items: center;
     justify-content: center;
 }
-.burger-menu-button-close {
+.burger-menu__button_close {
     border: 1px solid var(--grey-2);
     border-radius: 50%;
     background: var(--grey-2);
     /*margin-top: 16px;*/
     margin-left: 0;
 }
-.burger-menu-icon {
+.burger-menu__icon {
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -47,10 +47,10 @@
 .burger-menu[data-open] {
     transform: translateX(0);
 }
-.burger-menu[data-open] .burger-menu-window-backgraund {
+.burger-menu[data-open] .burger-menu-backgraund {
     display: block;
 }
-.burger-menu-window-backgraund {
+.burger-menu-backgraund {
     position: fixed;
     background-color: var(--grey-8);
     width: 100vw;
