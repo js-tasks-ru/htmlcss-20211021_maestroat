@@ -1,14 +1,4 @@
-.preload {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-}
-body {
-    /*position: absolute;
-    left: 20%;*/
-    /*padding-left: 100px;*/
-}
+
 .toggler {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
@@ -79,6 +69,8 @@ body {
     border: 1px solid var(--grey-2);
     box-sizing: border-box;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 52px;
     height: 28px;
     border-radius: 16px;
@@ -97,7 +89,7 @@ body {
     position: absolute;
     left: 3px;
     top: 0;
-    /*transform: translateY(2px);*/
+    transform: translateY(2px);
 }
 .toggler__input:checked~.toggler__state .toggler__control::before {
     background-color: var(--blue);
