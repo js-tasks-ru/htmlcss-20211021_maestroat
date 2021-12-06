@@ -1,11 +1,15 @@
-
+.preload {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 .toggler {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 1.6rem;
     line-height: 24px;
     display: inline-block;
-    /*position: relative;*/
 }
 .toggler__title {
     font-style: normal;
@@ -22,24 +26,12 @@
     outline: none;
 }
 .toggler__state {
-    cursor: pointer;
-    position: relative;
-}
-.toggler__text {
-    /*margin-left: 12px;*/
-    margin-left: 64px;
-    color:var(--grey-4);
-}
-.toggler_active .toggler__input:focus~.toggler__state .toggler__text {
-    text-decoration: underline;
-}
-.toggler_disabled .toggler__state-disabled {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    cursor: not-allowed;
+    cursor: pointer;
 }
-.toggler_disabled .toggler__control-disabled {
+.toggler__control {
     width: 52px;
     height: 28px;
     border-radius: 16px;
@@ -47,62 +39,60 @@
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+}
+.toggler__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--grey-2);
+    transform: translateX(0);
+    transition: transform .5s ease;
+}
+.toggler__control{
+    background: var(--white);
+    border: 1px solid var(--grey-2);
+    align-items: flex-start;
+    padding-left: 2px;
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.toggler__text {
+    margin-left: 12px;
+    color:var(--grey-4);
+}
+.toggler_active .toggler__input:checked~.toggler__state .toggler__control {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.toggler_active .toggler__input:checked~.toggler__state .toggler__control .toggler__icon {
+    background-color: var(--white);
+    transform: translateX(23px);
+    transition: background-color, transform .5s ease;
+}
+.toggler_active .toggler__input:focus~.toggler__state .toggler__text {
+    text-decoration: underline;
+}
+.toggler_disabled .toggler__state-disabled {
+    cursor: not-allowed;
+}
+.toggler_disabled .toggler__control-disabled {
     background: var(--grey-2);
     border: 1px solid var(--grey-2);
     align-items: flex-start;
     padding-left: 2px;
 }
 .toggler_disabled .toggler__icon-disabled {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
     background-color: var(--grey-3);
 }
 .toggler_disabled .toggler__text-disabled {
-    margin-left: 12px;
     color:var(--grey-2);
 }
-.toggler__state .toggler__control::before {
-    content: '';
-    background: var(--white);
-    border: 1px solid var(--grey-2);
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 52px;
-    height: 28px;
-    border-radius: 16px;
-    transition: all .5s ease;
-}
-.toggler__state .toggler__control .toggler__icon::before, .toggler__state .toggler__control .toggler__icon::after {
-    transition: left .5s ease;
-    /*transition: background-color .5s ease;*/
-    content: '';
-    display: block;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-    position: absolute;
-    left: 3px;
-    top: 0;
-    transform: translateY(2px);
-    background-color: transparent;
-}
-.toggler__state .toggler__control .toggler__icon::after {
-    background-color: var(--grey-2) !important;
-}
-.toggler__input:checked~.toggler__state .toggler__control::before {
-    background-color: var(--primary);
-    border-color: var(--primary);
-}
-.toggler__input:checked~.toggler__state .toggler__control .toggler__icon::before {
-    opacity: 0;
-}
-.toggler__input:checked~.toggler__state .toggler__control .toggler__icon::after {
-    background-color: var(--white) !important;
-    left: 25px;
-}
+
+
