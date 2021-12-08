@@ -21,9 +21,9 @@
 </head>
 <body class="preload">
 
-<div class="Checkbox__title">CHECKBOX</div>
+<div class="Checkbox-title">CHECKBOX</div>
 <div class="Checkbox-wrapper">
-    <label class="Checkbox Checkbox_active">
+    <label class="Checkbox">
         <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
         <span class="Checkbox__state">
             <span class="Checkbox__control">
@@ -31,13 +31,13 @@
                         <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
                     </svg>
             </span>
-            <span class="Checkbox__text">Default</span>
+            <span class="Checkbox__text">Checked</span>
         </span>
     </label>
 </div>
 
 <div class="Checkbox-wrapper">
-    <label class="Checkbox Checkbox_active">
+    <label class="Checkbox">
         <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
         <span class="Checkbox__state">
             <span class="Checkbox__control">
@@ -48,17 +48,22 @@
             </span>
             <span class="Checkbox__text">Checked</span>
         </span>
-
     </label>
 </div>
 
 <div class="Checkbox-wrapper">
-    <div class="Checkbox Checkbox_disabled">
-        <div class="Checkbox__state Checkbox__state-Disabled">
-            <div class="Checkbox__control Checkbox__control-Disabled"></div>
-            <div class="Checkbox__text Checkbox__text-Disabled">Disabled</div>
-        </div>
-    </div>
+    <label class="Checkbox">
+        <input class="Checkbox__input" type="checkbox" name="option1" value="a1" disabled>
+        <span class="Checkbox__state">
+            <span class="Checkbox__control">
+                <span class="Checkbox__control-shadow"></span>
+                    <svg class="Checkbox__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+            </span>
+            <span class="Checkbox__text">Disabled</span>
+        </span>
+    </label>
 </div>
 
 </body>
