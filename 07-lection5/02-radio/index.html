@@ -18,14 +18,13 @@
         }
     </style>
 </head>
-<body>
-
-<div class="radio__title">RADIO BUTTON</div>
+<body class="preload">
+<div class="radio-title">RADIO BUTTON</div>
 <div class="radio-wrapper">
-    <label class="radio radio_active">
+    <label class="radio">
         <input class="radio__input" type="radio" name="option" value="a1">
         <span class="radio__state">
-                <span class="radio__control">
+                <span class="radio__el">
                     <span class="radio__icon">
                     </span>
                 </span>
@@ -34,10 +33,10 @@
     </label>
 </div>
 <div class="radio-wrapper">
-    <label class="radio radio_active">
+    <label class="radio">
         <input class="radio__input" type="radio" name="option" value="a2">
         <span class="radio__state">
-                <span class="radio__control">
+                <span class="radio__el">
                     <span class="radio__icon">
                     </span>
                 </span>
@@ -46,12 +45,17 @@
     </label>
 </div>
 <div class="radio-wrapper">
-    <div class="radio radio_disabled">
-        <div class="radio__state radio__state-disabled">
-            <div class="radio__control radio__control-disabled"></div>
-            <div class="radio__text radio__text-disabled">Disabled</div>
-        </div>
-    </div>
+    <label class="radio">
+        <input class="radio__input" type="radio" name="option" value="a3" disabled>
+        <span class="radio__state">
+                <span class="radio__el">
+                    <span class="radio__icon">
+                    </span>
+                </span>
+                <span class="radio__text">Disabled</span>
+        </span>
+    </label>
 </div>
 </body>
+<script src="../../assets/js/transition_no.js"></script>
 </html>
