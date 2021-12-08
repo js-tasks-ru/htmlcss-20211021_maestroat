@@ -26,10 +26,7 @@
     outline: none;
     /*bootstrap style*/
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition-property: border-color, box-shadow;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: 0s, 0s;
+
 }
 .input_label {
     display: block;
