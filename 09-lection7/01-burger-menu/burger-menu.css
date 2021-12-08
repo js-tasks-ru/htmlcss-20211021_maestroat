@@ -1,27 +1,7 @@
 
 
 @media screen and (min-width: 768px) {
-    .burger-menu, #burger-menu-open {display: none;}
-}
-.burger-menu__button {
-    background: none;
-    border: none;
-    margin-top: 16px;
-    margin-left: 12px;
-    padding: 0;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.burger-menu__button_close {
-    border: 1px solid var(--grey-2);
-    border-radius: 50%;
-    background: var(--grey-2);
-    /*margin-top: 16px;*/
-    margin-left: 0;
+    .burger-menu, .button {display: none;}
 }
 .burger-menu__icon {
     width: 24px;
@@ -46,16 +26,13 @@
 }
 .burger-menu[data-open] {
     transform: translateX(0);
-}
-.burger-menu[data-open] .burger-menu__backgraund {
+
     display: block;
-}
-.burger-menu__backgraund {
     position: fixed;
     background-color: var(--grey-8);
     width: 100vw;
     height: 100vh;
-    display: none;
+    /*display: none;*/
     top: 0;
     left: 0;
 }
@@ -93,17 +70,12 @@
     display: inline-block;
     color: var(--grey-4);
 }
-.burger-menu__toogle-button {
-    /*position: absolute;*/
-    /*transform: translateX(-100px);*/
-    margin-right: 50px;
-}
 .burger-menu__list {
     display: inline-block;
     padding-left: 0;
     margin-bottom: 0;
 }
-.urger-menu-main {
+.burger-menu-main {
     padding-left: 4px;
 }
 /* Убираем стандартный маркер Firefox */

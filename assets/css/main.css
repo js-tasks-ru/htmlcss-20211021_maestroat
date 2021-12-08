@@ -42,3 +42,9 @@ html {
     font-size: 10px;
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+.preload {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
