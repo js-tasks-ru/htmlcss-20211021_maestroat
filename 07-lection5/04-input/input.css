@@ -26,7 +26,6 @@
     outline: none;
     /*bootstrap style*/
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-
 }
 .input__label {
     display: block;
