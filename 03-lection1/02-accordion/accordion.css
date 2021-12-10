@@ -3,7 +3,7 @@
 .accordion {
     display: flex;
     flex-flow: column wrap;
-    max-width: 579px;
+    /*max-width: 579px;*/
 }
 /* Убираем стандартный маркер Firefox */
 .accordion__item > .accordion__summary {
@@ -35,12 +35,24 @@
     outline-style: none;
     border-bottom: none;
     /* Убираем стандартный маркер Firefox */
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     padding-bottom: 1em;
     padding-top: 1em;
     padding-left: 1em;
 }
-
+.icon {
+    width: 24px;
+    height: 24px;
+    color: var(--white);
+    margin-top: 5px;
+    /*position: absolute;*/
+    /*top:  50%; right: 12px; transform: translateY(-50%);*/
+}
+.icon-up {
+    display: none;
+}
 .accordion__item[open] {
     padding-bottom: 0;
     padding-top: 0;
@@ -53,6 +65,12 @@
     padding-top: 1em;
     padding-left: 1em;
     color: var(--alternate-border);
+}
+.accordion__item[open] .accordion__summary .icon-down {
+    display: none;
+}
+.accordion__item[open] .accordion__summary .icon-up {
+    display: block;
 }
 .accordion__item[open] .open__text {
     margin-top: 0;
