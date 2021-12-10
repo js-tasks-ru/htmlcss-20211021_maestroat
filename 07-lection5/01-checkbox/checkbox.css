@@ -6,20 +6,11 @@
     line-height: 24px;
     display: inline-block;
 }
-.Checkbox-title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 18px;
-    color: var(--grey-3);
-    /*margin-bottom: 13px;*/
-}
 .Checkbox__input {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     opacity: 0;
     outline: none;
-    /*transform: translate(50%, 50%);*/
 }
 .Checkbox__state {
     display: flex;
@@ -38,6 +29,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: border-color .2s linear, background .2s linear;
 }
 .Checkbox__icon {
     display: inline-block;
@@ -55,10 +47,9 @@
 .Checkbox__input:checked~.Checkbox__state .Checkbox__control {
     background: var(--blue);
     border: 1px solid var(--blue);
-    transition: border-color .2s linear, background .2s linear;
 }
 
-.Checkbox__input:checked~.Checkbox__state .Checkbox__control:before {
+.Checkbox__input:checked~.Checkbox__state .Checkbox__control::before {
     animation: pulse 0.5s;
     animation-fill-mode: forwards;
     border: 1px solid var(--grey-2);
@@ -70,8 +61,6 @@
     box-sizing: border-box;
     z-index: 0;
     position: absolute;
-    /*    left: 0;
-        top: 0;*/
     background-color: var(--grey-2);
 }
 
@@ -79,7 +68,8 @@
     from {transform: scale(0.5); opacity: 1;}
     to {transform: scale(1); opacity: 0;}
 }
-.Checkbox__input:disabled~.Checkbox__state .Checkbox__control:before {
+
+.Checkbox__input:disabled~.Checkbox__state .Checkbox__control::before {
     display: none;
 }
 .Checkbox__input:disabled~.Checkbox__state .Checkbox__control {
