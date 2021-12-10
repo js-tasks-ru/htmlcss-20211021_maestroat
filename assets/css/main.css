@@ -11,7 +11,9 @@
     --blue-1: #4263EB;
     --blue-2: #2342C0;
     --blue-3: rgba(160,177,245,0.2);
+    --blue-4: rgba(13,110,253,.25);
     --red: #F03D3E;
+    --red-1: rgba(220, 53, 69, 0.25);
     --grey-1: #F8F9FA;
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
@@ -20,6 +22,7 @@
     --grey-6: #334D6E;
     --grey-7: #C4C4C4;
     --grey-8: rgba(196,196,196,0.5);
+    --grey-9: #F9FAFC;
 
     --error: var(--red);
     --success: var(--blue);
@@ -31,6 +34,7 @@
     --alternate-border: #212429;
 
     --button__active: green;
+
 }
 
 /** {
@@ -41,6 +45,7 @@ html {
     font-size: 10px;
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
+
 .preload {
     -webkit-transition: none !important;
     -moz-transition: none !important;
