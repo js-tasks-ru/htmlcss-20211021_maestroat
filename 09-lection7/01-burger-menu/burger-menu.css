@@ -1,8 +1,4 @@
 
-
-@media screen and (min-width: 768px) {
-    .burger-menu, .button {display: none;}
-}
 .burger-menu__icon {
     width: 24px;
     height: 24px;
@@ -26,15 +22,7 @@
 }
 .burger-menu[data-open] {
     transform: translateX(0);
-
-    display: block;
-    position: fixed;
     background-color: var(--grey-8);
-    width: 100vw;
-    height: 100vh;
-    /*display: none;*/
-    top: 0;
-    left: 0;
 }
 .burger-menu__window {
     /*height: 375px;*/
@@ -42,13 +30,11 @@
     z-index: 1;
     background: var(--grey-9);
     border-radius: 0 8px 8px 0;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     padding-left: 12px;
     padding-right: 16px;
-    /*top: 50px;
-    left: 16px;*/
 }
 .burger-menu__line {
     margin-top: 16px;
@@ -75,7 +61,11 @@
     padding-left: 0;
     margin-bottom: 0;
 }
-.burger-menu-main {
+.burger-menu__href {
+    text-decoration: none;
+    color: var(--black);
+}
+.burger-menu__main {
     padding-left: 4px;
 }
 /* Убираем стандартный маркер Firefox */
@@ -99,9 +89,10 @@
 }
 .burger-menu__list-el:first-child {
     font-size: 2rem;
-    color: var(--grey-3);
+    /*color: var(--grey-3);*/
+    color: var(--black);
     line-height: 26px;
 }
-.burger-menu__list-el_red {
+.burger-menu__list-el_active {
     color: var(--red);
 }

@@ -48,3 +48,6 @@ html {
     -o-transition: none !important;
     transition: none !important;
 }
+@media screen and (min-width: 768px) {
+    .burger-menu, .button {display: none;}
+}
