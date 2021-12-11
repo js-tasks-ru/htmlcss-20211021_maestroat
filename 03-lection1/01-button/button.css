@@ -9,12 +9,13 @@
     padding: 0.5em;
     font-size: 1.6rem;
     text-align: center;
-    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
     color: var(--white);
     cursor: pointer;
+    transition: opacity, background, border-color, box-shadow .15s ease-in-out;
 }
 .button_primary {
     background: var(--blue-1);
+    border: 1px solid var(--blue-1);
 }
 .button_primary:hover {
     background: var(--blue-2);
@@ -23,18 +24,21 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
-.button_primary:active {
-    background: var(--button__active);
+.button_primary:active, .button_primary:focus {
+    background:  var(--blue-2);
+    box-shadow: 0 0 0 5px var(--blue-4);
 }
 
-.button_secondary{
+.button_secondary {
     background: var(--purple);
+    border: 1px solid var(--purple);
 }
-.button_secondary:hover{
+.button_secondary:hover {
     background: var(--purple-2);
 }
-.button_secondary:active {
-    background: var(--button__active);
+.button_secondary:active, .button_secondary:focus {
+    background: var(--purple-2);
+    box-shadow: 0 0 0 5px var(--blue-4);
 }
 .button_alternate {
     border: 1px solid var(--grey-3);
@@ -44,7 +48,7 @@
 .button_alternate:hover {
     border-color: var(--alternate-border);
 }
-.button_alternate:active {
-    background: var(--button__active);
-    color: var(--white);
+.button_alternate:active, .button_alternate:focus {
+    border-color: var(--alternate-border);
+    box-shadow: 0 0 0 5px var(--blue-4);
 }
