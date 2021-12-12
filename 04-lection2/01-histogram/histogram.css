@@ -41,10 +41,19 @@
     flex-flow: row wrap;
     align-items: flex-end;
     margin: 0 15px 15px 15px;
+    height: 50px;
+    animation-name: go;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    transform-origin: 0 100%;
 }
 .histogram__line {
     margin-right: 1px;
     background-color: var(--blue-1);
     flex-grow: 1;
     flex-basis: auto;
+}
+@keyframes go {
+    from {transform: scaleY(0);}
+    to {transform: scaleY(1);}
 }

@@ -1,0 +1,92 @@
+.input {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 24px;
+    display: inline-block;
+    width: 100%;
+}
+.input__field {
+    font-size: 2rem;
+    height: 56px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--grey-2);
+    background-color: var(--white);
+    display: block;
+    box-sizing: border-box;
+    padding-top: 17px;
+    padding-left: 24px;
+    padding-bottom: 13px;
+    color: var(--grey-4);
+    outline:none;
+}
+.input__field:focus {
+    outline: none;
+    /*bootstrap style*/
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.input__label {
+    display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 18px;
+    color: var(--grey-3);
+}
+.input_valid .input__field:focus {
+    border:1px solid  var(--blue);
+}
+.input_invalid .input__field {
+    border: 1px solid var(--red);
+}
+.input_invalid .input__field:focus {
+    box-shadow:  0 0 0 5px var(--red-1);
+}
+.input_success .input__field {
+    border: 1px solid var(--grey-2);
+}
+.input_success .input__field:focus {
+    border:1px solid  var(--blue);
+    box-shadow: 0 0 0 5px var(--blue-4);
+}
+.input__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 100%;
+    transform: translate(-40px, -40px);
+}
+.input__icon_error {
+    color: var(--red)
+}
+.input__icon_success {
+    color: var(--blue);
+}
+.input__field::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--grey-4);
+}
+.input__field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--grey-4);
+}
+.input__field::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--grey-4);
+}
+.input__field:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 2rem;
+    color: var(--grey-4);
+}
+.input__field::-moz-placeholder { opacity: 1; }
+.input__field::-webkit-input-placeholder { opacity: 1; }

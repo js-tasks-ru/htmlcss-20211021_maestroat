@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <!-- Страница чекбокса -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./checkbox.css">
-    </head>
-    <body>
+<head>
+    <title>checkbox</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./checkbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .Checkbox-wrapper {
+            margin-bottom: 16px;
+            margin-top: 13px;
+        }
+        .Checkbox-wrapper:last-child {
+            margin-bottom: 0;
+        }
+        .Checkbox-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 18px;
+            color: var(--grey-3);
+            /*margin-bottom: 13px;*/
+        }
+    </style>
+</head>
+<body class="preload">
 
-    </body>
+<div class="Checkbox-title">CHECKBOX</div>
+<div class="Checkbox-wrapper">
+    <label class="Checkbox">
+        <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
+        <span class="Checkbox__state">
+            <span class="Checkbox__control">
+                    <svg class="Checkbox__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+            </span>
+            <span class="Checkbox__text">Checked</span>
+        </span>
+    </label>
+</div>
+
+<div class="Checkbox-wrapper">
+    <label class="Checkbox">
+        <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
+        <span class="Checkbox__state">
+            <span class="Checkbox__control">
+                <span class="Checkbox__control-shadow"></span>
+                    <svg class="Checkbox__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+            </span>
+            <span class="Checkbox__text">Checked</span>
+        </span>
+    </label>
+</div>
+
+<div class="Checkbox-wrapper">
+    <label class="Checkbox">
+        <input class="Checkbox__input" type="checkbox" name="option1" value="a1" disabled>
+        <span class="Checkbox__state">
+            <span class="Checkbox__control">
+                <span class="Checkbox__control-shadow"></span>
+                    <svg class="Checkbox__icon">
+                        <use xlink:href="../../assets/images/sprite.svg#Checkbox" />
+                    </svg>
+            </span>
+            <span class="Checkbox__text">Disabled</span>
+        </span>
+    </label>
+</div>
+
+</body>
+<script src="../../assets/js/transition_no.js"></script>
 </html>
