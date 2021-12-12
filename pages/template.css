@@ -1,0 +1,162 @@
+.page {
+	font-family: 'Inter', 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 1.6rem;
+	line-height: 24px;
+	background-color: var(--grey-9);
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-row-gap: 56px;
+	grid-column-gap: 56px;
+}
+.page__header {
+	height: 118px;
+	background-color: var(--grey-9);
+	/*background-color: red;*/
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+ 	align-items: center;
+ 	padding: 0 15px;
+}
+.header__logo {
+}
+.logo__el {
+	margin-right: 8px;
+}
+.logo__el:last-child {
+	margin-right: 0;
+}
+.header__right-block {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+ 	align-items: center;
+ 	grid-column-gap: 56px;
+}
+.header__menu {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: space-between;
+	align-items: center;
+	grid-column-gap: 24px;
+	padding-left: 0;
+}
+/* Убираем стандартный маркер Firefox */
+.header__menu  > .menu__list-el {
+    list-style: none;
+}
+/* Убираем стандартный маркер Google, Safari */
+.header__menu  .menu__list-el::-webkit-details-marker {
+    display: none
+}
+/* Убираем стандартный маркер */
+.header__menu  .menu__list-el {
+	outline-style: none;
+    border-bottom: none;
+}
+.menu__href {
+	text-decoration: none;
+	color: var(--grey-3);
+}
+.menu__href:hover {
+	color: var(--black);
+}
+.header__checked {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: space-around;
+	align-items: center;
+	grid-column-gap: 14px;
+}
+.page__main {
+	background-color: var(--grey-9);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 56px;
+/*	max-width: 1140px;
+*/	padding: 0 15px;
+	/*margin: 0 auto;*/
+	/*height: 100vh;*/
+	/*height: 100%;*/
+}
+.main__menu {
+	display: inline-block;
+	color: var(--black);
+	width: 229px;
+	/*height: 646px;*/
+	/*background-color: yellow;*/
+}
+.component {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	background-color: var(--white);
+	box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+	border-radius: 12px;
+	/*height: 100vh;*/
+	height: 100%;
+
+}
+.component__present {
+	/*height: 345px;*/
+	border-bottom: 1px solid var(--grey-2);
+	display: grid;
+	grid-template-rows: 1fr auto;
+	height: 100%;
+	padding-left: 48px;
+}
+.component__change {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: start;
+	align-items: center;
+	grid-column-gap: 24px;
+	padding-left: 0;
+}
+/* Убираем стандартный маркер Firefox */
+.component__change  > .component__change-el {
+    list-style: none;
+}
+/* Убираем стандартный маркер Google, Safari */
+.component__change .component__change-el::-webkit-details-marker {
+    display: none
+}
+/* Убираем стандартный маркер */
+.component__change .component__change-el {
+	outline-style: none;
+    border-bottom: none;
+}
+.component__href {
+	text-decoration: none;
+	color: var(--grey-3);
+}
+.component__href:hover {
+	border-bottom: 5px solid var(--alternate-border);
+	color: var(--black);
+}
+.component__cod {
+	/*height: 436px;*/
+	padding-left: 42px;
+	padding-right: 106px;
+	padding-top: 50px;
+	padding-bottom: 64px;
+}
+.page__footer {
+	display: flex;
+	flex-flow: column wrap;
+	height: 130px;
+	background-color: var(--grey-9);
+/*	margin: 0 auto;
+*/}
+.footer__text {
+	display: inline-block;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 18px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--grey-3);
+	margin: 56px auto;
+}

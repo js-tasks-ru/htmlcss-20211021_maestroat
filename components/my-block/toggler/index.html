@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Страница с кнопкой переключения -->
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>toggler</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./toggler.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .toggler-wrapper {
+            margin-top: 13px;
+            margin-bottom: 16px;
+        }
+        .toggler-wrapper:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body class="preload">
+<div class="toggler-title">TOGGLER</div>
+<div class="toggler-wrapper">
+    <label class="toggler">
+        <input class="toggler__input" type="checkbox" name="option" value="a1">
+        <span class="toggler__state">
+                <span class="toggler__control">
+                    <span class="toggler__icon">
+                    </span>
+                </span>
+            <span class="toggler__text">Off/On</span>
+            </span>
+    </label>
+</div>
+
+<div class="toggler-wrapper">
+    <label class="toggler">
+        <input class="toggler__input" type="checkbox" name="option" value="a1">
+        <span class="toggler__state">
+                <span class="toggler__control">
+                    <span class="toggler__icon">
+                    </span>
+                </span>
+             <span class="toggler__text">Off/On</span>
+             </span>
+    </label>
+</div>
+
+
+<div class="toggler-wrapper">
+    <label class="toggler">
+        <input class="toggler__input" type="checkbox" name="option" value="a1" disabled>
+        <span class="toggler__state">
+                <span class="toggler__control">
+                    <span class="toggler__icon">
+                    </span>
+                </span>
+             <span class="toggler__text">Disabled</span>
+             </span>
+    </label>
+</div>
+
+</body>
+    <script src="../../assets/js/transition_no.js"></script>
+
+</html>

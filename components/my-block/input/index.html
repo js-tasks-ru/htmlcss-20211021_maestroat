@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Страница с полем ввода -->
+<html lang="ru">
+<head>
+    <title>Input</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <style type="text/css">
+        .input__field-wrapper {
+            margin-top: 5px;
+            margin-bottom: 16px;
+        }
+        .input_success .input__field-wrapper {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body class="preload">
+<div class="input input_valid">
+    <label for="input-id-1" class="input__label">LABEL</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-1" class="input__field" type="text" name="option" placeholder="Placeholder">
+    </div>
+</div>
+
+<div class="input input_invalid">
+    <label for="input-id-2" class="input__label">ERROR</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-2" class="input__field" type="text" name="option" placeholder="Error">
+        <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="../../assets/images/sprite.svg#error" />
+        </svg>
+    </div>
+</div>
+
+<div class="input input_success">
+    <label for="input-id-3" class="input__label">SUCCESS</label>
+    <div class="input__field-wrapper">
+        <input id="input-id-3" class="input__field" type="text" name="option" placeholder="Success">
+        <svg class="input__icon input__icon_success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="../../assets/images/sprite.svg#success" />
+        </svg>
+    </div>
+</div>
+</body>
+    <script src="../../assets/js/transition_no.js"></script>
+</html>
