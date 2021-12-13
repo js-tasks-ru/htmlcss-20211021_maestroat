@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <!-- Страница бургер-меню -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./burger-menu.css">
-        <script defer src="./burger-menu.js"></script>
-    </head>
-    <body>
+<head>
+    <title>Burger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./burger-menu.css">
+    <link rel="stylesheet" href="../../07-lection5/03-toggler/toggler.css">
+    <link rel="stylesheet" href="../../03-lection1/01-button/button.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
 
-    </body>
+<body class="preload">
+<button class="button button_primary" id="burger-menu-open" style="margin-top: 16px;margin-left: 24px;padding: 0;width: 32px;height: 32px;">
+    <span>Primary</span>
+</button>
+
+<div id="burger-menu" class="burger-menu">
+    <div class="burger-menu__window">
+        <button class="button button_primary" id="burger-menu-close" style="margin-top: 16px;margin-left: 12px;padding: 0;width: 32px;height: 32px;">
+            <span>Primary</span>
+        </button>
+        <div class="burger-menu-main">
+            <hr class="burger-menu__line">
+            <div class="burger-menu__toogler">
+                <span class="burger-menu__toogler-text">Dark mode</span>
+                <label class="toggler toggler_active">
+                    <input class="toggler__input" type="checkbox" name="option" value="a1">
+                    <span class="toggler__state">
+                <span class="toggler__control">
+                    <span class="toggler__icon">
+                    </span>
+                </span>
+            </span>
+                </label>
+            </div>
+            <hr class="burger-menu__line">
+            <ul class="burger-menu__list">
+                <li class="burger-menu__list-el">Elements</li>
+                <li class="burger-menu__list-el">Avatar</li>
+                <li class="burger-menu__list-el burger-menu__list-el_red">Custom form elements</li>
+                <li class="burger-menu__list-el">Button</li>
+                <li class="burger-menu__list-el">Avatar</li>
+                <li class="burger-menu__list-el">Custom form elements</li>
+                <li class="burger-menu__list-el">Button</li>
+            </ul>
+            <hr class="burger-menu__line">
+            <ul class="burger-menu__list">
+                <li class="burger-menu__list-el">Containers</li>
+                <li class="burger-menu__list-el">Avatar</li>
+                <li class="burger-menu__list-el">Custom form elements</li>
+                <li class="burger-menu__list-el">Button</li>
+                <li class="burger-menu__list-el">Avatar</li>
+                <li class="burger-menu__list-el">Custom form elements</li>
+                <li class="burger-menu__list-el">Button</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<p style="margin-left:16px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</body>
+<script defer src="./burger-menu.js"></script>
+<script src="../../assets/js/transition_no.js"></script>
 </html>
