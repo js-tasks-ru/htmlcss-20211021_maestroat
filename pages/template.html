@@ -3,10 +3,11 @@
 <head>
 	<title>Page-component</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../assets/css/main.css">
-	<link rel="stylesheet" href="./template.css">
 	<link rel="stylesheet" href="../components/my-block/burger-menu/burger-menu.css">
 	<link rel="stylesheet" href="../components/my-block/toggler/toggler.css">
+	<link rel="stylesheet" href="../components/header/header.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="./template.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 		.page-wrapper {
 			max-width: 1140px;
 			margin: 0 auto;
-			padding: 0 15px;
+			/*padding: 0 15px;*/
 			width: 100%;
 			/*box-sizing: border-box;*/
 		}
@@ -23,25 +24,25 @@
 <body class="preload">
 <div class="page">
 	<div class="page-wrapper">
-		<div class="page__header">
+		<div class="page__header header__top">
 			<div class="header__logo">
-				<a class="logo__href" href="#">
-					<svg class="logo__el" width="32" height="32" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<a class="header__logo-href" href="#">
+					<svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect width="30" height="30" fill="#212429"/>
 					</svg>
-					<svg class="logo__el" width="32" height="32" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect width="30" height="30" fill="#212429"/>
 					</svg>
-					<svg class="logo__el" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 0L32 32H0V0Z" fill="#212429"/>
 					</svg>
 				</a>
 			</div>
 			<div class="header__right-block">
 				<ul class="header__menu">
-					<li class="menu__list-el"><a class="menu__href" href="#">Component</a></li>
-					<li class="menu__list-el"><a class="menu__href" href="#">About</a></li>
-					<li class="menu__list-el"><a class="menu__href" href="#">Contact</a></li>
+					<li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Component</a></li>
+					<li class="header__menu-list-el"><a class="header__menu-list-href" href="#">About</a></li>
+					<li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Contact</a></li>
 				</ul>
 				<div class="header__checked">
 					<div>
@@ -58,14 +59,14 @@
 						</svg>
 					</div>
 					<div class="toggler-wrapper">
-						<label class="toggler">
+						<label class="header__toggler toggler">
 							<input class="toggler__input" type="checkbox" name="option" value="a1">
 							<span class="toggler__state">
-		                <span class="toggler__control">
-		                    <span class="toggler__icon">
-		                    </span>
-		                </span>
-		        </span>
+                        <span class="toggler__control">
+                            <span class="toggler__icon">
+                            </span>
+                        </span>
+                </span>
 						</label>
 					</div>
 					<div>
@@ -79,7 +80,7 @@
 	</div>
 	<div class="page-wrapper">
 		<div class="page__main">
-			<div class="main__menu">
+			<div class="page__main-menu burger-menu">
 				<ul class="burger-menu__list">
 					<li class="burger-menu__list-el">Elements</li>
 					<li class="burger-menu__list-el"><a class="burger-menu__href" href="#">Avatar</a></li>
@@ -98,17 +99,16 @@
 					<li class="burger-menu__list-el"><a class="burger-menu__href" href="#">Custom form elements</a></li>
 					<li class="burger-menu__list-el"><a class="burger-menu__href" href="#">Button</a></li>
 				</ul>
-
 			</div>
-			<div class="component">
-				<div class="component__present">
+			<div class="page__main-component">
+				<div class="page__main-present">
 					<div></div>
-					<ul class="component__change">
-						<li class="component__change-el"><a class="component__href" href="#">HTML</a></li>
-						<li class="component__change-el"><a class="component__href" href="#">CSS</a></li>
+					<ul class="page__main-change">
+						<li class="page__main-el"><a class="page__main-href " href="#">HTML</a></li>
+						<li class="page__main-el"><a class="page__main-href " href="#">CSS</a></li>
 					</ul>
 				</div>
-				<div class="component__cod">
+				<div class="page__main-cod">
 
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 	</div>
 	<div class="page-wrapper">
 		<div class="page__footer">
-			<div class="footer__text">Reusable component library</div>
+			<div class="page__footer-text">Reusable component library</div>
 		</div>
 	</div>
 </div>
