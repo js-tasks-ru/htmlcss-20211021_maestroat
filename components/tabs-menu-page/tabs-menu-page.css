@@ -1,0 +1,25 @@
+
+#tab1:checked ~ .page__main-change .page__main-el .page__main-label[for="tab1"]:after, #tab2:checked ~ .page__main-change .page__main-el .page__main-label[for="tab2"]:after {
+	transform: scaleX(1);
+}
+
+#tab1:checked ~ .page__main-change .page__main-el .page__main-label[for="tab1"], #tab2:checked ~ .page__main-change .page__main-el .page__main-label[for="tab2"] {
+    color: var(--black);
+}
+
+#tab1:hover ~ .page__main-change .page__main-el .page__main-label[for="tab1"]:after, #tab2:hover ~ .page__main-change .page__main-el .page__main-label[for="tab2"]:after  {
+    transform: scaleX(1);
+}
+#tab2:checked~.page__main-cod-css {
+	display: block;
+}
+#tab2:checked~.page__main-cod-html {
+	display: none;
+}
+#tab1:checked~.page__main-cod-html {
+	display: block;
+}
+#tab1:checked~.page__main-cod-css {
+	display: none;
+	position: relative;
+}
