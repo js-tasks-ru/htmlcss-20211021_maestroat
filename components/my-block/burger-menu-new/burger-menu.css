@@ -1,0 +1,127 @@
+
+
+/*@media screen and (min-width: 768px) {
+    .burger-menu, .button {display: none;}
+}*/
+.burger-menu__button {
+	background: none;
+	border: none;
+/*	margin-top: 16px;
+	margin-left: 12px;*/
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.burger-menu__button_close {
+	border: 1px solid var(--grey-2);
+	border-radius: 50%;
+	background: var(--grey-2);
+	margin-left: 0;
+}
+.burger-menu__icon {
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+.burger-menu {
+	font-family: 'Inter', 'Roboto', sans-serif;
+	font-style: normal;
+	font-size: 1.6rem;
+	line-height: 24px;
+	color: var(--black);
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	transform: translateX(-100%);
+	transition: transform 0.2s ease-in-out;
+}
+.burger-menu[data-open] {
+	transform: translateX(0);
+
+	display: block;
+	position: fixed;
+	background-color: var(--grey-8);
+	width: 100vw;
+	height: 100vh;
+	/*display: none;*/
+	top: 0;
+	left: 0;
+}
+.burger-menu__window {
+		/*height: 375px;*/
+	width: 375px;
+	z-index: 1;
+	background: var(--grey-9);
+	border-radius: 0 8px 8px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 12px;
+	padding-right: 16px;
+	padding-top: 30px;
+	/*top: 50px;
+	left: 16px;*/
+}
+.burger-menu__line {
+	margin-top: 16px;
+	margin-bottom: 0;
+	color: var(--grey-2);
+	background-color: var(--grey-2); 
+	border: none;
+	height: 1px;
+}
+.burger-menu__toogler {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 16px;
+	padding-left: 0;
+}
+.burger-menu__toogler-text {
+	display: inline-block;
+	color: var(--grey-4);
+}
+.burger-menu__list {
+	display: inline-block;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.burger-menu-main {
+	padding-left: 4px;
+}
+/* Убираем стандартный маркер Firefox */
+.burger-menu__list > .burger-menu__list-el {
+    list-style: none;
+}
+/* Убираем стандартный маркер Google, Safari */
+.burger-menu__list .burger-menu__list-el::-webkit-details-marker {
+    display: none
+}
+/* Убираем стандартный маркер */
+.burger-menu__list .burger-menu__list-el {
+	outline-style: none;
+    border-bottom: none;
+}
+.burger-menu__list-el {
+	margin-bottom: 10px;
+}
+.burger-menu__list-el:last-child {
+	margin-bottom: 0;
+}
+.burger-menu__list-el:first-child {
+	font-size: 2rem;
+	color: var(--grey-3);
+	line-height: 26px;
+}
+.burger-menu__list-el_red {
+	color: var(--red);
+}

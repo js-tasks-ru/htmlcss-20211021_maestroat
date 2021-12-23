@@ -31,10 +31,10 @@
     --secondary: var(--purple);
 
     --alternate-text: #495057;
-    --alternate-border: #212429;
+    --alternate-border: #212429;    
 
     --button__active: green;
-
+    
 }
 
 /** {
@@ -54,5 +54,12 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-    .burger-menu, .button {display: none;}
+    .burger-menu, .page__header-button {display: none;}
+}
+@media screen and (max-width: 768px) {
+    .header__right-block, .page__main-menu, .left-menu {display: none;}
+    .page {grid-template-areas: "header header"
+                        "main main"
+                        "footer footer";
+            grid-column-gap: 0;}
 }
