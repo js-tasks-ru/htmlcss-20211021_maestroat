@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <!-- Пример использования theme-changer -->
 <html lang="ru">
-    <head>
-        <style>
-            html[data-theme-dark] {
-                background: #000;
-            }
-        </style>
-        <script defer src="./theme-changer.js"></script>
-    </head>
-    <body>
-        <input type="checkbox" id="theme-changer">
-    </body>
+<head>
+    <link rel="stylesheet" href="../../07-lection5/01-checkbox/checkbox.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        html[data-theme-dark] {
+            background: #000;
+        }
+    </style>
+    <script defer src="./theme-changer.js"></script>
+</head>
+<body>
+<label class="Checkbox">
+    <input id="theme-changer" class="Checkbox__input" type="checkbox" name="option1" value="a1">
+    <span class="Checkbox__state">
+                <span class="Checkbox__control">
+                    <span class="Checkbox__control-shadow"></span>
+                        <svg class="Checkbox__icon">
+                            <use xlink:href="../../assets/images/sprite.svg#checkbox" />
+                        </svg>
+                </span>
+                <span class="Checkbox__text">Checked</span>
+            </span>
+</label>
+</body>
 </html>
