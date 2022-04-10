@@ -1,13 +1,7 @@
 
 .avatar {
-	/*width: 102px;*/
-	/*height: 102px;*/
 	border-radius: 50%;
 	overflow: hidden;
-/*	background-image: url("../../assets/images/avatar.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;*/
 }
 .avatar__img {
 	height: 100%;

@@ -1,15 +1,4 @@
-.preload {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
 
-}
-body {
-    /*position: absolute;
-    left: 20%;*/
-    /*padding-left: 100px;*/
-}
 .toggler {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
@@ -40,11 +29,19 @@ body {
 .toggler__control {
     width: 52px;
     height: 28px;
+    border: 1px solid var(--grey-2);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     box-sizing: border-box;
+    padding-left: 2px;
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    background-color: var(--input-color);
 }
 .toggler__icon {
     display: inline-block;
@@ -54,16 +51,6 @@ body {
     background-color: var(--grey-2);
     transform: translateX(0);
     transition: transform .5s ease;
-}
-.toggler__control{
-    background: var(--white);
-    border: 1px solid var(--grey-2);
-    align-items: flex-start;
-    padding-left: 2px;
-    transition-property: background-color, border;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
 }
 .toggler__text {
     margin-left: 12px;

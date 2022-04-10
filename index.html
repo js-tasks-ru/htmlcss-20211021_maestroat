@@ -1,10 +1,694 @@
 <!DOCTYPE html>
 <!-- Главная страница -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="./assets/css/main.css">
-    </head>
-    <body>
+<head>
+    <title>Index-Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./components/my-block/button/button.css">
+    <link rel="stylesheet" href="./components/my-block/burger-menu-new/burger-menu.css">
+    <link rel="stylesheet" href="./components/tabs-menu-general/tabs-menu-general.css">
+    <link rel="stylesheet" href="./components/my-block/toggler/toggler.css">
+    <link rel="stylesheet" href="./components/my-block/tooltip/tooltip.css">
+    <link rel="stylesheet" href="./components/my-block/radio/radio.css">
+    <link rel="stylesheet" href="./components/my-block/checkbox/checkbox.css">
+    <link rel="stylesheet" href="./components/my-block/calendar/calendar.css">
+    <link rel="stylesheet" href="./components/my-block/input/input.css">
+    <link rel="stylesheet" href="./components/my-block/modal/modal.css">
+    <link rel="stylesheet" href="./components/my-block/avatar/avatar.css">
+    <link rel="stylesheet" href="./components/my-block/histogram/histogram.css">
+    <link rel="stylesheet" href="./components/my-block/skeleton/skeleton.css">
+    <link rel="stylesheet" href="./components/my-block/02-modal/modal.css">
+    <link rel="stylesheet" href="./components/my-block/accordion/accordion.css">
+    <link rel="stylesheet" href="./components/header/header.css">
+    <link rel="stylesheet" href="./components/footer/footer.css">
+    <link rel="stylesheet" href="./components/page/page.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .wrapper-color {
+            background-color: var(--main-bg);
+        }
+        .component__wrapper {
+            margin: auto;
+            pointer-events: none;
+        }
+        .component__wrapper-2 {
+            margin: auto 0;
+            pointer-events: none;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 25px 15px;
+            box-sizing: border-box;
+        }
+    </style>
+    <script defer src="./assets/js/theme-changer.js"></script>
+</head>
+<body class="preload wrapper-color">
+<div class="wrapper-color container">
+    <header class="header">
 
-    </body>
+        <div class="header__top">
+            <div class="header__burger-menu burger-menu">
+                <button type="button" id="burger-menu-open" class="burger-menu__button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger-menu__icon header__burger-menu-icon">
+                        <use xlink:href="./assets/images/sprite.svg#burger-button" />
+                    </svg>
+                </button>
+                <div id="burger-menu" class="burger-menu__page">
+                    <div class="header__burger-menu-windows burger-menu__window">
+                        <button type="button" id="burger-menu-close" class="burger-menu__button burger-menu__button_close">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="./assets/images/sprite.svg#close" />
+                            </svg>
+                        </button>
+                        <div class="burger-menu__header header__logo">
+                            <a class="header__logo-href" href="./index.html">
+                                <svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="30" height="30"/>
+                                </svg>
+                                <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="32" height="32" rx="16"/>
+                                </svg>
+                                <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0L32 32H0V0Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="burger-menu__main">
+                            <hr class="burger-menu__line">
+                            <div class="burger-menu__toogler">
+                                <span class="burger-menu__toogler-text">Dark mode</span>
+                                <label class="toggler toggler_active">
+                                    <input id="theme-changer-burger" class="toggler__input" type="checkbox" name="option" value="a1">
+                                    <span class="toggler__state">
+                        <span class="toggler__control">
+                            <span class="toggler__icon">
+                            </span>
+                        </span>
+                    </span>
+                                </label>
+                            </div>
+                            <hr class="burger-menu__line">
+                            <ul class="burger-menu__list">
+                                <li class="burger-menu__list-el">Components</li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/modal.html">Modal</a></li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/tooltip.html">Tooltip</a></li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/avatar.html">Avatar</a></li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/calendar.html">Calendar</a></li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/histogram.html">Histogram</a></li>
+                                <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="./pages/selected.html">Custom form elements</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__logo">
+                <a class="header__logo-href" href="./index.html">
+                    <svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30"/>
+                    </svg>
+                    <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16"/>
+                    </svg>
+                    <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L32 32H0V0Z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="header__right-block">
+                <ul class="header__menu">
+                    <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Component</a></li>
+                    <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">About</a></li>
+                    <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Contact</a></li>
+                </ul>
+                <div class="header__checked">
+                    <div class="header__icon header__icon_sun">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="./assets/images/sprite.svg#sun" />
+                        </svg>
+                    </div>
+                    <div>
+                        <label class="header__toggler toggler">
+                            <input id="theme-changer" class="toggler__input" type="checkbox" name="option" value="a1">
+                            <span class="toggler__state">
+                                <span class="toggler__control">
+                                <span class="toggler__icon">
+                                </span>
+                                </span>
+                                </span>
+                        </label>
+                    </div>
+                    <div class="header__icon header__icon_moon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="./assets/images/sprite.svg#moon" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+</div>
+<main class="main">
+    <div class="wrapper-color">
+        <h1 class="main__title">Reusable component</h1>
+    </div>
+    <div class="main__tabs-menu-general tabs-menu-general">
+        <input checked id="tab1" type="radio" name="tabs" class="tabs-menu-general__input">
+        <input id="tab2" type="radio" name="tabs" class="tabs-menu-general__input">
+        <input id="tab3" type="radio" name="tabs" class="tabs-menu-general__input">
+        <input id="tab4" type="radio" name="tabs" class="tabs-menu-general__input">
+        <nav class="tabs-menu-general__nav">
+            <ul class="tabs-menu-general__list main__wrapper">
+                <li class="tabs-menu-general__el">
+                    <label for="tab1" class="tabs-menu-general__label">All components</label>
+                </li>
+                <li class="tabs-menu-general__el">
+                    <label for="tab2" class="tabs-menu-general__label">Atoms</label>
+                </li>
+                <li class="tabs-menu-general__el">
+                    <label for="tab3" class="tabs-menu-general__label">Molecules</label>
+                </li>
+                <li class="tabs-menu-general__el">
+                    <label for="tab4" class="tabs-menu-general__label">Organisms</label>
+                </li>
+            </ul>
+        </nav>
+        <div class="main__divider"></div>
+
+        <div class="main__wrapper">
+            <div class="main__card-list">
+                <div class="main__component" id="component-1">
+                    <a class="main__href" href="./pages/tooltip.html">
+                        <div class="component__wrapper">
+                            <div class="main__tooltip tooltip">
+                                <div class="tooltip__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="./assets/images/sprite.svg#tooltip" />
+                                    </svg>
+                                </div>
+                                <div class="tooltip__bubble">
+                                    <div class="tooltip__text">Helper Text</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__component-text">Tooltip </div>
+                    </a>
+                </div>
+
+                <div class="main__component" id="component-2">
+                    <a class="main__href" href="./pages/selected.html">
+                        <div class="component__wrapper main__button-group-component">
+
+                            <label class="main__radio radio">
+                                <input class="radio__input" type="radio" name="option" value="a1">
+                                <span class="radio__state">
+                                <span class="radio__el main__radio-el-card">
+                                <span class="radio__icon">
+                                </span>
+                                </span>
+                                <span class="radio__text">Default</span>
+                                </span>
+                            </label>
+
+                            <label class="main__radio radio">
+                                <input class="radio__input" type="radio" name="option" value="a2" checked>
+                                <span class="radio__state">
+                                <span class="radio__el main__radio-el-card">
+                                <span class="radio__icon">
+                                </span>
+                                </span>
+                                <span class="radio__text">Selected</span>
+                                </span>
+                            </label>
+
+                            <label class="main__Checkbox Checkbox">
+                                <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
+                                <span class="Checkbox__state">
+                        <span class="Checkbox__control main__Checkbox-control-card">
+                            <svg class="Checkbox__icon main__Checkbox-icon">
+                                <!-- <use xlink:href="./assets/images/sprite.svg#checkbox" /> -->
+                            </svg>
+                        </span>
+                        <span class="Checkbox__text">Default</span>
+                        </span>
+                            </label>
+
+                            <label class="main__Checkbox Checkbox">
+                                <input class="Checkbox__input" type="checkbox" name="option1" value="a2" checked>
+                                <span class="Checkbox__state">
+                        <span class="Checkbox__control main__Checkbox-control-card">
+                        <span class="Checkbox__control-shadow"></span>
+                            <svg class="Checkbox__icon main__Checkbox-icon">
+                                <use xlink:href="./assets/images/sprite.svg#checkbox" />
+                            </svg>
+                        </span>
+                        <span class="Checkbox__text">Checked</span>
+                        </span>
+                            </label>
+
+                        </div>
+                        <div class="main__component-text">Custom form elements</div>
+                    </a>
+                </div>
+
+                <div class="main__component" id="component-3">
+                    <a class="main__href" href="./pages/calendar.html">
+                        <div class="component__wrapper-2">
+                            <div class="calendar">
+                                <div class="calendar__title">October 2021</div>
+                                <div class="calendar__wrapper">
+                                    <div class="calendar__inner">
+
+                                        <span class="calendar__item">Mon</span>
+                                        <span class="calendar__item">Tue</span>
+                                        <span class="calendar__item">Wed</span>
+                                        <span class="calendar__item">Thu</span>
+                                        <span class="calendar__item">Fri</span>
+                                        <span class="calendar__item">Sat</span>
+                                        <span class="calendar__item">Sun</span>
+                                        <!-- <span class="calendar__item">&nbsp;</span> -->
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item">1</span>
+                                        <span class="calendar__item">2</span>
+                                        <span class="calendar__item">3</span>
+                                        <span class="calendar__item">4</span>
+                                        <span class="calendar__item">5</span>
+                                        <span class="calendar__item">6</span>
+                                        <span class="calendar__item">7</span>
+                                        <span class="calendar__item">8</span>
+                                        <span class="calendar__item">9</span>
+                                        <span class="calendar__item">10</span>
+                                        <span class="calendar__item">11</span>
+                                        <span class="calendar__item">12</span>
+                                        <span class="calendar__item">13</span>
+                                        <span class="calendar__item">14</span>
+                                        <span class="calendar__item">15</span>
+                                        <span class="calendar__item">16</span>
+                                        <span class="calendar__item">17</span>
+                                        <span class="calendar__item calendar__item_blue">18</span>
+                                        <span class="calendar__item calendar__item_blue-3">19</span>
+                                        <span class="calendar__item calendar__item_blue-3">20</span>
+                                        <span class="calendar__item calendar__item_blue-3">21</span>
+                                        <span class="calendar__item calendar__item_blue-3">22</span>
+                                        <span class="calendar__item calendar__item_blue">23</span>
+                                        <span class="calendar__item ">24</span>
+                                        <span class="calendar__item">25</span>
+                                        <span class="calendar__item">26</span>
+                                        <span class="calendar__item">27</span>
+                                        <span class="calendar__item">28</span>
+                                        <span class="calendar__item">29</span>
+                                        <span class="calendar__item">30</span>
+                                        <span class="calendar__item">31</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__component-text">Calendar</div>
+                    </a>
+                </div>
+
+                <div class="main__component" id="component-4">
+                    <a class="main__href" href="./pages/modal.html">
+                        <div class="component__wrapper-2">
+                            <div class="main__modal-new modal-new">
+                                <div class="modal-new__window">
+                                    <div class="modal-new__window-main">
+                                        <div class="modal-new__window-title main__modal-new-title">Modal</div>
+                                        <div class="modal-new__close">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <use xlink:href="./assets/images/sprite.svg#close" />
+                                            </svg>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="input input_valid">
+                                        <label for="input-id-1" class="input__label">EMAIL</label>
+                                        <input id="input-id-1" class="input__field main__input-card" type="text" name="option" placeholder="Placeholder">
+                                    </div>
+
+                                    <button class="button button_primary modal-new__button main__modal-button " id="">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main__component-text">Modal</div>
+                    </a>
+                </div>
+
+                <div class="main__component" id="component-5">
+                    <a class="main__href" href="./pages/histogram.html">
+                        <div class="component__wrapper-2">
+                            <div class="histogram">
+                                <div class="histogram__header">
+                                    <div class="histogram__header-block">
+                                        <p class="histogram__title">Total orders</p>
+                                        <p class="histogram__amount">50254</p>
+                                    </div>
+                                    <div class="histogram__view">
+                                        View all
+                                    </div>
+                                </div>
+                                <div class="histogram__chart">
+                                    <div class="histogram__line" style="height: 50px;"></div>
+                                    <div class="histogram__line" style="height: 35px;"></div>
+                                    <div class="histogram__line" style="height: 22px;"></div>
+                                    <div class="histogram__line" style="height: 39px;"></div>
+                                    <div class="histogram__line" style="height: 22px;"></div>
+                                    <div class="histogram__line" style="height: 30px;"></div>
+                                    <div class="histogram__line" style="height: 39px;"></div>
+                                    <div class="histogram__line" style="height: 50px;"></div>
+                                    <div class="histogram__line" style="height: 11px;"></div>
+                                    <div class="histogram__line" style="height: 22px;"></div>
+                                    <div class="histogram__line" style="height: 30px;"></div>
+                                    <div class="histogram__line" style="height: 35px;"></div>
+                                    <div class="histogram__line" style="height: 11px; margin-right: 0;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="main__component-text">Histogram</div>
+                    </a>
+                </div>
+
+                <div class="main__component" id="component-6">
+                    <a class="main__href" href="./pages/avatar.html">
+                        <div class="component__wrapper">
+                            <div class="main__avatar avatar">
+                                <img src="./assets/images/avatar.png" alt="avatar" class="avatar__img">
+                            </div>
+                        </div>
+                        <div class="main__component-text">Avatar</div>
+                    </a>
+                </div>
+
+                <div class="main__component_nocard" id="component-7">
+                    <h3 class="main__component-text_nocard">BUTTONS</h3>
+                    <div class="main__component-button-group">
+                        <div class="main__button-group">
+                            <div class="main__button">
+                                <span>Button</span>
+                            </div>
+                            <div class="main__button_disabled">
+                                <span>Button Disabled</span>
+                            </div>
+                        </div>
+                        <div class="main__button-group">
+                            <button class="button button_primary">
+                                <span>Primary</span>
+                            </button>
+                            <button class="button button_primary button_primary:disabled" disabled>
+                                <span>Primary Disabled</span>
+                            </button>
+                        </div>
+                        <div class="main__button-group">
+                            <button class="button button_secondary">
+                                <span>Secondary</span>
+                            </button>
+                            <button class="button button_secondary button_secondary:disabled" disabled>
+                                <span>Secondary Disabled</span>
+                            </button>
+                        </div>
+                        <div class="main__button-group">
+                            <button class="button button_alternate">
+                                <span>Alternate</span>
+                            </button>
+                            <button class="button button_alternate button_alternate:disabled" disabled>
+                                <span>Alternate Disabled</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__component_nocard" id="component-8">
+                    <h3 class="main__component-text_nocard">Skeleton</h3>
+                    <div class="main__skeleton skeleton">
+                        <div class="skeleton__header">
+                            <div class="skeleton__avatar"></div>
+                            <div class="skeleton__aside">
+                                <div class="line aside__line-1">
+                                </div>
+                                <div class="line aside__line-2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skeleton__main">
+                            <div class="line main__line-1">
+                            </div>
+                            <div class="line main__line-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__component_nocard" id="component-9">
+                    <h3 class="main__component-text_nocard">Custom form elements</h3>
+                    <div class="main__component-button-group">
+                        <div class="main__button-group button-group">
+                            <label class="main__radio radio">
+                                <input class="radio__input" type="radio" name="option" value="a1">
+                                <span class="radio__state">
+                        <span class="radio__el">
+                            <span class="radio__icon">
+                            </span>
+                        </span>
+                        <span class="radio__text">Default</span>
+                </span>
+                            </label>
+                            <label class="main__radio radio">
+                                <input class="radio__input" type="radio" name="option" value="a2" checked>
+                                <span class="radio__state">
+                            <span class="radio__el">
+                                <span class="radio__icon">
+                                </span>
+                            </span>
+                            <span class="radio__text">Selected</span>
+                    </span>
+                            </label>
+                            <label class="main__radio radio">
+                                <input class="radio__input" type="radio" name="option" value="a3" disabled>
+                                <span class="radio__state">
+                                        <span class="radio__el">
+                                            <span class="radio__icon">
+                                            </span>
+                                        </span>
+                                        <span class="radio__text">Disabled</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="button-group main__button-group">
+                            <div class="">
+                                <label class="main__component-Checkbox Checkbox">
+                                    <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
+                                    <span class="Checkbox__state">
+                                <span class="Checkbox__control">
+                            <svg class="Checkbox__icon main__Checkbox-icon">
+                                <use xlink:href="./assets/images/sprite.svg#checkbox" />
+                            </svg>
+                    </span>
+                    <span class="Checkbox__text">Default</span>
+                    </span>
+                                </label>
+                            </div>
+
+                            <label class="main__component-Checkbox Checkbox">
+                                <input class="Checkbox__input" type="checkbox" name="option1" value="a1" checked>
+                                <span class="Checkbox__state">
+                        <span class="Checkbox__control">
+                        <span class="Checkbox__control-shadow"></span>
+                            <svg class="Checkbox__icon main__Checkbox-icon">
+                                <use xlink:href="./assets/images/sprite.svg#checkbox" />
+                            </svg>
+                    </span>
+                    <span class="Checkbox__text">Checked</span>
+                </span>
+                            </label>
+                            <label class="main__component-Checkbox Checkbox">
+                                <input class="Checkbox__input" type="checkbox" name="option1" value="a1" disabled>
+                                <span class="Checkbox__state">
+                            <span class="Checkbox__control">
+                                <span class="Checkbox__control-shadow"></span>
+                                    <svg class="Checkbox__icon main__Checkbox-icon">
+                                        <use xlink:href="./assets/images/sprite.svg#checkbox" />
+                                    </svg>
+                            </span>
+                            <span class="Checkbox__text">Disabled</span>
+                        </span>
+                            </label>
+                        </div>
+
+                        <div class="button-group main__button-group">
+                            <label class="main__component-toggler toggler">
+                                <input class="toggler__input" type="checkbox" name="option" value="a1">
+                                <span class="toggler__state">
+                                    <span class="toggler__control">
+                                        <span class="toggler__icon">
+                                        </span>
+                                    </span>
+                                <span class="toggler__text">Off/On</span>
+                                </span>
+                            </label>
+                            <label class="main__component-toggler toggler">
+                                <input class="toggler__input" type="checkbox" name="option" value="a1">
+                                <span class="toggler__state">
+                                    <span class="toggler__control">
+                                        <span class="toggler__icon">
+                                        </span>
+                                    </span>
+                                <span class="toggler__text">Off/On</span>
+                                </span>
+                            </label>
+                            <label class="main__component-toggler toggler">
+                                <input class="toggler__input" type="checkbox" name="option" value="a1" disabled>
+                                <span class="toggler__state">
+                                    <span class="toggler__control">
+                                        <span class="toggler__icon">
+                                        </span>
+                                    </span>
+                                 <span class="toggler__text">Disabled</span>
+                                 </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__component_nocard" id="component-10">
+                    <h3 class="main__component-text_nocard">Custom form elements</h3>
+                    <div class="component__wrapper-nocard">
+                        <div class="main__input input">
+                            <div class="main__input-element input_valid">
+                                <label for="input-id-2" class="input__label">LABEL</label>
+                                <input id="input-id-2" class="input__field" type="text" name="option" placeholder="Placeholder">
+                            </div>
+
+                            <div class="main__input-element input_invalid">
+                                <label for="input-id-3" class="input__label">ERROR</label>
+                                <input id="input-id-3" class="input__field" type="text" name="option" placeholder="Error">
+                                <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./assets/images/sprite.svg#error" />
+                                </svg>
+                            </div>
+
+                            <div class="main__input-element input_success">
+                                <label for="input-id-4" class="input__label">SUCCESS</label>
+                                <input id="input-id-4" class="input__field" type="text" name="option" placeholder="Success">
+                                <svg class="input__icon input__icon_success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use xlink:href="./assets/images/sprite.svg#success" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__component_nocard" id="component-11">
+                    <h3 class="main__component-text_nocard">Modal</h3>
+                    <div class="">
+                        <button class="button button_primary main__component-button" id="modal-open">
+                            <span>Basic CSS-Only Modal</span>
+                        </button>
+
+                        <div id="modal" class="main__modal modal-new modal">
+                            <div class="main__modal-window modal-new__window modal__window">
+                                <div class="modal-new__window-main">
+                                    <div class="modal-new__window-title">Modal</div>
+                                    <div id="modal-close" class="modal-new__close">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="./assets/images/sprite.svg#close" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="input input_valid">
+                                    <label for="input-id-5" class="input__label">EMAIL</label>
+                                    <input id="input-id-5" class="input__field main__modal-input" type="text" name="option" placeholder="Placeholder">
+                                </div>
+
+                                <button class="main__modal-button button button_primary modal-new__button">
+                                    <span>Submit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__component_nocard" id="component-12">
+                    <h3 class="main__component-text_nocard">Accordion</h3>
+                    <section class="main__accordion accordion">
+                        <details class="accordion__item">
+                            <summary class="accordion__summary">
+                                <span>Accordion item 1</span>
+                                <svg class="accordion__icon accordion__icon_down">
+                                    <use xlink:href="./assets/images/sprite.svg#strelka-down" />
+                                </svg>
+<!--                                <svg class="accordion__icon accordion__icon_up">-->
+<!--                                    <use xlink:href="./assets/images/sprite.svg#strelka-up" />-->
+<!--                                </svg>-->
+                            </summary>
+                            <p class="accordion__open-text">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </details>
+                        <details class="accordion__item ">
+                            <summary class="accordion__summary">
+                                <span>Accordion item 2</span>
+                                <svg class="accordion__icon accordion__icon_down">
+                                    <use xlink:href="./assets/images/sprite.svg#strelka-down" />
+                                </svg>
+<!--                                <svg class="accordion__icon accordion__icon_up">-->
+<!--                                    <use xlink:href="./assets/images/sprite.svg#strelka-up" />-->
+<!--                                </svg>-->
+                            </summary>
+                            <p class="accordion__open-text">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </details>
+                        <details class="accordion__item">
+                            <summary class="accordion__summary">
+                                <span>Accordion item 3</span>
+                                <svg class="accordion__icon accordion__icon_down">
+                                    <use xlink:href="./assets/images/sprite.svg#strelka-down" />
+                                </svg>
+<!--                                <svg class="accordion__icon accordion__icon_up">-->
+<!--                                    <use xlink:href="./assets/images/sprite.svg#strelka-up" />-->
+<!--                                </svg>-->
+                            </summary>
+                            <p class="accordion__open-text">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </p>
+                        </details>
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</main>
+<div class="wrapper-color">
+    <footer class="footer main__footer main__wrapper">
+        <h2 class="footer__title">
+            About
+        </h2>
+        <div class="footer__text">
+            This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.
+        </div>
+    </footer>
+</div>
+</body>
+<script defer src="./components/my-block/burger-menu-new/burger-menu.js"></script>
+<script src="./assets/js/transition_no.js"></script>
+<script src="./components/my-block/02-modal/index.js"></script>
 </html>

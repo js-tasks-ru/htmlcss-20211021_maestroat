@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Страница бургер-меню -->
+<html lang="ru">
+    <head>
+    <title>Burger</title>
+        <meta charset="utf-8">
+    	<meta name="viewport" content="widht=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../../assets/css/main.css">
+        <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="../toggler/toggler.css">
+        <link rel="stylesheet" href="../button/button.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="preload">
+
+	<div class="burger-menu">	
+    <button type="button" id="burger-menu-open" class="burger-menu__button">
+    	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger-menu__icon">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.4477 2.44772 11 3 11H21C21.5523 11 22 11.4477 22 12C22 12.5523 21.5523 13 21 13H3C2.44772 13 2 12.5523 2 12Z" fill="#212429"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z" fill="#212429"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M2 18C2 17.4477 2.44772 17 3 17H21C21.5523 17 22 17.4477 22 18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z" fill="#212429"/>
+		</svg>
+    </button>
+
+    <div id="burger-menu" class="burger-menu__page">
+    	<div class="burger-menu__window">
+    	 <button type="button" id="burger-menu-close" class="burger-menu__button burger-menu__button_close">
+    	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger-menu__icon">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#212429"/>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#212429"/>
+		</svg>
+    	</button>
+    	<div class="burger-menu__main">
+    	<hr class="burger-menu__line">
+    	<div class="burger-menu__toogler">
+    		<span class="burger-menu__toogler-text">Dark mode</span>
+    		<label class="toggler toggler_active">
+        	<input class="toggler__input" type="checkbox" name="option" value="a1">
+        	<span class="toggler__state">
+                <span class="toggler__control">
+                    <span class="toggler__icon">
+                    </span>
+                </span>
+            </span>
+    		</label>
+    	</div>
+    	<hr class="burger-menu__line">
+    	<ul class="burger-menu__list">
+    		<li class="burger-menu__list-el">Elements</li>
+    		<li class="burger-menu__list-el">Avatar</li>
+    		<li class="burger-menu__list-el burger-menu__list-el_red">Custom form elements</li>
+    		<li class="burger-menu__list-el">Button</li>
+    		<li class="burger-menu__list-el">Avatar</li>
+    		<li class="burger-menu__list-el">Custom form elements</li>
+    		<li class="burger-menu__list-el">Button</li>
+  		</ul>
+  		<hr class="burger-menu__line">
+  		<ul class="burger-menu__list">
+    		<li class="burger-menu__list-el">Containers</li>
+    		<li class="burger-menu__list-el">Avatar</li>
+    		<li class="burger-menu__list-el">Custom form elements</li>
+    		<li class="burger-menu__list-el">Button</li>
+    		<li class="burger-menu__list-el">Avatar</li>
+    		<li class="burger-menu__list-el">Custom form elements</li>
+    		<li class="burger-menu__list-el">Button</li>
+  		</ul>
+  		</div>
+    	</div>
+        </div>
+    </div>
+
+    </body>
+    <script defer src="./burger-menu.js"></script>
+        <script src="../../../assets/js/transition_no.js"></script>
+</html>

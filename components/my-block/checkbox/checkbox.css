@@ -1,5 +1,4 @@
 
-
 .Checkbox {
     font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: normal;
@@ -7,7 +6,7 @@
     line-height: 24px;
     display: inline-block;
 }
-.Checkbox-title {
+.Checkbox__title {
     font-style: normal;
     font-weight: 500;
     font-size: 1.2rem;
@@ -20,7 +19,6 @@
     clip: rect(0, 0, 0, 0);
     opacity: 0;
     outline: none;
-    /*transform: translate(50%, 50%);*/
 }
 .Checkbox__state {
     display: flex;
@@ -29,7 +27,7 @@
     cursor: pointer;
 }
 .Checkbox__control {
-    background: var(--white);
+    background-color: var(--input-color);
     width: 28px;
     height: 28px;
     border: 1px solid var(--grey-2);
@@ -43,12 +41,13 @@
 .Checkbox__icon {
     display: inline-block;
     width: 18px;
-    height: 18px;
+    height: 10px;
     color: var(--white);
+    opacity: 0;
 }
 .Checkbox__text {
     margin-left: 12px;
-    color:var(--grey-4);
+    color: var(--text-primary);
 }
 .Checkbox__input:focus~.Checkbox__state .Checkbox__text {
     text-decoration: underline;
@@ -56,9 +55,11 @@
 .Checkbox__input:checked~.Checkbox__state .Checkbox__control {
     background: var(--blue);
     border: 1px solid var(--blue);
-    transition: border-color .2s linear, background .2s linear;
+    transition: border-color .2s linear, background-color .2s linear;
 }
-
+.Checkbox__input:checked~.Checkbox__state .Checkbox__control .Checkbox__icon {
+    opacity: 1;
+}
 .Checkbox__input:checked~.Checkbox__state .Checkbox__control:before {
     animation: pulse 0.5s;
     animation-fill-mode: forwards;
@@ -71,8 +72,6 @@
     box-sizing: border-box;
     z-index: 0;
     position: absolute;
-    /*    left: 0;
-        top: 0;*/
     background-color: var(--grey-2);
 }
 
@@ -80,17 +79,6 @@
     from {transform: scale(0.5); opacity: 1;}
     to {transform: scale(1); opacity: 0;}
 }
-
-
-/*.Checkbox_disabled .Checkbox__state-Disabled {
-    cursor: not-allowed;
-}
-.Checkbox_disabled .Checkbox__control-Disabled {
-    background: var(--grey-2);
-}
-.Checkbox_disabled  .Checkbox__text-Disabled {
-    color:var(--grey-2);
-}*/
 
 .Checkbox__input:disabled~.Checkbox__state .Checkbox__control:before {
     display: none;
