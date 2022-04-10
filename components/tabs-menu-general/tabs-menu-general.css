@@ -1,10 +1,4 @@
 
-.tabs-menu-general__list {
-	left: calc((100% - 1140px) / 2 + 15px);
-}
-.tabs-menu-general__nav {
-	background-color: var(--main-bg);
-}
 #tab1:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab1"]:after, #tab2:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab2"]:after, #tab3:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab3"]:after, #tab4:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab4"]:after {
 	transform: scaleX(1);
 }
@@ -79,7 +73,15 @@
 	outline: none;
 	pointer-events: none;
 }
+.tabs-menu-general__nav {
+	background-color: var(--main-bg);
+	overflow: hidden;
+	box-sizing: border-box;
+}
 .tabs-menu-general__list {
+	left: calc((100% - 1140px) / 2 + 15px);
+	width: 100%;
+	overflow-x: scroll;
 	display: grid;
 	grid-template-columns: repeat(4, auto);
 	justify-content: start;
