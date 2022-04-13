@@ -1,7 +1,7 @@
 .histogram {
     /*max-width: 354px;*/
     min-height: 185px;
-    background-color: var(--white);
+    background-color: var(--white-bg);
     border: 1px solid var(--grey-3);
     border-radius: 8px;
     display: flex;
@@ -23,10 +23,12 @@
 
 .histogram__title {
     opacity: 0.8;
+    color: var(--text-secondary);
 }
 .histogram__amount {
     font-size: 20px;
     line-height: 26px;
+    color: var(--text-primary);
 }
 .histogram__title,
 .histogram__amount {

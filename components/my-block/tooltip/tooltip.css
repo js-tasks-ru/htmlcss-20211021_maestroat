@@ -11,6 +11,7 @@
 .tooltip__icon {
 	display: inline-block;
 	cursor: pointer;
+	color: var(--blue-1);
 }
 
 .tooltip__bubble {
@@ -28,7 +29,6 @@
     opacity: 1;
 	pointer-events: none;
 	display: flex;
-	flex-flow: collumn wrap;
 }
 /*стрелка как в уроке*/
 .tooltip__bubble:after {
