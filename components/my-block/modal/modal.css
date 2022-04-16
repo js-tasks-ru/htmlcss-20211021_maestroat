@@ -52,16 +52,16 @@
 }
 
 /*For Mobile*/
-@media screen and (max-width: 640px) {
-    .modal-new__close {
-        left: 90%;
-        top: 2%;
-    }
-}
+/*@media screen and (max-width: 640px) {*/
+/*    .modal-new__close {*/
+/*        left: 90%;*/
+/*        top: 2%;*/
+/*    }*/
+/*}*/
 /*For Tablet*/
-@media screen and (min-width: 640px) and (max-width: 1024px) {
-    .modal-new__close {
-        left: 94%;
-        top: 3%;
-    }
-}
+/*@media screen and (min-width: 640px) and (max-width: 1024px) {*/
+/*    .modal-new__close {*/
+/*        left: 94%;*/
+/*        top: 3%;*/
+/*    }*/
+/*}*/

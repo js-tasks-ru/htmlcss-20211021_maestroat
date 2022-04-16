@@ -91,24 +91,3 @@ html[data-theme-dark] img {
     -o-transition: none !important;
     transition: none !important;
 }
-
-/*@media screen and (min-width: 768px) {*/
-/*    .burger-menu__page, .header__burger-menu {display: none}*/
-/*    .header__title {font-size: 50px}*/
-/*}*/
-/*@media screen and (max-width: 768px) {*/
-/*    .header__right-block, .page__main-menu, .left-menu {display: none;}*/
-/*    .page {grid-template-areas: "header header"*/
-/*                        "main main"*/
-/*                        "footer footer";*/
-/*            grid-column-gap: 0;}*/
-/*}*/
-/*@media screen and (max-width: 768px) {*/
-/*    .header__top {justify-content: center}*/
-/*    .header__title {padding: 18px 0 52px}*/
-/*    .tabs-menu-general__list {top: 16.2%}*/
-/*    .main__footer {max-width: 100%;}*/
-/*}*/
-/*@media screen and (max-width: 1140px) {*/
-/*    .tabs-menu-general__list {left: 15px}*/
-/*}*/

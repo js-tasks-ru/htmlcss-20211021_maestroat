@@ -70,3 +70,23 @@
 /*.accordion__item[open] .accordion__summary .accordion__icon_up {*/
 /*    display: block;*/
 /*}*/
+@media screen and (max-width: 750px) {
+    .accordion__item[open] {
+        height: 138px;
+    }
+}
+@media screen and (max-width: 530px) {
+    .accordion__item[open] {
+        height: 178px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .accordion__item[open] {
+        height: 210px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .accordion__item[open] {
+        height: 240px;
+    }
+}
