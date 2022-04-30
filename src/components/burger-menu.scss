@@ -1,0 +1,147 @@
+@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
+	font-family: 'Inter', 'Roboto', sans-serif;
+	@if $size {font-size: $size}
+	@if $color {color: $color}
+	@if $weight {font-weight: $weight}
+	@if $style {font-style: $style}
+	@if $lh {line-height: $lh}
+}
+.burger-menu {
+	@include text(1.6rem, var(--black), normal, normal, 24px);
+	&__button {
+		background: none;
+		border: none;
+		padding: 0;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		left: 10px;
+		top: 26px;
+		cursor: pointer;
+	}
+	&__button_close {
+		border: 1px solid var(--grey-2);
+		border-radius: 50%;
+		background: var(--grey-2);
+		margin-left: 0;
+		color: var(--grey-4);
+	}
+	&__header {
+		margin: auto;
+	}
+	&__icon {
+		width: 24px;
+		height: 24px;
+		display: inline-block;
+		color: var(--grey-4);
+	}
+	&__page {
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		box-sizing: border-box;
+		transform: translateX(-100%);
+		transition: transform 0.2s ease-in-out;
+	}
+	&__page[data-open] {
+		transform: translateX(0);
+		display: block;
+		position: fixed;
+		background-color: var(--grey-8);
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
+	&__window {
+		height: 100%;
+		max-width: 428px;
+		width: 100%;
+		z-index: 3;
+		background: var(--grey-9);
+		border-radius: 0 8px 8px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-left: 12px;
+		padding-right: 16px;
+		padding-top: 26px;
+		box-sizing: border-box;
+	}
+	&__line {
+		margin-top: 16px;
+		margin-bottom: 0;
+		color: var(--grey-2);
+		background-color: var(--grey-2);
+		border: none;
+		height: 1px;
+	}
+	&__toogler {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 16px;
+		padding-left: 0;
+	}
+	&__toogler-text {
+		display: inline-block;
+		color: var(--grey-4);
+	}
+	&__list {
+		display: inline-block;
+		padding-left: 0;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	&__main {
+		padding-left: 4px;
+		padding-top: 9px
+	}
+	/* Убираем стандартный маркер Firefox */
+	&__list > &__list-el {
+		list-style: none;
+	}
+	/* Убираем стандартный маркер Google, Safari */
+	&__list &__list-el::-webkit-details-marker {
+		display: none
+	}
+	/* Убираем стандартный маркер */
+	&__list &__list-el {
+		outline-style: none;
+		border-bottom: none;
+	}
+	&__list-el {
+		margin-bottom: 10px;
+	}
+	&__list-el-href {
+		text-decoration: none;
+		color: var(--font-color);
+		display: block;
+	}
+	&__list-el-href:hover {
+		color: var(--grey-4);
+	}
+	&__list-el:last-child {
+		margin-bottom: 0;
+	}
+	&__list-el:first-child {
+		font-size: 2rem;
+		color: var(--grey-3);
+		line-height: 26px;
+	}
+	&__list-el_red {
+		color: var(--red);
+	}
+	@media screen and (min-width: 768px) {
+		& {display: none;}
+	}
+
+}

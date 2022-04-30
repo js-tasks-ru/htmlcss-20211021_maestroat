@@ -1,0 +1,74 @@
+@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
+
+	@if $size {font-size: $size}
+	@if $color {color: $color}
+	@if $weight {font-weight: $weight}
+	@if $style {font-style: $style}
+	@if $lh {line-height: $lh}
+}
+.calendar {
+	border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    padding-top: 28px;
+    padding-left: 36px;
+    padding-right: 36px;
+    width: 100%;
+    max-width: 300px;
+	box-sizing: border-box;
+	margin: auto;
+	@include text(false, false, normal, normal, false);
+	font-family: 'Inter', 'Roboto', sans-serif;
+	&__title {
+		padding-bottom: 10px;
+		text-align: center;
+		@include text(2rem, var(--font-color), normal, normal, 24px);
+	}
+	@media screen and (max-width: 540px) {
+		&__title  {
+			font-size: 1.7rem;
+		}
+	}
+	&__wrapper {
+		position: relative;
+		padding-bottom: 100%;
+	}
+	&__inner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(7, 1fr);
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include text(1.6rem, var(--calendar-item), normal, normal, 20px);
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+	@media screen and (max-width: 540px) {
+		&__item {
+			font-size: 1.3rem;
+		}
+	}
+	&__item_day {
+		@include text(1.4rem, var(--calendar-day), normal, normal, false);
+	}
+	@media screen and (max-width: 540px) {
+		&__item_day {
+			font-size: 1.2rem;
+		}
+	}
+	&__item_blue {
+		background-color: var(--blue-1);
+		color: var(--white);
+	}
+	&__item_blue-3 {
+		background-color: var(--blue-3);
+		color: var(--calendar-item-active);
+	}
+}
+

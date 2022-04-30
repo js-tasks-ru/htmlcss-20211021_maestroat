@@ -1,0 +1,59 @@
+/* Стилизация кнопки */
+@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    @if $size {font-size: $size}
+    @if $color {color: $color}
+    @if $weight {font-weight: $weight}
+    @if $style {font-style: $style}
+    @if $lh {line-height: $lh}
+}
+.button {
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100%;
+    height: 48px;
+    padding: 0.5em;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    @include text(1.6rem, var(--white), normal, normal, 24px);
+    &_primary {
+        background: var(--blue-1);
+        border: 1px solid var(--blue-1);
+        &:hover {
+            background: var(--blue-2);
+            border-color: var(--blue-2);
+        }
+    }
+    &_primary:disabled, &_secondary:disabled, &_alternate:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    &_primary:active, &_primary:focus, &_secondary:active, &_secondary:focus {
+        background:  var(--blue-2);
+        box-shadow: 0 0 0 5px var(--blue-4);
+        border-color: var(--blue-2);
+    }
+    &_secondary {
+        background: var(--purple);
+        border: 1px solid var(--purple);
+        &:hover {
+            background: var(--purple-2);
+            border-color: var(--purple-2);
+        }
+    }
+    &_alternate {
+        border: 1px solid var(--grey-3);
+        background-color: var(--input-color);
+        color: var(--input-text-color);
+        &:hover {
+            border-color: var(--alternate-border);
+        }
+        &:active, &:focus {
+            border-color: var(--alternate-border);
+            box-shadow: 0 0 0 5px var(--blue-4);
+        }
+    }
+
+}
+

@@ -1,0 +1,91 @@
+
+:root {
+  --white: #ffffff;
+  --black: #212429;
+  --pink: #F784AD;
+  --purple: #7048E8;
+  --purple-2: #5028C6;
+  --blue: #374FC7;
+  --blue-1: #4263EB;
+  --blue-2: #2342C0;
+  --blue-3: rgba(160,177,245,0.2);
+  --blue-4: rgba(13,110,253,.25);
+  --red: #F03D3E;
+  --red-1: rgba(220, 53, 69, 0.25);
+  --grey-1: #F8F9FA;
+  --grey-2: #DDE2E5;
+  --grey-3: #ACB5BD;
+  --grey-4: #495057;
+  --grey-5: #90A0B7;
+  --grey-6: #334D6E;
+  --grey-7: #C4C4C4;
+  --grey-8: rgba(196,196,196,0.5);
+  --grey-9: #F9FAFC;
+  --grey-10: rgb(172, 181, 189);
+
+  --error: var(--red);
+  --success: var(--blue);
+  --primary: var(--blue);
+  --secondary: var(--purple);
+  --alternate-text: #495057;
+  --alternate-border: #212429;
+  --button__active: green;
+
+  --text-primary: var(--black);
+  --text-secondary: var(--grey-3);
+  --active-text-color: var(--text-primary);
+  --main-bg: var(--light-bg);
+  --grey-bg: var(--grey-1);
+  --white-bg: var(--white);
+  --light-bg: var(--white);
+  --dark-bg: var(--black);
+  --card-bg: var(--white);
+  --font-color: var(--text-primary);
+  --input-text-color: var(--grey-4);
+  --input-color: var(--white);
+  --page-color: var(--grey-9);
+  --href-change: var(--grey-3);
+  --calendar-day: var(--grey-5);
+  --calendar-item: var(--grey-6);
+  --calendar-item-active: var(--grey-6);
+}
+
+/** {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}*/
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  height: 100%;
+  min-width: 320px;
+}
+html[data-theme-dark] {
+  /* --white: #ffffff75; */
+  --main-bg: var(--black);
+  --font-color: #ffffff75;
+  --dark-bg: var(--grey-1);
+  --white-bg: var(--black);
+  --light-bg: var(--grey-4);
+  --grey-bg: var(--grey-4);
+  --card-bg: var(--black);
+  --text-primary: var(--white);
+  --active-text-color: var(--grey-2);
+  --input-text-color: var(--font-color);
+  --blue-bg: var(--blue);
+  --input-color: var(--grey-4);
+  --page-color: var(--black);
+  --href-change: var(--black);
+  --calendar-day: var(--grey-2);
+  --calendar-item: var(--grey-3);
+  --calendar-item-active: var(--white);
+}
+html[data-theme-dark] img {
+  filter: brightness(.8) contrast(1.2);
+}
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

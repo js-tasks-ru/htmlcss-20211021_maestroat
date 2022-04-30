@@ -1,0 +1,72 @@
+@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    @if $size {font-size: $size}
+    @if $color {color: $color}
+    @if $weight {font-weight: $weight}
+    @if $style {font-style: $style}
+    @if $lh {line-height: $lh}
+}
+.radio {
+    display: inline-block;
+    @include text(1.6rem, false, normal, normal, 24px);
+    &__input {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        opacity: 0;
+        outline: none;
+    }
+    &__state {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__el {
+        background-color: var(--input-color);
+        width: 28px;
+        height: 28px;
+        border: 1px solid var(--grey-2);
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: border-color .2s linear;
+    }
+    &__icon {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-color: var(--light-bg);
+        border-radius: 50%;
+        transition: background-color .2s linear;
+        opacity: 0;
+    }
+    &__text {
+        color: var(--text-primary);
+        margin-left: 12px;
+    }
+    &__input:focus~&__state &__text {
+        text-decoration: underline;
+    }
+    &__input:checked ~&__state &__el {
+        border: 2px solid var(--blue);
+    }
+    &__input:checked ~&__state &__el &__icon {
+        background-color: var(--blue);
+        opacity: 1;
+    }
+    &__input:disabled~&__state {
+        cursor: not-allowed;
+    }
+    &__input:disabled~&__state &__el {
+        background: var(--grey-2);
+    }
+    &__input:disabled~&__state &__el &__icon {
+        background: var(--grey-2);
+    }
+    &__input:disabled~&__state &__text {
+        color:var(--grey-2);
+    }
+}
