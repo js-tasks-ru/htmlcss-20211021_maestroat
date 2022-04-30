@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <title>Button</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="./button.css">
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="./button.css" />
+    <meta charset="utf-8" />
     <style type="text/css">
-        .button-main {
-            display: flex;
-            flex-basis: auto;
-            flex-flow: row wrap;
-        }
-        .button-group-center {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 40px auto;
-        }
-        .button-group {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-            margin-right: 20px;
-            width: 200px;
-        }
-        .button-group > .button { margin-bottom: 8px; }
-        .button-group > .button:last-child { margin-bottom: 0; }
+      .button-main {
+        display: flex;
+        flex-basis: auto;
+        flex-flow: row wrap;
+      }
+      .button-group-center {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px auto;
+      }
+      .button-group {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-right: 20px;
+        width: 200px;
+      }
+      .button-group > .button {
+        margin-bottom: 8px;
+      }
+      .button-group > .button:last-child {
+        margin-bottom: 0;
+      }
     </style>
-</head>
-<body>
-<main class="button-main">
-    <section class="button-group-center">
+  </head>
+  <body>
+    <main class="button-main">
+      <section class="button-group-center">
         <div class="button-group">
-            <button class="button button_primary">
-                <span>Primary</span>
-            </button>
-            <button class="button button_primary button_primary:disabled" disabled>
-                <span>Primary Disabled</span>
-            </button>
-
+          <button class="button button_primary">
+            <span>Primary</span>
+          </button>
+          <button
+            class="button button_primary button_primary:disabled"
+            disabled
+          >
+            <span>Primary Disabled</span>
+          </button>
         </div>
         <div class="button-group">
-            <button class="button button_secondary">
-                <span>Secondary</span>
-            </button>
-            <button class="button button_secondary button_secondary:disabled" disabled>
-                <span>Secondary Disabled</span>
-            </button>
-
+          <button class="button button_secondary">
+            <span>Secondary</span>
+          </button>
+          <button
+            class="button button_secondary button_secondary:disabled"
+            disabled
+          >
+            <span>Secondary Disabled</span>
+          </button>
         </div>
         <div class="button-group">
-            <button class="button button_alternate">
-                <span>Alternate</span>
-            </button>
-            <button class="button button_alternate button_alternate:disabled" disabled>
-                <span>Alternate Disabled</span>
-            </button>
-
+          <button class="button button_alternate">
+            <span>Alternate</span>
+          </button>
+          <button
+            class="button button_alternate button_alternate:disabled"
+            disabled
+          >
+            <span>Alternate Disabled</span>
+          </button>
         </div>
-    </section>
-</main>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

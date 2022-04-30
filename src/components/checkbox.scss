@@ -1,97 +1,119 @@
-@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    @if $size {font-size: $size}
-    @if $color {color: $color}
-    @if $weight {font-weight: $weight}
-    @if $style {font-style: $style}
-    @if $lh {line-height: $lh}
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
 }
 .Checkbox {
+  display: inline-block;
+
+  &__title {
+    @include text(1.2rem, var(--grey-3), 500, normal, 18px);
+  }
+  &__input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    opacity: 0;
+    outline: none;
+  }
+  &__state {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__control {
+    background-color: var(--input-color);
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--grey-2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
     display: inline-block;
+    width: 18px;
+    height: 10px;
+    color: var(--white);
+    opacity: 0;
+  }
+  &__text {
+    margin-left: 12px;
+    color: var(--text-primary);
+  }
+  &__input:focus ~ &__state &__text {
+    text-decoration: underline;
+  }
+  &__input:checked ~ &__state &__control {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    transition: border-color 0.2s linear, background-color 0.2s linear;
+  }
+  &__input:checked ~ &__state &__control &__icon {
+    opacity: 1;
+  }
+  &__input:checked ~ &__state &__control:before {
+    animation: pulse 0.5s;
+    animation-fill-mode: forwards;
+    border: 1px solid var(--grey-2);
+    border-radius: 20%;
+    content: '';
+    width: 70px;
+    height: 70px;
+    display: block;
+    box-sizing: border-box;
+    z-index: 0;
+    position: absolute;
+    background-color: var(--grey-2);
+  }
 
-    &__title {
-        @include text(1.2rem, var(--grey-3), 500, normal, 18px);
+  @keyframes pulse {
+    from {
+      transform: scale(0.5);
+      opacity: 1;
     }
-    &__input {
-        position: absolute;
-        clip: rect(0, 0, 0, 0);
-        opacity: 0;
-        outline: none;
+    to {
+      transform: scale(1);
+      opacity: 0;
     }
-    &__state {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        cursor: pointer;
-    }
-    &__control {
-        background-color: var(--input-color);
-        width: 28px;
-        height: 28px;
-        border: 1px solid var(--grey-2);
-        box-sizing: border-box;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    &__icon {
-        display: inline-block;
-        width: 18px;
-        height: 10px;
-        color: var(--white);
-        opacity: 0;
-    }
-    &__text {
-        margin-left: 12px;
-        color: var(--text-primary);
-    }
-    &__input:focus~&__state &__text {
-        text-decoration: underline;
-    }
-    &__input:checked~&__state &__control {
-        background: var(--blue);
-        border: 1px solid var(--blue);
-        transition: border-color .2s linear, background-color .2s linear;
-    }
-    &__input:checked~&__state &__control &__icon {
-        opacity: 1;
-    }
-    &__input:checked~&__state &__control:before {
-        animation: pulse 0.5s;
-        animation-fill-mode: forwards;
-        border: 1px solid var(--grey-2);
-        border-radius: 20%;
-        content: '';
-        width: 70px;
-        height: 70px;
-        display: block;
-        box-sizing: border-box;
-        z-index: 0;
-        position: absolute;
-        background-color: var(--grey-2);
-    }
+  }
 
-    @keyframes pulse {
-        from {transform: scale(0.5); opacity: 1;}
-        to {transform: scale(1); opacity: 0;}
-    }
-
-    &__input:disabled~&__state &__control:before {
-        display: none;
-    }
-    &__input:disabled~&__state &__control {
-        background: var(--grey-2);
-    }
-    &__input:disabled~&__state {
-        cursor: not-allowed;
-    }
-    &__input:disabled~&__state &__text {
-        color:var(--grey-2);
-    }
-    &__input:disabled~&__state &__control &__icon {
-        background-color: var(--grey-2);
-        color:var(--grey-2);
-    }
+  &__input:disabled ~ &__state &__control:before {
+    display: none;
+  }
+  &__input:disabled ~ &__state &__control {
+    background: var(--grey-2);
+  }
+  &__input:disabled ~ &__state {
+    cursor: not-allowed;
+  }
+  &__input:disabled ~ &__state &__text {
+    color: var(--grey-2);
+  }
+  &__input:disabled ~ &__state &__control &__icon {
+    background-color: var(--grey-2);
+    color: var(--grey-2);
+  }
 }

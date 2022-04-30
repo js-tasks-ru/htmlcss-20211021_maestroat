@@ -6,10 +6,9 @@ const component = document.querySelector('.page__main-component-title');
 // menuEl.forEach(item => {if (item.innerText.toLowerCase() === component.innerText.toLowerCase()) {
 // 	item.firstChild.classList.add('left-menu__list-el_active');
 // }})
-for (let i=0; i<menuEl.length; i++) {
-	if (menuEl[i].innerText.toLowerCase() === component.innerText.toLowerCase()) {
-	menuEl[i].firstChild.classList.add('left-menu__list-el_active');
-	menuBurgerEl[i].firstChild.classList.add('left-menu__list-el_active');
+for (let i = 0; i < menuEl.length; i++) {
+  if (menuEl[i].innerText.toLowerCase() === component.innerText.toLowerCase()) {
+    menuEl[i].firstChild.classList.add('left-menu__list-el_active');
+    menuBurgerEl[i].firstChild.classList.add('left-menu__list-el_active');
+  }
 }
-}
-

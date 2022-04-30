@@ -1,76 +1,75 @@
-
 .left-menu {
-	font-family: 'Inter', 'Roboto', sans-serif;
-	font-style: normal;
-	font-size: 1.4rem;
-	line-height: 18px;
-	color: var(--font-color);
-	box-sizing: border-box;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 18px;
+  color: var(--font-color);
+  box-sizing: border-box;
 }
 .left-menu__line {
-	margin-top: 16px;
-	margin-bottom: 0;
-	color: var(--grey-2);
-	background-color: var(--grey-2); 
-	border: none;
-	height: 1px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: var(--grey-2);
+  background-color: var(--grey-2);
+  border: none;
+  height: 1px;
 }
 .left-menu__toogler {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 16px;
-	padding-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-left: 0;
 }
 .left-menu__toogler-text {
-	display: inline-block;
-	color: var(--grey-4);
+  display: inline-block;
+  color: var(--grey-4);
 }
 .left-menu__list {
-	display: inline-block;
-	padding-left: 0;
-	margin-bottom: 0;
-	margin-top: 16px;
-	/* font-size: 1.4rem; */
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 16px;
+  /* font-size: 1.4rem; */
 }
 .left-menu__list:first-child {
-	margin-top: 0;
+  margin-top: 0;
 }
 .left-menu__href {
-	text-decoration: none;
-	color: var(--font-color);
+  text-decoration: none;
+  color: var(--font-color);
 }
 .left-menu__href:hover {
-	color: var(--href-change);
+  color: var(--href-change);
 }
 .left-menu__main {
-	padding-left: 4px;
+  padding-left: 4px;
 }
 /* Убираем стандартный маркер Firefox */
 .left-menu__list > .left-menu__list-el {
-    list-style: none;
+  list-style: none;
 }
 /* Убираем стандартный маркер Google, Safari */
 .left-menu__list .left-menu__list-el::-webkit-details-marker {
-    display: none
+  display: none;
 }
 /* Убираем стандартный маркер */
 .left-menu__list .left-menu__list-el {
-	outline-style: none;
-    border-bottom: none;
+  outline-style: none;
+  border-bottom: none;
 }
 .left-menu__list-el {
-	margin-bottom: 4px;
-	line-height: 22px;
+  margin-bottom: 4px;
+  line-height: 22px;
 }
 .left-menu__list-el:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 .left-menu__list-el:first-child {
-	font-size: 2rem;
-	margin-bottom: 16px;
+  font-size: 2rem;
+  margin-bottom: 16px;
 }
 .left-menu__list-el_active {
-	color: var(--red);
+  color: var(--red);
 }

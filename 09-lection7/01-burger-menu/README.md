@@ -9,6 +9,7 @@ figma: [https://www.figma.com/file/LavZmQfQccqyrTMzoSJYNu/CSS-Course?node-id=188
 Можно сделать с помощью чекбокса и бургера в теге `<label>`, можно с помощью js.
 
 js-скрипт уже подключен к html и лежит рядом - `burger-menu.js`. Он делает следующее:
+
 - По клику на элемент с id `burger-menu-open` назначает элементу с id `burger-menu` атрибут `data-open`.
 - По клику на элемент с id `burger-menu-close` удаляет с элемента с id `burger-menu` атрибут `data-open`.
 

@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <!-- Страница с модалкой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../../assets/css/main.css">
-        <link rel="stylesheet" href="./modal.css">
-        <link rel="stylesheet" href="../button/button.css">
-        <link rel="stylesheet" href="../input/input.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-        <title>Modal</title>
-        <meta charset="utf-8">
-        <style type="text/css">
-		/*.window-wrapper {
+  <head>
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="../button/button.css" />
+    <link rel="stylesheet" href="../input/input.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Modal</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      /*.window-wrapper {
 	    	padding-bottom: 24px;
 		}*/
-	    </style>
-    </head>
-    <body>
-       		
-		<div class="modal-new">
-		<div class="modal-new__window">
-
-			<div class="modal-new__window-main">
-			<div class="modal-new__window-title">Modal</div>
-				<div class="modal-new__close">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<use xlink:href="../../../assets/images/sprite.svg#close" />
-					</svg>
-				</div>
-			<!-- <div class="input input_valid">
+    </style>
+  </head>
+  <body>
+    <div class="modal-new">
+      <div class="modal-new__window">
+        <div class="modal-new__window-main">
+          <div class="modal-new__window-title">Modal</div>
+          <div class="modal-new__close">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlink:href="../../../assets/images/sprite.svg#close" />
+            </svg>
+          </div>
+          <!-- <div class="input input_valid">
 			    <label for="input-id-1" class="input_label">NAME</label>
 			    <div class="input__field-wrapper">
 			        <input id="input-id-1" class="input__field" type="text" name="option" placeholder="Placeholder">
 			    </div>
 			</div> -->
-			</div>
-			
-			<div class="input input_valid modal-new__input">
-			    <label for="input-id-1" class="input_label">EMAIL</label>
-			        <input id="input-id-1" class="input__field modal-new__window-input-wrapper" type="text" name="option" placeholder="Placeholder">
-			</div>
-			
-		<button class="button button_primary modal-new__button" id="">
-			 <span>Primary</span>
-		</button>
-		</div>
-		</div>
-	</body>
-    <script src="./index.js"></script> 
+        </div>
+
+        <div class="input input_valid modal-new__input">
+          <label for="input-id-1" class="input_label">EMAIL</label>
+          <input
+            id="input-id-1"
+            class="input__field modal-new__window-input-wrapper"
+            type="text"
+            name="option"
+            placeholder="Placeholder"
+          />
+        </div>
+
+        <button class="button button_primary modal-new__button" id="">
+          <span>Primary</span>
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
 </html>

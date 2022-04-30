@@ -1,63 +1,70 @@
-
 .skeleton {
-    border-radius: 8px;
-    background-color: var(--white);
-    border: 1px solid var(--grey-3);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+  border-radius: 8px;
+  background-color: var(--white);
+  border: 1px solid var(--grey-3);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .skeleton__header {
-    display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 20px;
-    width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+  width: 100%;
 }
 .skeleton__avatar {
-    width: 64px;
-    height: 64px;
-    background-color: var(--grey-2);
-    border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: var(--grey-2);
+  border-radius: 50%;
 }
 .line {
-    height: 20px;
-    /*background-color: var(--grey-2);*/
-    background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--grey-1) 80%, var(--grey-2) 100%);
-    animation-name: move;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    background-size: 200%;
-    display: inline-block;
+  height: 20px;
+  /*background-color: var(--grey-2);*/
+  background: linear-gradient(
+    267.58deg,
+    var(--grey-2) 0%,
+    var(--grey-1) 80%,
+    var(--grey-2) 100%
+  );
+  animation-name: move;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  background-size: 200%;
+  display: inline-block;
 }
 
-    @keyframes move {
-        0% {background-position: 100%;}
-        100% {background-position: -100%;}
-        }
+@keyframes move {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
 
 .skeleton__aside {
-    margin-top: 7px;
-    margin-bottom: 7px;
-    margin-left: 12px;
-    width: calc(100% - 64px - 12px);
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 12px;
+  width: calc(100% - 64px - 12px);
 }
 .aside__line-1 {
-    width: 85%;
-    margin-bottom: 10px;
+  width: 85%;
+  margin-bottom: 10px;
 }
 .aside__line-2 {
-    width: 95%;
+  width: 95%;
 }
 .main__line-1 {
-    margin-bottom: 10px;
-    width: 100%
+  margin-bottom: 10px;
+  width: 100%;
 }
 .main__line-2 {
-    width: 95%;
+  width: 95%;
 }
-

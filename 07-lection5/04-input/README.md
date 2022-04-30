@@ -5,6 +5,7 @@ figma: [https://www.figma.com/file/LavZmQfQccqyrTMzoSJYNu/CSS-Course?node-id=183
 Самое обычное - `input type="text"`.
 
 Не забудьте учесть состояния:
+
 - `:focus`
 - `_invalid`
 - `_success`

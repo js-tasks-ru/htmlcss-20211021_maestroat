@@ -1,66 +1,64 @@
-
-
 .modal {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    position: fixed;
-    background-color: var(--grey-8);
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    top: 0;
-    left: 0;
-    z-index: 5;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  position: fixed;
+  background-color: var(--grey-8);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .modal__window {
-    background: var(--white);
-    border-radius: 8px;
-/*    display: flex;
+  background: var(--white);
+  border-radius: 8px;
+  /*    display: flex;
     flex-flow: row wrap;*/
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
 }
 .modal__main {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 30px;
-    /*width: 348px;*/
-    line-height: 24px;
-    display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  /*width: 348px;*/
+  line-height: 24px;
+  display: inline-block;
 }
 .modal__title {
-    padding-top: 30px;
-    padding-bottom: 14px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2rem;
-    color: var(--grey-6);
+  padding-top: 30px;
+  padding-bottom: 14px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--grey-6);
 }
 .modal__text {
-    background: var(--white);
-    border-radius: 8px;
-    font-size: 1.6rem;
-    color: var(--alternate-text);
+  background: var(--white);
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: var(--alternate-text);
 }
 .modal__close {
-    position: absolute;
-    left: 96%;
-    top: 5%;
+  position: absolute;
+  left: 96%;
+  top: 5%;
 }
 /*For Mobile*/
 @media screen and (max-width: 640px) {
-    .modal__close {
-        left: 90%;
-        top: 2%;
-    }
+  .modal__close {
+    left: 90%;
+    top: 2%;
+  }
 }
 /*For Tablet*/
 @media screen and (min-width: 640px) and (max-width: 1024px) {
-    .modal__close {
-        left: 94%;
-        top: 3%;
-    }
+  .modal__close {
+    left: 94%;
+    top: 3%;
+  }
 }

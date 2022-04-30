@@ -3,6 +3,7 @@
 figma: [https://www.figma.com/file/LavZmQfQccqyrTMzoSJYNu/CSS-Course?node-id=18342%3A1](https://www.figma.com/file/LavZmQfQccqyrTMzoSJYNu/CSS-Course?node-id=18342%3A1)
 
 Реализовать нужно правильное отображений состояний:
+
 - `:focus`
 - `:checked`
 - `:disabled`

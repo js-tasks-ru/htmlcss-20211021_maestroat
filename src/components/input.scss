@@ -1,79 +1,102 @@
-@mixin text($size: false, $color: false, $weight: false, $style: false, $lh: false) {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    @if $size {font-size: $size}
-    @if $color {color: $color}
-    @if $weight {font-weight: $weight}
-    @if $style {font-style: $style}
-    @if $lh {line-height: $lh}
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
 }
 .input {
-    display: inline-block;
+  display: inline-block;
+  width: 100%;
+  @include text(1.6rem, var(--black), normal, normal, 24px);
+  &__field {
+    height: 56px;
     width: 100%;
-    @include text(1.6rem, var(--black), normal, normal, 24px);
-    &__field {
-        height: 56px;
-        width: 100%;
-        border-radius: 8px;
-        border: 1px solid var(--grey-2);
-        background-color: var(--input-color);
-        display: block;
-        box-sizing: border-box;
-        padding-top: 17px;
-        padding-left: 24px;
-        padding-bottom: 13px;
-        outline:none;
-        @include text(2rem, var(--input-text-color), normal, normal, false);
-        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    }
-    &__label {
-        display: block;
-        margin-bottom: 5px;
-        @include text(1.2rem, var(--grey-3), 500, normal, 18px);
-    }
-    &_valid &__field:focus {
-        border:1px solid  var(--blue);
-    }
-    &_invalid &__field {
-        border: 1px solid var(--red);
-    }
-    &_invalid &__field:focus {
-        box-shadow:  0 0 0 5px var(--red-1);
-    }
-    &_success &__field {
-        border: 1px solid var(--blue);
-    }
-    &_success &__field:focus {
-        border:1px solid  var(--blue);
-        box-shadow: 0 0 0 5px var(--blue-4);
-    }
-    &__icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        position: absolute;
-        left: 100%;
-        transform: translate(-40px, -40px);
-    }
-    &__icon_error {
-        color: var(--red)
-    }
-    &__icon_success {
-        color: var(--blue);
-    }
+    border-radius: 8px;
+    border: 1px solid var(--grey-2);
+    background-color: var(--input-color);
+    display: block;
+    box-sizing: border-box;
+    padding-top: 17px;
+    padding-left: 24px;
+    padding-bottom: 13px;
+    outline: none;
+    @include text(2rem, var(--input-text-color), normal, normal, false);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    @include text(1.2rem, var(--grey-3), 500, normal, 18px);
+  }
+  &_valid &__field:focus {
+    border: 1px solid var(--blue);
+  }
+  &_invalid &__field {
+    border: 1px solid var(--red);
+  }
+  &_invalid &__field:focus {
+    box-shadow: 0 0 0 5px var(--red-1);
+  }
+  &_success &__field {
+    border: 1px solid var(--blue);
+  }
+  &_success &__field:focus {
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 5px var(--blue-4);
+  }
+  &__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 100%;
+    transform: translate(-40px, -40px);
+  }
+  &__icon_error {
+    color: var(--red);
+  }
+  &__icon_success {
+    color: var(--blue);
+  }
 
-    &__field::-webkit-input-placeholder { /* WebKit browsers */
-        @include text(2rem, false, false, false, false);
-    }
-    &__field:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-        @include text(2rem, false, false, normal, false);
-    }
-    &__field::-moz-placeholder { /* Mozilla Firefox 19+ */
-        @include text(2rem, false, false, normal, false);
-    }
-    &__field:-ms-input-placeholder { /* Internet Explorer 10+ */
-        @include text(2rem, false, false, normal, false);
-    }
-    &__field::-moz-placeholder { opacity: 1; }
-    &__field::-webkit-input-placeholder { opacity: 1; }
+  &__field::-webkit-input-placeholder {
+    /* WebKit browsers */
+    @include text(2rem, false, false, false, false);
+  }
+  &__field:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    @include text(2rem, false, false, normal, false);
+  }
+  &__field::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    @include text(2rem, false, false, normal, false);
+  }
+  &__field:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    @include text(2rem, false, false, normal, false);
+  }
+  &__field::-moz-placeholder {
+    opacity: 1;
+  }
+  &__field::-webkit-input-placeholder {
+    opacity: 1;
+  }
 }
-

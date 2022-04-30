@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <!-- Страница радио -->
 <html lang="ru">
-<head>
+  <head>
     <title>radio</title>
-    <link rel="stylesheet" href="../../../assets/css/main.css">
-    <link rel="stylesheet" href="./radio.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/main.css" />
+    <link rel="stylesheet" href="./radio.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <style type="text/css">
-        .radio-wrapper {
-            margin-bottom: 16px;
-            margin-top: 13px;
-        }
-        .radio-wrapper:last-child {
-            margin-bottom: 0;
-        }
-        .radio-title {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1.2rem;
-            line-height: 18px;
-            color: var(--grey-3);
-            /*margin-bottom: 13px;*/
-        }
+      .radio-wrapper {
+        margin-bottom: 16px;
+        margin-top: 13px;
+      }
+      .radio-wrapper:last-child {
+        margin-bottom: 0;
+      }
+      .radio-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 18px;
+        color: var(--grey-3);
+        /*margin-bottom: 13px;*/
+      }
     </style>
-</head>
-<body>
-
-<div class="radio-title">RADIO BUTTON</div>
-<div class="radio-wrapper">
-    <label class="radio">
-        <input class="radio__input" type="radio" name="option" value="a1">
+  </head>
+  <body>
+    <div class="radio-title">RADIO BUTTON</div>
+    <div class="radio-wrapper">
+      <label class="radio">
+        <input class="radio__input" type="radio" name="option" value="a1" />
         <span class="radio__state">
-                <span class="radio__el">
-                    <span class="radio__icon">
-                    </span>
-                </span>
-                <span class="radio__text">Default</span>
+          <span class="radio__el">
+            <span class="radio__icon"> </span>
+          </span>
+          <span class="radio__text">Default</span>
         </span>
-    </label>
-</div>
-<div class="radio-wrapper">
-    <label class="radio">
-        <input class="radio__input" type="radio" name="option" value="a2">
+      </label>
+    </div>
+    <div class="radio-wrapper">
+      <label class="radio">
+        <input class="radio__input" type="radio" name="option" value="a2" />
         <span class="radio__state">
-                <span class="radio__el">
-                    <span class="radio__icon">
-                    </span>
-                </span>
-                <span class="radio__text">Selected</span>
+          <span class="radio__el">
+            <span class="radio__icon"> </span>
+          </span>
+          <span class="radio__text">Selected</span>
         </span>
-    </label>
-</div>
-<div class="radio-wrapper">
-    <label class="radio">
-        <input class="radio__input" type="radio" name="option" value="a3" disabled>
+      </label>
+    </div>
+    <div class="radio-wrapper">
+      <label class="radio">
+        <input
+          class="radio__input"
+          type="radio"
+          name="option"
+          value="a3"
+          disabled
+        />
         <span class="radio__state">
-                <span class="radio__el">
-                    <span class="radio__icon">
-                    </span>
-                </span>
-                <span class="radio__text">Disabled</span>
+          <span class="radio__el">
+            <span class="radio__icon"> </span>
+          </span>
+          <span class="radio__text">Disabled</span>
         </span>
-    </label>
-</div>
-
-</body>
+      </label>
+    </div>
+  </body>
 </html>

@@ -1,98 +1,106 @@
-
 .Checkbox {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 24px;
-    display: inline-block;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 24px;
+  display: inline-block;
 }
 .Checkbox__title {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 18px;
-    color: var(--grey-3);
-    /*margin-bottom: 13px;*/
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 18px;
+  color: var(--grey-3);
+  /*margin-bottom: 13px;*/
 }
 .Checkbox__input {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    opacity: 0;
-    outline: none;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  opacity: 0;
+  outline: none;
 }
 .Checkbox__state {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
 }
 .Checkbox__control {
-    background-color: var(--input-color);
-    width: 28px;
-    height: 28px;
-    border: 1px solid var(--grey-2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--input-color);
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--grey-2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Checkbox__icon {
-    display: inline-block;
-    width: 18px;
-    height: 10px;
-    color: var(--white);
-    opacity: 0;
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  color: var(--white);
+  opacity: 0;
 }
 .Checkbox__text {
-    margin-left: 12px;
-    color: var(--text-primary);
+  margin-left: 12px;
+  color: var(--text-primary);
 }
-.Checkbox__input:focus~.Checkbox__state .Checkbox__text {
-    text-decoration: underline;
+.Checkbox__input:focus ~ .Checkbox__state .Checkbox__text {
+  text-decoration: underline;
 }
-.Checkbox__input:checked~.Checkbox__state .Checkbox__control {
-    background: var(--blue);
-    border: 1px solid var(--blue);
-    transition: border-color .2s linear, background-color .2s linear;
+.Checkbox__input:checked ~ .Checkbox__state .Checkbox__control {
+  background: var(--blue);
+  border: 1px solid var(--blue);
+  transition: border-color 0.2s linear, background-color 0.2s linear;
 }
-.Checkbox__input:checked~.Checkbox__state .Checkbox__control .Checkbox__icon {
-    opacity: 1;
+.Checkbox__input:checked ~ .Checkbox__state .Checkbox__control .Checkbox__icon {
+  opacity: 1;
 }
-.Checkbox__input:checked~.Checkbox__state .Checkbox__control:before {
-    animation: pulse 0.5s;
-    animation-fill-mode: forwards;
-    border: 1px solid var(--grey-2);
-    border-radius: 20%;
-    content: '';
-    width: 70px;
-    height: 70px;
-    display: block;
-    box-sizing: border-box;
-    z-index: 0;
-    position: absolute;
-    background-color: var(--grey-2);
+.Checkbox__input:checked ~ .Checkbox__state .Checkbox__control:before {
+  animation: pulse 0.5s;
+  animation-fill-mode: forwards;
+  border: 1px solid var(--grey-2);
+  border-radius: 20%;
+  content: '';
+  width: 70px;
+  height: 70px;
+  display: block;
+  box-sizing: border-box;
+  z-index: 0;
+  position: absolute;
+  background-color: var(--grey-2);
 }
 
 @keyframes pulse {
-    from {transform: scale(0.5); opacity: 1;}
-    to {transform: scale(1); opacity: 0;}
+  from {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
-.Checkbox__input:disabled~.Checkbox__state .Checkbox__control:before {
-    display: none;
+.Checkbox__input:disabled ~ .Checkbox__state .Checkbox__control:before {
+  display: none;
 }
-.Checkbox__input:disabled~.Checkbox__state .Checkbox__control {
-    background: var(--grey-2);
+.Checkbox__input:disabled ~ .Checkbox__state .Checkbox__control {
+  background: var(--grey-2);
 }
-.Checkbox__input:disabled~.Checkbox__state {
-    cursor: not-allowed;
+.Checkbox__input:disabled ~ .Checkbox__state {
+  cursor: not-allowed;
 }
-.Checkbox__input:disabled~.Checkbox__state .Checkbox__text {
-    color:var(--grey-2);
+.Checkbox__input:disabled ~ .Checkbox__state .Checkbox__text {
+  color: var(--grey-2);
 }
-.Checkbox__input:disabled~.Checkbox__state .Checkbox__control .Checkbox__icon {
-    background-color: var(--grey-2);
-    color:var(--grey-2);
+.Checkbox__input:disabled
+  ~ .Checkbox__state
+  .Checkbox__control
+  .Checkbox__icon {
+  background-color: var(--grey-2);
+  color: var(--grey-2);
 }
