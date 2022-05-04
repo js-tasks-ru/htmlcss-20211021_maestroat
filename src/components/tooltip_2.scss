@@ -1,0 +1,76 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.tooltip {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  @include text(1.6rem, var(--black), normal, normal, 24px);
+  &__icon {
+    display: inline-block;
+    cursor: pointer;
+    color: var(--blue-1);
+  }
+  &__bubble {
+    background-color: var(--blue-1);
+    border: 1px solid var(--blue-1);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 10px;
+    position: absolute;
+    white-space: nowrap;
+    bottom: 100%;
+    transform: translate(-50%, -7px);
+    left: 50%;
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.1s linear;
+    pointer-events: none;
+  }
+  &__bubble:after {
+    content: '';
+    border: 7px solid transparent;
+    border-top: 7px solid var(--blue-1);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+  }
+  &__icon:hover ~ &__bubble {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &__icon:hover ~ &__bubble &__text {
+    opacity: 1;
+    pointer-events: all;
+  }
+  &__text {
+    margin: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.1s linear;
+  }
+}

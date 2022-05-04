@@ -1,37 +1,35 @@
-
-
 .tooltip {
-    text-align: center;
-    position: relative;
-    display: inline-block;
+  text-align: center;
+  position: relative;
+  display: inline-block;
 }
 .tooltip__icon {
-    display: inline-block;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 .tooltip__bubble {
-    background-color: var(--black);
-    border-radius: 10px;
-    color: var(--white);
-    padding: 10px;
-    position: absolute;
-    white-space: nowrap;
-    bottom: 100%;
-    transform: translate(-21px, -3px);
-    display: none;
+  background-color: var(--black);
+  border-radius: 10px;
+  color: var(--white);
+  padding: 10px;
+  position: absolute;
+  white-space: nowrap;
+  bottom: 100%;
+  transform: translate(-21px, -3px);
+  display: none;
 }
 /*стрелка как в уроке*/
 .tooltip__bubble:after {
-    content: "";
-    border: 10px solid transparent;
-    border-top: 5px solid var(--black);
-    position: absolute;
-    left: 50%;
-    top: 47%;
-    transform: translate(-50%, 100%);
+  content: '';
+  border: 10px solid transparent;
+  border-top: 5px solid var(--black);
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, 100%);
 }
 .tooltip__icon:hover ~ .tooltip__bubble {
-    display: block;
+  display: block;
 }

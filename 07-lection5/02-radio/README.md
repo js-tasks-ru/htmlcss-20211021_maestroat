@@ -5,6 +5,7 @@ figma: [https://www.figma.com/file/LavZmQfQccqyrTMzoSJYNu/CSS-Course?node-id=183
 Похожий на `checkbox` элемент управления как по внешнему виду, так и по структуре в html.
 
 Как и для `checkbox`, реализовать правильное отображений состояний:
+
 - `:focus`
 - `:checked`
 - `:disabled`

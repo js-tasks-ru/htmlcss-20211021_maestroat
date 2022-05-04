@@ -1,0 +1,90 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.histogram {
+  min-height: 185px;
+  background-color: var(--white-bg);
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  //font-family: 'Inter', 'Roboto', sans-serif;
+  //font-size: 16px;
+  //color: var(--black);
+  //font-weight: normal;
+  //font-style: normal;
+  //line-height: 24px;
+  @include text(1.6rem, var(--black), normal, normal, 24px);
+  &__header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 15px 15px 0 15px;
+  }
+
+  &__title {
+    opacity: 0.8;
+    color: var(--text-secondary);
+  }
+  &__amount {
+    //font-size: 20px;
+    //line-height: 26px;
+    //color: var(--text-primary);
+    @include text(20px, var(--text-primary), false, false, 26px);
+  }
+  &__title,
+  &__amount {
+    margin: 0;
+    padding: 0;
+  }
+  &__view {
+    color: var(--blue-1);
+  }
+  &__chart {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    margin: 0 15px 15px 15px;
+    height: 50px;
+    animation-name: go;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    transform-origin: 0 100%;
+  }
+  &__line {
+    margin-right: 1px;
+    background-color: var(--blue-1);
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  @keyframes go {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+}

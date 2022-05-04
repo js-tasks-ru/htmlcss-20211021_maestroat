@@ -1,45 +1,43 @@
-
-
 .tooltip {
-	font-family: 'Inter', 'Roboto', sans-serif;
-	font-weight: normal;
-    font-size: 1.6rem;
-	text-align: center;
-	position: relative;
-	display: inline-block;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
 }
 .tooltip__icon {
-	display: inline-block;
-	cursor: pointer;
-	color: var(--blue-1);
+  display: inline-block;
+  cursor: pointer;
+  color: var(--blue-1);
 }
 
 .tooltip__bubble {
-	width: 130px;
-	height: 45px;
-	background-color: var(--blue-1);
-	border: 1px solid var(--blue-1);
-	border-radius: 10px;
-	color: var(--white);
-	position: absolute;
-	white-space: nowrap;
-	bottom: 100%;
-	transform: translate(-50%, -7px);
-	left: 50%;
-    opacity: 1;
-	pointer-events: none;
-	display: flex;
+  width: 130px;
+  height: 45px;
+  background-color: var(--blue-1);
+  border: 1px solid var(--blue-1);
+  border-radius: 10px;
+  color: var(--white);
+  position: absolute;
+  white-space: nowrap;
+  bottom: 100%;
+  transform: translate(-50%, -7px);
+  left: 50%;
+  opacity: 1;
+  pointer-events: none;
+  display: flex;
 }
 /*стрелка как в уроке*/
 .tooltip__bubble:after {
-	content: "";
-	border: 7px solid transparent;
-	border-top: 7px solid var(--blue-1);
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	transform: translate(-50%, 100%);
+  content: '';
+  border: 7px solid transparent;
+  border-top: 7px solid var(--blue-1);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
 }
 .tooltip__text {
-	margin: auto;
+  margin: auto;
 }

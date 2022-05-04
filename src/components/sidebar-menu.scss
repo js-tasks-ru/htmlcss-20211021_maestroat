@@ -1,0 +1,92 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.sidebar-menu {
+  box-sizing: border-box;
+  @include text(1.4rem, var(--font-color), normal, normal, 18px);
+  &__line {
+    margin-top: 16px;
+    margin-bottom: 0;
+    color: var(--grey-2);
+    background-color: var(--grey-2);
+    border: none;
+    height: 1px;
+  }
+  &__toogler {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-left: 0;
+  }
+  &__toogler-text {
+    display: inline-block;
+    color: var(--grey-4);
+  }
+  &__list {
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  &__list:first-child {
+    margin-top: 0;
+  }
+  &__href {
+    text-decoration: none;
+    color: var(--font-color);
+    // color: inherit;
+    &_active {
+      color: var(--red);
+    }
+    &:hover {
+      color: var(--href-change);
+    }
+  }
+  &__main {
+    padding-left: 4px;
+  }
+  &__list-el {
+    list-style: none;
+  }
+  &__list-el::-webkit-details-marker {
+    display: none;
+  }
+  &__list-el {
+    outline-style: none;
+    border-bottom: none;
+  }
+  &__list-el {
+    margin-bottom: 4px;
+    line-height: 22px;
+  }
+  &__list-el:last-child {
+    margin-bottom: 0;
+  }
+  &__list-el:first-child {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+}

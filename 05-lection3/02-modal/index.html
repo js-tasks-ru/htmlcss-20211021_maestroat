@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <!-- Страница с модалкой -->
 <html lang="ru">
-<head>
+  <head>
     <title>Modal</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="./modal.css">
-    <link rel="stylesheet" href="../../03-lection1/01-button/button.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="../../03-lection1/01-button/button.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <title>Modal</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style type="text/css">
-        .main__button {
-            position: absolute;
-            top: 50%;
-            left: 25%;
-            transform: translate(-50%, -50%);
-        }
+      .main__button {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+      }
     </style>
-</head>
-<body>
-<button class="button button_primary main__button" id="modal-open">
-    <span>Primary</span>
-</button>
-<div id="modal" class="modal main__modal">
-    <div class="modal__window">
+  </head>
+  <body>
+    <button class="button button_primary main__button" id="modal-open">
+      <span>Primary</span>
+    </button>
+    <div id="modal" class="modal main__modal">
+      <div class="modal__window">
         <div class="window__main">
-            <div class="window__title">Modal title</div>
-            <div class="window__text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-            </div>
+          <div class="window__title">Modal title</div>
+          <div class="window__text">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
+            ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+            duis enim velit mollit. Exercitation veniam consequat sunt nostrud
+            amet.
+          </div>
         </div>
         <div id="modal-close" class="modal__close">
-            <svg class="modal__close">
-                <use xlink:href="../../assets/images/sprite.svg#close" />
-            </svg>
+          <svg class="modal__close">
+            <use xlink:href="../../assets/images/sprite.svg#close" />
+          </svg>
         </div>
+      </div>
     </div>
-</div>
-</body>
-<script src="./index.js"></script>
+  </body>
+  <script src="./index.js"></script>
 </html>

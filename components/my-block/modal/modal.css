@@ -1,67 +1,66 @@
-
 .modal-new {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    position: relative;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  position: relative;
 }
 
 .modal-new__window {
-    background: var(--white-bg);
-    border: 1px solid var(--grey-3);
-    border-radius: 8px;
-    display: flex;
-    flex-flow: column wrap;
-    padding: 32px 40px;
+  background: var(--white-bg);
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 32px 40px;
 }
 .modal-new__window-main {
-    /*padding-top: 10px;*/
-    padding-bottom: 16px;
+  /*padding-top: 10px;*/
+  padding-bottom: 16px;
 }
 .modal-new__window-title {
-    /*padding-top: 10px;*/
-    padding-bottom: 14px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2rem;
-    color: var(--dark-bg);
-    display: inline-block;
+  /*padding-top: 10px;*/
+  padding-bottom: 14px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--dark-bg);
+  display: inline-block;
 }
 .modal-new__text {
-    background: var(--white);
-    border-radius: 8px;
-    font-size: 1.6rem;
-    color: var(--alternate-text);
+  background: var(--white);
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: var(--alternate-text);
 }
-.modal-new__close { 
-    display: inline-block;
-    position: absolute;
-    /*left: 96%;*/
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    color: var(--input-text-color);
-    cursor: pointer;
+.modal-new__close {
+  display: inline-block;
+  position: absolute;
+  /*left: 96%;*/
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  color: var(--input-text-color);
+  cursor: pointer;
 }
 .modal-new__button {
-    /*min-width: 100px;*/
-    max-width: 182px;
-    height: 48px;
-    margin-top: 16px;
+  /*min-width: 100px;*/
+  max-width: 182px;
+  height: 48px;
+  margin-top: 16px;
 }
 .modal-new__input {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 /*For Mobile*/
-@media screen and (max-width: 640px) {
-    .modal-new__close {
-        left: 90%;
-        top: 2%;
-    }
-}
+/*@media screen and (max-width: 640px) {*/
+/*    .modal-new__close {*/
+/*        left: 90%;*/
+/*        top: 2%;*/
+/*    }*/
+/*}*/
 /*For Tablet*/
-@media screen and (min-width: 640px) and (max-width: 1024px) {
-    .modal-new__close {
-        left: 94%;
-        top: 3%;
-    }
-}
+/*@media screen and (min-width: 640px) and (max-width: 1024px) {*/
+/*    .modal-new__close {*/
+/*        left: 94%;*/
+/*        top: 3%;*/
+/*    }*/
+/*}*/

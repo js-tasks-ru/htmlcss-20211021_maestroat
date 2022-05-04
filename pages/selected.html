@@ -1,289 +1,472 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-    	<title>Page-component</title>
-    	<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="../components/my-block/burger-menu-new/burger-menu.css">
-        <link rel="stylesheet" href="../components/header/header.css">
-        <link rel="stylesheet" href="../components/footer/footer.css">
-        <link rel="stylesheet" href="../components/tabs-menu-page/tabs-menu-page.css">
-        <link rel="stylesheet" href="../components/sidebar-menu/sidebar-menu.css">
-        <link rel="stylesheet" href="../components/my-block/tooltip/tooltip.css">
-        <link rel="stylesheet" href="../components/my-block/radio/radio.css">
-        <link rel="stylesheet" href="../components/my-block/toggler/toggler.css">
-        <link rel="stylesheet" href="../components/my-block/checkbox/checkbox.css">
-        <link rel="stylesheet" href="../components/my-block/input/input.css">
-        <link rel="stylesheet" href="./template.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    	<style type="text/css">
-            .body-wrapper {
-               background-color: var(--grey-bg);
-            }
-        </style>
-        <script defer src="../assets/js/theme-changer.js"></script>
-</head>
-<body class="preload body-wrapper">
-   <div class="page">
-    <div class="page__header header">
+  <head>
+    <title>Page-component</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../dist/styles.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      .body-wrapper {
+        background-color: var(--grey-bg);
+      }
+    </style>
+    <script defer src="../assets/js/theme-changer.js"></script>
+  </head>
+  <body class="preload body-wrapper">
+    <div class="page">
+      <div class="page__header header">
         <div class="header__top">
-            <div class="header__burger-menu burger-menu">   
-                <button type="button" id="burger-menu-open" class="burger-menu__button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="header__burger-menu-icon burger-menu__icon">
-                        <use xlink:href="../assets/images/sprite.svg#burger-button" />
-                    </svg>
-                </button>
+          <div class="header__burger-menu burger-menu">
+            <button
+              type="button"
+              id="burger-menu-open"
+              class="burger-menu__button"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="header__burger-menu-icon burger-menu__icon"
+              >
+                <use xlink:href="../assets/images/sprite.svg#burger-button" />
+              </svg>
+            </button>
             <div id="burger-menu" class="burger-menu__page">
-            <div class="header__burger-menu-windows burger-menu__window">
-                 <button type="button" id="burger-menu-close" class="burger-menu__button burger-menu__button_close">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="../assets/images/sprite.svg#close" />
-                    </svg>
+              <div class="header__burger-menu-windows burger-menu__window">
+                <button
+                  type="button"
+                  id="burger-menu-close"
+                  class="burger-menu__button burger-menu__button_close"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use xlink:href="../assets/images/sprite.svg#close" />
+                  </svg>
                 </button>
                 <div class="burger-menu__header header__logo">
-                    <a class="header__logo-href" href="../index.html">
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="30" height="30"/>
-                        </svg>
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="16"/>
-                        </svg>
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L32 32H0V0Z"/>
-                        </svg>
-                    </a>
+                  <a class="header__logo-href" href="../index.html">
+                    <svg
+                      class="header__logo-el"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 30 30"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="30" height="30" />
+                    </svg>
+                    <svg
+                      class="header__logo-el"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="32" height="32" rx="16" />
+                    </svg>
+                    <svg
+                      class="header__logo-el"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0L32 32H0V0Z" />
+                    </svg>
+                  </a>
                 </div>
                 <div class="burger-menu__main">
-                <hr class="burger-menu__line">
-                <div class="burger-menu__toogler">
+                  <hr class="burger-menu__line" />
+                  <div class="burger-menu__toogler">
                     <span class="burger-menu__toogler-text">Dark mode</span>
                     <label class="toggler toggler_active">
-                    <input id="theme-changer-burger" class="toggler__input" type="checkbox" name="option" value="a1">
-                    <span class="toggler__state">
+                      <input
+                        id="theme-changer-burger"
+                        class="toggler__input"
+                        type="checkbox"
+                        name="option"
+                        value="a1"
+                      />
+                      <span class="toggler__state">
                         <span class="toggler__control page__toggler-control">
-                            <span class="toggler__icon">
-                            </span>
+                          <span class="toggler__icon"> </span>
                         </span>
-                    </span>
+                      </span>
                     </label>
-                </div>
-                <hr class="burger-menu__line">
-                <ul class="burger-menu__list">
+                  </div>
+                  <hr class="burger-menu__line" />
+                  <ul class="burger-menu__list">
                     <li class="burger-menu__list-el">Components</li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="modal.html">Modal</a></li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="tooltip.html">Tooltip</a></li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="avatar.html">Avatar</a></li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="calendar.html">Calendar</a></li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="histogram.html">Histogram</a></li>
-                    <li class="burger-menu__list-el"><a class="burger-menu__list-el-href" href="selected.html">Custom form elements</a></li>
-                </ul>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="modal.html"
+                        >Modal</a
+                      >
+                    </li>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="tooltip.html"
+                        >Tooltip</a
+                      >
+                    </li>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="avatar.html"
+                        >Avatar</a
+                      >
+                    </li>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="calendar.html"
+                        >Calendar</a
+                      >
+                    </li>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="histogram.html"
+                        >Histogram</a
+                      >
+                    </li>
+                    <li class="burger-menu__list-el">
+                      <a class="burger-menu__list-el-href" href="selected.html"
+                        >Custom form elements</a
+                      >
+                    </li>
+                  </ul>
                 </div>
-                </div>
+              </div>
             </div>
-            </div>
+          </div>
 
-                <div class="header__logo">
-                    <a class="header__logo-href" href="../index.html">
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="30" height="30"/>
-                        </svg>
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="32" height="32" rx="16"/>
-                        </svg>
-                        <svg class="header__logo-el" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0L32 32H0V0Z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="header__right-block">
-                    <ul class="header__menu">
-                        <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Component</a></li>
-                        <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">About</a></li>
-                        <li class="header__menu-list-el"><a class="header__menu-list-href" href="#">Contact</a></li>
-                    </ul>
-                    <div class="header__checked">
-                        <div class="header__icon header__icon_sun">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="../assets/images/sprite.svg#sun" />
-                            </svg>
-                        </div>
-                        <div>
-                            <label class="header__toggler toggler">
-                                <input id="theme-changer" class="toggler__input" type="checkbox" name="option" value="a1">
-                                <span class="toggler__state">
-                        <span class="toggler__control">
-                            <span class="toggler__icon">
-                            </span>
-                        </span>
-                </span>
-                            </label>
-                        </div>
-                        <div class="header__icon header__icon_moon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <use xlink:href="../assets/images/sprite.svg#moon" /> 
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div class="page__sidebar-menu sidebar-menu">
-            <ul class="sidebar-menu__list">
-                <li class="sidebar-menu__list-el">Components</li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./modal.html">Modal</a></li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./tooltip.html">Tooltip</a></li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./avatar.html">Avatar</a></li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./calendar.html">Calendar</a></li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./histogram.html">Histogram</a></li>
-                <li class="sidebar-menu__list-el"><a class="sidebar-menu__href" href="./selected.html">Custom form elements</a></li>
+          <div class="header__logo">
+            <a class="header__logo-href" href="../index.html">
+              <svg
+                class="header__logo-el"
+                width="32"
+                height="32"
+                viewBox="0 0 30 30"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="30" height="30" />
+              </svg>
+              <svg
+                class="header__logo-el"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="32" height="32" rx="16" />
+              </svg>
+              <svg
+                class="header__logo-el"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0L32 32H0V0Z" />
+              </svg>
+            </a>
+          </div>
+          <div class="header__right-block">
+            <ul class="header__menu">
+              <li class="header__menu-list-el">
+                <a class="header__menu-list-href" href="#">Component</a>
+              </li>
+              <li class="header__menu-list-el">
+                <a class="header__menu-list-href" href="#">About</a>
+              </li>
+              <li class="header__menu-list-el">
+                <a class="header__menu-list-href" href="#">Contact</a>
+              </li>
             </ul>
+            <div class="header__checked">
+              <div class="header__icon header__icon_sun">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="../assets/images/sprite.svg#sun" />
+                </svg>
+              </div>
+              <div>
+                <label class="header__toggler toggler">
+                  <input
+                    id="theme-changer"
+                    class="toggler__input"
+                    type="checkbox"
+                    name="option"
+                    value="a1"
+                  />
+                  <span class="toggler__state">
+                    <span class="toggler__control">
+                      <span class="toggler__icon"> </span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+              <div class="header__icon header__icon_moon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use xlink:href="../assets/images/sprite.svg#moon" />
+                </svg>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__sidebar-menu sidebar-menu">
+        <ul class="sidebar-menu__list">
+          <li class="sidebar-menu__list-el">Components</li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./modal.html">Modal</a>
+          </li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./tooltip.html">Tooltip</a>
+          </li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./avatar.html">Avatar</a>
+          </li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./calendar.html">Calendar</a>
+          </li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./histogram.html">Histogram</a>
+          </li>
+          <li class="sidebar-menu__list-el">
+            <a class="sidebar-menu__href" href="./selected.html"
+              >Custom form elements</a
+            >
+          </li>
+        </ul>
+      </div>
 
-                <div class="page__main">
-                <div class="page__main-component">
-                <div class="page__main-component-title">Custom form elements</div>
-                <div class="page__selected">
-                    <label class="page__radio radio">
-                        <input class="radio__input" type="radio" name="option" value="a1">
-                        <span class="radio__state">
-                                <span class="radio__el page__radio-el">
-                                    <span class="radio__icon">
-                                    </span>
-                                </span>
-                                <span class="radio__text">Default</span>
-                        </span>
-                    </label>
+      <div class="page__main">
+        <div class="page__main-component">
+          <div class="page__main-component-title">Custom form elements</div>
+          <div class="page__selected">
+            <label class="page__radio radio">
+              <input
+                class="radio__input"
+                type="radio"
+                name="option"
+                value="a1"
+              />
+              <span class="radio__state">
+                <span class="radio__el page__radio-el">
+                  <span class="radio__icon"> </span>
+                </span>
+                <span class="radio__text">Default</span>
+              </span>
+            </label>
 
-                    <label class="page__radio radio">
-                        <input checked class="radio__input" type="radio" name="option" value="a2">
-                        <span class="radio__state">
-                                <span class="radio__el page__radio-el">
-                                    <span class="radio__icon">
-                                    </span>
-                                </span>
-                                <span class="radio__text">Selected</span>
-                        </span>
-                    </label>
+            <label class="page__radio radio">
+              <input
+                checked
+                class="radio__input"
+                type="radio"
+                name="option"
+                value="a2"
+              />
+              <span class="radio__state">
+                <span class="radio__el page__radio-el">
+                  <span class="radio__icon"> </span>
+                </span>
+                <span class="radio__text">Selected</span>
+              </span>
+            </label>
 
-                    <label class="page__radio radio">
-                        <input class="radio__input" type="radio" name="option" value="a3" disabled>
-                        <span class="radio__state">
-                                <span class="radio__el page__radio-el">
-                                    <span class="radio__icon">
-                                    </span>
-                                </span>
-                                <span class="radio__text">Disabled</span>
-                        </span>
-                    </label>
-                
+            <label class="page__radio radio">
+              <input
+                class="radio__input"
+                type="radio"
+                name="option"
+                value="a3"
+                disabled
+              />
+              <span class="radio__state">
+                <span class="radio__el page__radio-el">
+                  <span class="radio__icon"> </span>
+                </span>
+                <span class="radio__text">Disabled</span>
+              </span>
+            </label>
 
-                <label class="page__Checkbox Checkbox">
-                    <input class="Checkbox__input" type="checkbox" name="option1" value="a1">
-                    <span class="Checkbox__state">
-                        <span class="Checkbox__control page__Checkbox-control">
-                                <svg class="Checkbox__icon">
-                                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
-                                </svg>
-                        </span>
-                        <span class="Checkbox__text">Default</span>
-                    </span>
-                </label>
+            <label class="page__Checkbox Checkbox">
+              <input
+                class="Checkbox__input"
+                type="checkbox"
+                name="option1"
+                value="a1"
+              />
+              <span class="Checkbox__state">
+                <span class="Checkbox__control page__Checkbox-control">
+                  <svg class="Checkbox__icon">
+                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
+                  </svg>
+                </span>
+                <span class="Checkbox__text">Default</span>
+              </span>
+            </label>
 
+            <label class="page__Checkbox Checkbox">
+              <input
+                checked
+                class="Checkbox__input"
+                type="checkbox"
+                name="option1"
+                value="a1"
+              />
+              <span class="Checkbox__state">
+                <span class="Checkbox__control page__Checkbox-control">
+                  <span class="Checkbox__control-shadow"></span>
+                  <svg class="Checkbox__icon">
+                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
+                  </svg>
+                </span>
+                <span class="Checkbox__text">Checked</span>
+              </span>
+            </label>
 
-                <label class="page__Checkbox Checkbox">
-                    <input checked class="Checkbox__input" type="checkbox" name="option1" value="a1">
-                    <span class="Checkbox__state">
-                        <span class="Checkbox__control page__Checkbox-control">
-                            <span class="Checkbox__control-shadow"></span>
-                                <svg class="Checkbox__icon">
-                                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
-                                </svg>
-                        </span>
-                        <span class="Checkbox__text">Checked</span>
-                    </span>
-                </label>
+            <label class="page__Checkbox Checkbox">
+              <input
+                class="Checkbox__input"
+                type="checkbox"
+                name="option1"
+                value="a1"
+                disabled
+              />
+              <span class="Checkbox__state">
+                <span class="Checkbox__control page__Checkbox-control">
+                  <span class="Checkbox__control-shadow"></span>
+                  <svg class="Checkbox__icon">
+                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
+                  </svg>
+                </span>
+                <span class="Checkbox__text">Disabled</span>
+              </span>
+            </label>
 
-                <label class="page__Checkbox Checkbox">
-                    <input class="Checkbox__input" type="checkbox" name="option1" value="a1" disabled>
-                    <span class="Checkbox__state">
-                        <span class="Checkbox__control page__Checkbox-control">
-                            <span class="Checkbox__control-shadow"></span>
-                                <svg class="Checkbox__icon">
-                                    <use xlink:href="../assets/images/sprite.svg#checkbox" />
-                                </svg>
-                        </span>
-                        <span class="Checkbox__text">Disabled</span>
-                    </span>
-                </label>
+            <label class="page__toggler toggler">
+              <input
+                class="toggler__input"
+                type="checkbox"
+                name="option2"
+                value="a1"
+              />
+              <span class="toggler__state">
+                <span class="toggler__control page__toggler-control">
+                  <span class="toggler__icon"> </span>
+                </span>
+                <span class="toggler__text">Off/On</span>
+              </span>
+            </label>
 
-                    <label class="page__toggler toggler">
-                        <input class="toggler__input" type="checkbox" name="option2" value="a1">
-                        <span class="toggler__state">
-                                <span class="toggler__control page__toggler-control">
-                                    <span class="toggler__icon">
-                                    </span>
-                                </span>
-                            <span class="toggler__text">Off/On</span>
-                            </span>
-                    </label>
+            <label class="page__toggler toggler">
+              <input
+                class="toggler__input"
+                type="checkbox"
+                name="option2"
+                value="a1"
+              />
+              <span class="toggler__state">
+                <span class="toggler__control page__toggler-control">
+                  <span class="toggler__icon"> </span>
+                </span>
+                <span class="toggler__text">Off/On</span>
+              </span>
+            </label>
 
-                    <label class="page__toggler toggler">
-                        <input class="toggler__input" type="checkbox" name="option2" value="a1">
-                        <span class="toggler__state">
-                                <span class="toggler__control page__toggler-control">
-                                    <span class="toggler__icon">
-                                    </span>
-                                </span>
-                             <span class="toggler__text">Off/On</span>
-                             </span>
-                    </label>
+            <label class="page__toggler toggler">
+              <input
+                class="toggler__input"
+                type="checkbox"
+                name="option2"
+                value="a1"
+                disabled
+              />
+              <span class="toggler__state">
+                <span class="toggler__control page__toggler-control">
+                  <span class="toggler__icon"> </span>
+                </span>
+                <span class="toggler__text">Disabled</span>
+              </span>
+            </label>
+          </div>
 
-
-                    <label class="page__toggler toggler">
-                        <input class="toggler__input" type="checkbox" name="option2" value="a1" disabled>
-                        <span class="toggler__state">
-                                <span class="toggler__control page__toggler-control">
-                                    <span class="toggler__icon">
-                                    </span>
-                                </span>
-                             <span class="toggler__text">Disabled</span>
-                             </span>
-                    </label>
-                </div>
-
-                <div class="page__input-wrapper">
-                <div class="page__input input input_valid">
-                    <label for="input-id-1" class="input__label">LABEL</label>
-                        <input id="input-id-1" class="input__field page__input-field" type="text" name="option" placeholder="Placeholder">
-                    </div>
-                <div class="page__input input input_invalid">
-                    <label for="input-id-2" class="input__label">ERROR</label>
-                        <input id="input-id-2" class="input__field page__input-field" type="text" name="option" placeholder="Error">
-                        <svg class="input__icon input__icon_error" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="../assets/images/sprite.svg#error" />
-                        </svg>
-                    </div>
-                <div class="page__input input input_success">
-                    <label for="input-id-3" class="input__label">SUCCESS</label>
-                        <input id="input-id-3" class="input__field page__input-field" type="text" name="option" placeholder="Success">
-                        <svg class="input__icon input__icon_success" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="../assets/images/sprite.svg#success" />
-                        </svg>
-                    </div>
-                </div>
-                     
+          <div class="page__input-wrapper">
+            <div class="page__input input input_valid">
+              <label for="input-id-1" class="input__label">LABEL</label>
+              <input
+                id="input-id-1"
+                class="input__field page__input-field"
+                type="text"
+                name="option"
+                placeholder="Placeholder"
+              />
             </div>
+            <div class="page__input input input_invalid">
+              <label for="input-id-2" class="input__label">ERROR</label>
+              <input
+                id="input-id-2"
+                class="input__field page__input-field"
+                type="text"
+                name="option"
+                placeholder="Error"
+              />
+              <svg
+                class="input__icon input__icon_error"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="../assets/images/sprite.svg#error" />
+              </svg>
+            </div>
+            <div class="page__input input input_success">
+              <label for="input-id-3" class="input__label">SUCCESS</label>
+              <input
+                id="input-id-3"
+                class="input__field page__input-field"
+                type="text"
+                name="option"
+                placeholder="Success"
+              />
+              <svg
+                class="input__icon input__icon_success"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use xlink:href="../assets/images/sprite.svg#success" />
+              </svg>
+            </div>
+          </div>
         </div>
-        <div class="page__footer footer">
-            <div class="page__footer-text">Reusable component library</div>
-        </div>
-        
+      </div>
+      <div class="page__footer footer">
+        <div class="page__footer-text">Reusable component library</div>
+      </div>
     </div>
-</body>
-<script src="../assets/js/sidebar-menu-el-active.js"></script>
-<script defer src="../components/my-block/burger-menu-new/burger-menu.js"></script>
-<script src="../assets/js/transition_no.js"></script>
+  </body>
+  <script src="../assets/js/sidebar-menu-el-active.js"></script>
+  <script src="../components/my-block/burger-menu-new/burger-menu.js"></script>
+  <script src="../assets/js/transition_no.js"></script>
 </html>

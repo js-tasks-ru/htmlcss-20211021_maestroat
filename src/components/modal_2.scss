@@ -1,0 +1,78 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.modal {
+  position: fixed;
+  background-color: var(--grey-8);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  @include text(false, false, normal, normal, false);
+  &__window {
+    background: var(--white-bg);
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+  &__main {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    line-height: 24px;
+    display: inline-block;
+  }
+  &__title {
+    padding-top: 30px;
+    padding-bottom: 14px;
+    @include text(2rem, var(--grey-6), 600, normal, false);
+  }
+  &__text {
+    background: var(--white);
+    border-radius: 8px;
+    @include text(1.6rem, var(--alternate-text), normal, normal, false);
+  }
+  &__close {
+    position: absolute;
+    left: 96%;
+    top: 5%;
+  }
+  @media screen and (max-width: 640px) {
+    &__close {
+      left: 90%;
+      top: 2%;
+    }
+  }
+  @media screen and (min-width: 640px) and (max-width: 1024px) {
+    &__close {
+      left: 94%;
+      top: 3%;
+    }
+  }
+}

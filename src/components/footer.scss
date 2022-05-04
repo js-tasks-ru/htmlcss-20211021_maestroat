@@ -1,0 +1,37 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.footer {
+  text-align: center;
+  background-color: var(--main-bg);
+  padding: 80px 0;
+  @include text(1.6rem, var(--font-color), normal, normal, 24px);
+  &__title {
+    margin: 0 0 24px 0;
+    @include text(3.8rem, var(--font-color), 500, normal, 48px);
+  }
+  &__text {
+    display: inline-block;
+  }
+}

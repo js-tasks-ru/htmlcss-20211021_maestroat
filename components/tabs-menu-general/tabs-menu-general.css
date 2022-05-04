@@ -1,104 +1,166 @@
+#tab1:checked
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab1']:after,
+#tab2:checked
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab2']:after,
+#tab3:checked
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab3']:after,
+#tab4:checked
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab4']:after {
+  transform: scaleX(1);
+}
+#tab1:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for='tab1'],
+#tab2:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for='tab2'],
+#tab3:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for='tab3'],
+#tab4:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for='tab4'] {
+  color: var(--active-text-color);
+}
 
-#tab1:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab1"]:after, #tab2:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab2"]:after, #tab3:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab3"]:after, #tab4:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab4"]:after {
-	transform: scaleX(1);
+#tab1:hover
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab1']:after,
+#tab2:hover
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab2']:after,
+#tab3:hover
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab3']:after,
+#tab4:hover
+  ~ .tabs-menu-general__nav
+  .tabs-menu-general__label[for='tab4']:after {
+  transform: scaleX(1);
 }
-#tab1:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab1"], #tab2:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab2"], #tab3:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab3"], #tab4:checked ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab4"] {
-    color: var(--active-text-color);
+#tab4:checked ~ .main__wrapper .main__card-list #component-3,
+#tab4:checked ~ .main__wrapper .main__card-list #component-8,
+#tab4:checked ~ .main__wrapper .main__card-list #component-10,
+#tab4:checked ~ .main__wrapper .main__card-list #component-8,
+#tab4:checked ~ .main__wrapper .main__card-list #component-6,
+#tab4:checked ~ .main__wrapper .main__card-list #component-1,
+#tab4:checked ~ .main__wrapper .main__card-list #component-7,
+#tab4:checked ~ .main__wrapper .main__card-list #component-9,
+#tab4:checked ~ .main__wrapper .main__card-list #component-2 {
+  display: none;
 }
-
-#tab1:hover ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab1"]:after, #tab2:hover ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab2"]:after, #tab3:hover ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab3"]:after, #tab4:hover ~ .tabs-menu-general__nav .tabs-menu-general__label[for="tab4"]:after {
-    transform: scaleX(1);
+#tab4:checked ~ .main__wrapper .main__card-list #component-4,
+#tab4:checked ~ .main__wrapper .main__card-list #component-5,
+#tab4:checked ~ .main__wrapper .main__card-list #component-11,
+#tab4:checked ~ .main__wrapper .main__card-list #component-12 {
+  display: flex;
 }
-#tab4:checked ~ .main__wrapper .main__card-list #component-3, #tab4:checked ~ .main__wrapper .main__card-list #component-8, #tab4:checked ~ .main__wrapper .main__card-list #component-10, #tab4:checked ~ .main__wrapper .main__card-list #component-8, #tab4:checked ~ .main__wrapper .main__card-list #component-6, #tab4:checked ~ .main__wrapper .main__card-list #component-1, #tab4:checked ~ .main__wrapper .main__card-list #component-7, #tab4:checked ~ .main__wrapper .main__card-list #component-9, #tab4:checked ~ .main__wrapper .main__card-list #component-2 {
-	display: none;
+#tab3:checked ~ .main__wrapper .main__card-list #component-3,
+#tab3:checked ~ .main__wrapper .main__card-list #component-4,
+#tab3:checked ~ .main__wrapper .main__card-list #component-5,
+#tab3:checked ~ .main__wrapper .main__card-list #component-6,
+#tab3:checked ~ .main__wrapper .main__card-list #component-1,
+#tab3:checked ~ .main__wrapper .main__card-list #component-7,
+#tab3:checked ~ .main__wrapper .main__card-list #component-9,
+#tab3:checked ~ .main__wrapper .main__card-list #component-11,
+#tab3:checked ~ .main__wrapper .main__card-list #component-12 {
+  display: none;
 }
-#tab4:checked ~ .main__wrapper .main__card-list #component-4, #tab4:checked ~ .main__wrapper .main__card-list #component-5, #tab4:checked ~ .main__wrapper .main__card-list #component-11, #tab4:checked ~ .main__wrapper .main__card-list #component-12 {
-	display: flex;
+#tab3:checked ~ .main__wrapper .main__card-list #component-3,
+#tab3:checked ~ .main__wrapper .main__card-list #component-8,
+#tab3:checked ~ .main__wrapper .main__card-list #component-10 {
+  display: flex;
 }
-#tab3:checked ~ .main__wrapper .main__card-list #component-3, #tab3:checked ~ .main__wrapper .main__card-list #component-4, #tab3:checked ~ .main__wrapper .main__card-list #component-5, #tab3:checked ~ .main__wrapper .main__card-list #component-6, #tab3:checked ~ .main__wrapper .main__card-list #component-1, #tab3:checked ~ .main__wrapper .main__card-list #component-7, #tab3:checked ~ .main__wrapper .main__card-list #component-9, #tab3:checked ~ .main__wrapper .main__card-list #component-11, #tab3:checked ~ .main__wrapper .main__card-list #component-12 {
-	display: none;
+#tab2:checked ~ .main__wrapper .main__card-list #component-3,
+#tab2:checked ~ .main__wrapper .main__card-list #component-4,
+#tab2:checked ~ .main__wrapper .main__card-list #component-5,
+#tab2:checked ~ .main__wrapper .main__card-list #component-2,
+#tab2:checked ~ .main__wrapper .main__card-list #component-8,
+#tab2:checked ~ .main__wrapper .main__card-list #component-10,
+#tab2:checked ~ .main__wrapper .main__card-list #component-11,
+#tab2:checked ~ .main__wrapper .main__card-list #component-12 {
+  display: none;
 }
-#tab3:checked ~ .main__wrapper .main__card-list #component-3, #tab3:checked ~ .main__wrapper .main__card-list #component-8, #tab3:checked ~ .main__wrapper .main__card-list #component-10 {
-	display: flex;
+#tab2:checked ~ .main__wrapper .main__card-list #component-7,
+#tab2:checked ~ .main__wrapper .main__card-list #component-9 {
+  display: flex;
 }
-#tab2:checked ~ .main__wrapper .main__card-list #component-3, #tab2:checked ~ .main__wrapper .main__card-list #component-4, #tab2:checked ~ .main__wrapper .main__card-list #component-5, #tab2:checked ~ .main__wrapper .main__card-list #component-2, #tab2:checked ~ .main__wrapper .main__card-list #component-8, #tab2:checked ~ .main__wrapper .main__card-list #component-10, #tab2:checked ~ .main__wrapper .main__card-list #component-11, #tab2:checked ~ .main__wrapper .main__card-list #component-12 {
-	display: none;
+#tab2:checked ~ .main__wrapper .main__card-list,
+#tab3:checked ~ .main__wrapper .main__card-list,
+#tab4:checked ~ .main__wrapper .main__card-list {
+  justify-content: flex-start;
 }
-#tab2:checked ~ .main__wrapper .main__card-list #component-7, #tab2:checked ~ .main__wrapper .main__card-list #component-9 {
-	display: flex;
+#tab1:checked ~ .main__wrapper .main__card-list #component-7,
+#tab1:checked ~ .main__wrapper .main__card-list #component-8,
+#tab1:checked ~ .main__wrapper .main__card-list #component-9,
+#tab1:checked ~ .main__wrapper .main__card-list #component-10,
+#tab1:checked ~ .main__wrapper .main__card-list #component-11,
+#tab1:checked ~ .main__wrapper .main__card-list #component-12 {
+  display: none;
 }
-#tab2:checked ~ .main__wrapper .main__card-list, #tab3:checked ~ .main__wrapper .main__card-list, #tab4:checked ~ .main__wrapper .main__card-list {
-	justify-content: flex-start;
-}
-#tab1:checked ~ .main__wrapper .main__card-list #component-7, #tab1:checked ~ .main__wrapper .main__card-list #component-8, #tab1:checked ~ .main__wrapper .main__card-list #component-9, #tab1:checked ~ .main__wrapper .main__card-list #component-10, #tab1:checked ~ .main__wrapper .main__card-list #component-11, #tab1:checked ~ .main__wrapper .main__card-list #component-12 {
-	display: none;
-}
-#tab1:checked ~ .main__wrapper .main__card-list #component-3, #tab1:checked ~ .main__wrapper .main__card-list #component-4, #tab1:checked ~ .main__wrapper .main__card-list #component-5 {
-	display: flex;
+#tab1:checked ~ .main__wrapper .main__card-list #component-3,
+#tab1:checked ~ .main__wrapper .main__card-list #component-4,
+#tab1:checked ~ .main__wrapper .main__card-list #component-5 {
+  display: flex;
 }
 #tab1:checked ~ .page__main-cod-html {
-	display: grid;
-	grid-template-columns: minmax(100px, auto);
-	overflow-x: auto;
+  display: grid;
+  grid-template-columns: minmax(100px, auto);
+  overflow-x: auto;
 }
 #tab1:checked ~ .page__main-cod-css {
-	display: none;
-	position: relative;
+  display: none;
+  position: relative;
 }
 .tabs-menu-general__label {
-	cursor: pointer;
-	position: relative;
-	color: var(--grey-3);
-	padding: 0.5rem 0;
-	border-bottom: 5px solid transparent;
-	/*display: inline-flex;*/
-	transition: 250ms all;
-	white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  color: var(--grey-3);
+  padding: 0.5rem 0;
+  border-bottom: 5px solid transparent;
+  /*display: inline-flex;*/
+  transition: 250ms all;
+  white-space: nowrap;
 }
 .tabs-menu-general__label:after {
-	content: '';
-	display: block;
-	position: absolute;
-	height: 5px;
-	width: 100%;
-	top: 100%;
-	background-color: var(--dark-bg);
-	transform: scaleX(0);
-	transition: transform 250ms ease-in-out;
+  content: '';
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  top: 100%;
+  background-color: var(--dark-bg);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
 }
 .tabs-menu-general__input {
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
-	opacity: 0;
-	outline: none;
-	pointer-events: none;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  opacity: 0;
+  outline: none;
+  pointer-events: none;
 }
 .tabs-menu-general__nav {
-	background-color: var(--main-bg);
-	overflow: hidden;
-	box-sizing: border-box;
+  background-color: var(--main-bg);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .tabs-menu-general__list {
-	left: calc((100% - 1140px) / 2 + 15px);
-	width: 100%;
-	overflow-x: scroll;
-	display: grid;
-	grid-template-columns: repeat(4, auto);
-	justify-content: start;
-	align-items: center;
-	grid-column-gap: 40px;
-	padding-left: 0;
-	height: 40px;
+  left: calc((100% - 1140px) / 2 + 15px);
+  width: 100%;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  align-items: center;
+  grid-column-gap: 40px;
+  padding-left: 0;
+  height: 40px;
 }
 .tabs-menu-general__el {
-	list-style: none;
+  list-style: none;
 }
 .tabs-menu-general__el::-webkit-details-marker {
-	display: none
+  display: none;
 }
 .tabs-menu-general__el {
-	outline-style: none;
-	border-bottom: none;
+  outline-style: none;
+  border-bottom: none;
 }
 /*@media screen and (max-width: 768px) {*/
 /*	.tabs-menu-general__list {top: 16.2%}*/

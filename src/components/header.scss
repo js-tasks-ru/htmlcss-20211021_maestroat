@@ -1,0 +1,112 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.header {
+  background-color: var(--main-bg);
+  width: 100%;
+  @include text(1.6rem, var(--font-color), normal, normal, 24px);
+  &__top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 110px;
+  }
+  &__logo-href {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    fill: var(--dark-bg);
+  }
+  &__right-block {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    grid-column-gap: 56px;
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    grid-column-gap: 24px;
+    padding-left: 0;
+    margin: 0;
+  }
+  &__menu > &__menu-list-el {
+    list-style: none;
+  }
+  &__menu-list-el::-webkit-details-marker {
+    display: none;
+  }
+  &__menu-list-el {
+    outline-style: none;
+    border-bottom: none;
+  }
+  &__menu-list-href {
+    text-decoration: none;
+    color: var(--grey-3);
+  }
+  &__menu-list-href:hover {
+    color: var(--text-primary);
+  }
+  &__checked {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+    align-items: center;
+    grid-column-gap: 14px;
+  }
+  &__icon {
+    color: var(--grey-3);
+  }
+  &__burger-menu-windows {
+    background: var(--white-bg) !important;
+  }
+  &__burger-menu-icon {
+    color: var(--input-text-color);
+  }
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 50px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__right-block {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__top {
+      justify-content: center;
+    }
+    &__title {
+      padding: 18px 0 52px;
+    }
+  }
+}

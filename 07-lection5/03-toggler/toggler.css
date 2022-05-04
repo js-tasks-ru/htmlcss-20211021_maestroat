@@ -1,80 +1,79 @@
-
 .toggler {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 24px;
-    display: inline-block;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 24px;
+  display: inline-block;
 }
 .toggler__input {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    opacity: 0;
-    outline: none;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  opacity: 0;
+  outline: none;
 }
 .toggler__state {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
 }
 .toggler__control {
-    width: 52px;
-    height: 28px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+  width: 52px;
+  height: 28px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .toggler__icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: var(--grey-2);
-    transform: translateX(0);
-    transition: transform .5s ease;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--grey-2);
+  transform: translateX(0);
+  transition: transform 0.5s ease;
 }
-.toggler__control{
-    background: var(--white);
-    border: 1px solid var(--grey-2);
-    align-items: flex-start;
-    padding-left: 2px;
-    transition-property: background-color, border;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+.toggler__control {
+  background: var(--white);
+  border: 1px solid var(--grey-2);
+  align-items: flex-start;
+  padding-left: 2px;
+  transition-property: background-color, border;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 .toggler__text {
-    margin-left: 12px;
-    color:var(--grey-4);
+  margin-left: 12px;
+  color: var(--grey-4);
 }
-.toggler__input:checked~.toggler__state .toggler__control {
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
-    transition-property: background-color, border;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+.toggler__input:checked ~ .toggler__state .toggler__control {
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  transition-property: background-color, border;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
-.toggler__input:checked~.toggler__state .toggler__control .toggler__icon {
-    background-color: var(--white);
-    transform: translateX(23px);
-    transition: background-color, transform .5s ease;
+.toggler__input:checked ~ .toggler__state .toggler__control .toggler__icon {
+  background-color: var(--white);
+  transform: translateX(23px);
+  transition: background-color, transform 0.5s ease;
 }
-.toggler__input:focus~.toggler__state .toggler__text {
-    text-decoration: underline;
+.toggler__input:focus ~ .toggler__state .toggler__text {
+  text-decoration: underline;
 }
-.toggler__input:disabled~.toggler__state .toggler__control {
-    background: var(--grey-2);
-    border: 1px solid var(--grey-2);
-    align-items: flex-start;
-    padding-left: 2px;
+.toggler__input:disabled ~ .toggler__state .toggler__control {
+  background: var(--grey-2);
+  border: 1px solid var(--grey-2);
+  align-items: flex-start;
+  padding-left: 2px;
 }
-.toggler__input:disabled~.toggler__state .toggler__control .toggler__icon {
-    background-color: var(--grey-3);
+.toggler__input:disabled ~ .toggler__state .toggler__control .toggler__icon {
+  background-color: var(--grey-3);
 }
-.toggler__input:disabled~.toggler__state  {
-    cursor: not-allowed;
+.toggler__input:disabled ~ .toggler__state {
+  cursor: not-allowed;
 }

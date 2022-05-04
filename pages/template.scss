@@ -1,0 +1,221 @@
+@mixin text(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $style: false,
+  $lh: false
+) {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $style {
+    font-style: $style;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(100px, auto) minmax(100px, 1110px);
+  grid-template-areas:
+    'header header'
+    'nav main'
+    'footer footer';
+  grid-column-gap: 56px;
+  grid-row-gap: 32px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  @include text(1.6rem, var(--black), normal, normal, 24px);
+  &__header {
+    grid-area: header;
+    background-color: var(--grey-bg);
+    margin: 0;
+    padding: 25px 0;
+  }
+  &__footer {
+    padding: 38px 0 33px 0;
+    background-color: var(--grey-bg);
+    grid-area: footer;
+  }
+  &__sidebar-menu {
+    display: inline-block;
+    width: 229px;
+    color: var(--font-color);
+    grid-area: nav;
+  }
+  &__main {
+    /*height: 345px;*/
+    background-color: var(--white-bg);
+    box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+    width: 100%;
+    max-width: calc(1140px - 229px);
+    grid-area: main;
+    position: relative;
+  }
+  &__main-component {
+    padding: 32px 48px 0;
+  }
+  &__main-cod-left {
+    margin: 0;
+    color: var(--font-color);
+  }
+  &__main-cod-html {
+    box-sizing: border-box;
+  }
+  &__footer-text {
+    display: inline-block;
+    margin: 0 auto;
+    @include text(1.6rem, var(--grey-3), normal, normal, 24px);
+  }
+  &__main-divider {
+    position: absolute;
+    width: 100%;
+    left: -2px;
+    max-width: calc(1140px - 229px);
+    height: 1px;
+    background-color: var(--grey-2);
+    z-index: 1;
+  }
+  &__main-component-title {
+    display: inline-block;
+    margin-bottom: 16px;
+    @include text(2.8rem, var(--font-color), normal, normal, 38px);
+  }
+  &__main-component-present {
+    margin-bottom: 32px;
+  }
+  &__button {
+    display: inline-block;
+  }
+  &__modal-button {
+    width: 83px;
+  }
+  &__modal-input {
+    padding-bottom: 16px;
+  }
+  &__modal_window {
+    max-width: 428px;
+    width: 100%;
+    background: var(--white-bg);
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 32px 40px;
+    box-sizing: border-box;
+  }
+  &__modal-new {
+    padding: 0;
+  }
+  &__modal-new-window {
+    justify-content: space-between;
+    padding-bottom: 16px;
+    padding-right: 20px;
+  }
+  &__modal-new-title {
+    @include text(1.6rem, var(--font-color), normal, normal, 24px);
+  }
+  &__modal-new-close {
+    flex-grow: 0;
+    cursor: pointer;
+  }
+  &__tooltip {
+    margin-top: 60px;
+    margin-left: 40px;
+  }
+  &__modal-new-input {
+    border: 1px solid var(--grey-2);
+    background-color: var(--white-bg);
+    box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
+
+    color: var(--input-text-color);
+    font-size: 20px;
+  }
+  &__avatar {
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+  }
+  &__calendar {
+    margin: 20px 0;
+  }
+  &__histogram {
+    margin-top: 20px;
+    max-width: 500px;
+  }
+  &__selected {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-gap: 32px;
+    margin-bottom: 30px;
+  }
+  &__radio-el {
+    background-color: var(--white-bg);
+  }
+  &__Checkbox-control {
+    background-color: var(--white-bg);
+  }
+  &__toggler-control {
+    background-color: var(--white-bg);
+  }
+  &__input {
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 16px;
+    max-width: 306px;
+    width: 100%;
+    position: relative;
+  }
+  &__input-field {
+    background-color: var(--white-bg);
+  }
+  &__input-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      grid-template-areas:
+        'header header'
+        'main main'
+        'footer footer';
+      grid-column-gap: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__sidebar-menu {
+      display: none;
+    }
+    &__selected {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(6, auto);
+      grid-auto-flow: column;
+      grid-gap: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    &__selected {
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(9, auto);
+      grid-auto-flow: column;
+      grid-gap: 32px;
+      margin-bottom: 30px;
+    }
+  }
+}
