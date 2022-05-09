@@ -92,8 +92,8 @@
   }
   &__main-component-title {
     display: inline-block;
-    margin-bottom: 16px;
-    @include text(2.8rem, var(--font-color), normal, normal, 38px);
+    margin: 0 0 16px 0;
+    @include text(2.8rem, var(--font-color), 400, normal, 38px);
   }
   &__main-component-present {
     margin-bottom: 32px;

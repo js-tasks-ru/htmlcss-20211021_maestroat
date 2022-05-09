@@ -47,7 +47,7 @@
     @include text(1.2rem, var(--grey-3), 500, normal, 18px);
   }
   &_valid &__field:focus {
-    border: 1px solid var(--blue);
+    border: 1px solid var(--blue-1);
   }
   &_invalid &__field {
     border: 1px solid var(--red);
@@ -67,8 +67,8 @@
     width: 24px;
     height: 24px;
     position: absolute;
-    left: 100%;
-    transform: translate(-40px, -40px);
+    right: 0%;
+    transform: translate(-22px, -40px);
   }
   &__icon_error {
     color: var(--red);

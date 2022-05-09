@@ -24,34 +24,23 @@
 }
 .histogram {
   min-height: 185px;
+  position: relative;
   background-color: var(--white-bg);
   border: 1px solid var(--grey-3);
   border-radius: 8px;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  //font-family: 'Inter', 'Roboto', sans-serif;
-  //font-size: 16px;
-  //color: var(--black);
-  //font-weight: normal;
-  //font-style: normal;
-  //line-height: 24px;
   @include text(1.6rem, var(--black), normal, normal, 24px);
   &__header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 15px 15px 0 15px;
+    padding: 15px 15px 0 15px;
+    margin: 0;
   }
-
   &__title {
     opacity: 0.8;
     color: var(--text-secondary);
   }
   &__amount {
-    //font-size: 20px;
-    //line-height: 26px;
-    //color: var(--text-primary);
     @include text(20px, var(--text-primary), false, false, 26px);
   }
   &__title,
@@ -61,12 +50,23 @@
   }
   &__view {
     color: var(--blue-1);
+    position: absolute;
+    right: 0%;
+    top: 0;
+    transform: translate(-15px, 15px);
+    cursor: pointer;
+  }
+  &__view-input {
+    clip: rect(0, 0, 0, 0);
+    opacity: 0;
+    outline: none;
+    position: absolute;
   }
   &__chart {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
-    margin: 0 15px 15px 15px;
+    padding: 0 15px 15px 15px;
     height: 50px;
     animation-name: go;
     animation-duration: 0.5s;
@@ -78,6 +78,21 @@
     background-color: var(--blue-1);
     flex-grow: 1;
     flex-basis: auto;
+    &:last-child {
+      margin-right: 0;
+    }
+    &_pre-active {
+      margin-right: 0;
+    }
+    &_no-active {
+      display: none;
+    }
+  }
+  #view1:checked ~ .histogram__chart .histogram__line_pre-active {
+    margin-right: 1px;
+  }
+  #view1:checked ~ .histogram__chart .histogram__line_no-active {
+    display: block;
   }
   @keyframes go {
     from {

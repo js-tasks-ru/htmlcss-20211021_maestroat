@@ -55,12 +55,11 @@
     margin: 0 15px 30px;
   }
   &__component-text {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 21px;
-    color: var(--font-color);
+    margin: 0 auto;
+    @include text(2.1rem, var(--font-color), 500, normal, 28px);
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    padding-top: 15px;
   }
   &__href {
     width: 100%;
