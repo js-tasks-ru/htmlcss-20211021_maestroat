@@ -71,8 +71,8 @@
     color: var(--grey-4);
   }
   &__input:checked ~ &__state &__control {
-    background-color: var(--blue);
-    border: 1px solid var(--blue);
+    background-color: var(--blue-1);
+    border: 1px solid var(--blue-1);
     transition-property: background-color, border;
     transition-duration: 0.5s;
     transition-timing-function: ease;
